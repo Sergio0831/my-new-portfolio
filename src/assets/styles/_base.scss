@@ -3,8 +3,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
   margin: 0;
+  box-sizing: inherit;
   padding: 0;
 }
 
@@ -15,8 +15,8 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: $color-bg-primary;
   color: $color-text;
+  background-color: $color-bg-primary;
 }
 
 li {

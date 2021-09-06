@@ -1,7 +1,10 @@
 import React from "react"
-import "normalize.css"
-import "../assets/styles/main.scss"
+import Layout from "../components/Layout/Layout"
 
 export default function Home() {
-  return <h1>My New Portfolio</h1>
+  return (
+    <Layout>
+      <h1>My New Portfolio</h1>
+    </Layout>
+  )
 }
