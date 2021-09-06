@@ -1,0 +1,29 @@
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-bg-primary;
+  color: $color-text;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}

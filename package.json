@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "my-new-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Sergejs Ivcenko portfolio",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -15,15 +15,28 @@
   },
   "dependencies": {
     "gatsby": "^3.13.0",
+    "gatsby-plugin-image": "^1.13.0",
+    "gatsby-plugin-react-helmet": "^4.13.0",
+    "gatsby-plugin-sass": "^4.13.0",
+    "gatsby-plugin-sharp": "^3.13.0",
+    "gatsby-plugin-webfonts": "^2.1.1",
+    "gatsby-source-filesystem": "^3.13.0",
+    "gatsby-transformer-sharp": "^3.13.0",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.39.0"
   },
   "devDependencies": {
-    "prettier": "2.3.2"
+    "prettier": "2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.20.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/Sergio0831/my-new-portfolio"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
