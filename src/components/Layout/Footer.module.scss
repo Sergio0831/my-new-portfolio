@@ -1,0 +1,18 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.footer {
+  background-color: $color-primary;
+  padding: $p-3 0;
+  text-align: $align-center;
+
+  &-icons {
+    margin-bottom: $m-1;
+  }
+
+  &-copy {
+    @include font($font-family-primary, $font-weight-medium, $font-small);
+
+    color: $color-light;
+  }
+}

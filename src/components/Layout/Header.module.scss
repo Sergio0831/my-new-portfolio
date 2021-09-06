@@ -1,0 +1,7 @@
+@use "../../assets/styles/variables" as *;
+
+.header {
+  width: 100%;
+  padding: $p-4 $p-5 0;
+  position: $p-absolute;
+}

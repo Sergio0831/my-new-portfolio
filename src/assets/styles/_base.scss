@@ -26,4 +26,10 @@ li {
 a {
   display: inline-block;
   text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  color: $color-light;
+  background-color: $color-secondary;
 }
