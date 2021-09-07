@@ -16,6 +16,13 @@
   justify-content: $justify-content;
 }
 
+@mixin centered-grid($direction, $justify-content) {
+  display: $d-grid;
+  flex-direction: $direction;
+  align-items: $align-center;
+  justify-content: $justify-content;
+}
+
 @mixin centered {
   position: $p-absolute;
   left: 50%;

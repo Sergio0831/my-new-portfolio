@@ -1,0 +1,66 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.navigation {
+  &-button {
+    display: $d-grid;
+    border: none;
+    cursor: pointer;
+    position: $p-fixed;
+    z-index: 2000;
+    top: 4.6rem;
+    right: 5rem;
+    height: 1.6rem;
+    background: transparent;
+
+    // &:hover {
+    //   .navigation-icon:first-child {
+    //     transform: translateY(0);
+    //   }
+
+    //   .navigation-icon:last-child {
+    //     transform: translateX(0);
+    //   }
+    // }
+  }
+
+  &-icon {
+    width: 2rem;
+    height: 2px;
+    background: $color-text;
+    border-radius: $rounded;
+    transition: all 0.7s cubic-bezier(0.83, 0, 0.17, 1);
+
+    &:first-child {
+      transform: rotate(0deg) translate(0.5rem, 0);
+    }
+
+    &:nth-child(2) {
+      background-color: $color-primary;
+    }
+
+    &:last-child {
+      transform: rotate(0deg) translate(-0.5rem, 0);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $m-1 / 2;
+    }
+  }
+
+  .show-nav {
+    &:first-child {
+      transform: rotate(45deg) translate(0.7rem, -0.7rem);
+      transform-origin: top left;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      transform: rotate(-45deg) translate(0.7rem, 0.6rem);
+      transform-origin: bottom left;
+    }
+  }
+}

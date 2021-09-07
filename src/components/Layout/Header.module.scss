@@ -1,6 +1,8 @@
 @use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
 .header {
+  @include centered-flex(row, space-between);
   width: 100%;
   padding: $p-4 $p-5 0;
   position: $p-absolute;

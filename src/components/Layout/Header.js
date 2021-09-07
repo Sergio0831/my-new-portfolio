@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import Logo from "../Header/Logo"
+import Navigation from "../Header/Navigation"
 import { header } from "./Header.module.scss"
 
 const Header = () => {
@@ -9,6 +10,7 @@ const Header = () => {
       <Link to="/">
         <Logo />
       </Link>
+      <Navigation />
     </header>
   )
 }

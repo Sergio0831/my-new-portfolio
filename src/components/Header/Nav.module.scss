@@ -1,0 +1,25 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.nav {
+  @include centered-grid(row, center);
+  overflow: hidden;
+}
+.navList {
+  text-align: $align-center;
+}
+.navItem {
+}
+.navLink {
+  @include font($font-family-primary, $font-weight-semi-bold, $font-xl);
+  color: $color-light;
+  padding: $p-1 $p-3 + 0.5;
+  transition: $base-transition;
+  border-radius: $rounded;
+
+  &:hover {
+    background-position: 100%;
+    transform: translateX(1rem);
+    background: $color-secondary;
+  }
+}
