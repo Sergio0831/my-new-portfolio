@@ -8,17 +8,63 @@
 .navList {
   text-align: $align-center;
 }
+
 .navItem {
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  opacity: 0;
+
+  &:nth-child(1) {
+    transition-delay: 0.35s;
+  }
+
+  &:nth-child(2) {
+    transition-delay: 0.25s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+
+  &:nth-child(4) {
+    transition-delay: 0.05s;
+  }
+
+  &In {
+    transform: translateY(0);
+    opacity: 1;
+
+    &:nth-child(1) {
+      transition-delay: 0.3s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: 0.4s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.5s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: 0.6s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: 0.7s;
+    }
+  }
 }
+
 .navLink {
   @include font($font-family-primary, $font-weight-semi-bold, $font-xl);
   color: $color-light;
   padding: $p-1 $p-3 + 0.5;
-  transition: $base-transition;
   border-radius: $rounded;
+  transition: $base-transition;
 
+  &Active,
   &:hover {
-    background-position: 100%;
     transform: translateX(1rem);
     background: $color-secondary;
   }

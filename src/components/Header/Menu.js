@@ -11,7 +11,7 @@ const Menu = ({ isOpen }) => {
 
   return (
     <div className={classes}>
-      <Nav />
+      <Nav isOpen={isOpen} />
     </div>
   )
 }
