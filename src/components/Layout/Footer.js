@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={footer}>
       <div className={footerIcons}>
-        <SocialIcons />
+        <SocialIcons footer />
       </div>
       <p className={footerCopy}>
         &copy; 2021, Designed & Coded by Sergejs Ivcenko

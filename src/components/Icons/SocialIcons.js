@@ -1,9 +1,21 @@
+import clsx from "clsx"
 import React from "react"
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
-import { socialIcon, socialIconLink } from "./SocialIcons.module.scss"
+import {
+  socialIcon,
+  socialIconLink,
+  homeHover,
+  footerHover,
+} from "./SocialIcons.module.scss"
 
-const SocialIcons = () => {
+const SocialIcons = ({ home, footer }) => {
+  const classes = clsx({
+    [socialIcon]: true,
+    [homeHover]: home,
+    [footerHover]: footer,
+  })
+
   return (
     <>
       <a
@@ -12,7 +24,7 @@ const SocialIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <IconContext.Provider value={{ className: socialIcon }}>
+        <IconContext.Provider value={{ className: classes }}>
           <FaLinkedin />
         </IconContext.Provider>
       </a>
@@ -22,7 +34,7 @@ const SocialIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <IconContext.Provider value={{ className: socialIcon }}>
+        <IconContext.Provider value={{ className: classes }}>
           <FaGithubSquare />
         </IconContext.Provider>
       </a>

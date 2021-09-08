@@ -2,7 +2,7 @@
 @use "../../assets/styles/mixins" as *;
 
 .header {
-  @include centered-flex(row, space-between);
+  @include centered-flex(space-between);
   width: 100%;
   padding: $p-4 $p-5 0;
   position: $p-absolute;

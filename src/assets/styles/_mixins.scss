@@ -9,16 +9,14 @@
 }
 
 // Layout
-@mixin centered-flex($direction, $justify-content) {
+@mixin centered-flex($justify-content) {
   display: $d-flex;
-  flex-direction: $direction;
   align-items: $align-center;
   justify-content: $justify-content;
 }
 
-@mixin centered-grid($direction, $justify-content) {
+@mixin centered-grid($justify-content) {
   display: $d-grid;
-  flex-direction: $direction;
   align-items: $align-center;
   justify-content: $justify-content;
 }

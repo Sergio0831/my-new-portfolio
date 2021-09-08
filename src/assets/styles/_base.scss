@@ -29,6 +29,10 @@ a {
   color: inherit;
 }
 
+h1 {
+  margin: 0;
+}
+
 ::selection {
   color: $color-light;
   background-color: $color-secondary;

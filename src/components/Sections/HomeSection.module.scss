@@ -1,12 +1,36 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
 .homeSection {
   background-image: url(../../assets/images/home-bg.svg);
-  height: 90vh;
+  height: calc(100vh - 37rem);
   background-size: cover;
+
+  @include centered-grid($justify-center);
 }
 
 .hero {
+  @include centered-flex($justify-center);
+
+  column-gap: $g-5 * 2;
+
   .heroText {
+    text-align: $align-center;
   }
+
+  .heroHeading {
+    @include font($font-family-primary, $font-weight-regular, $font-xl);
+    line-height: 7.8rem;
+  }
+  .heroSubheading {
+    @include font($font-family-secondary, $font-weight-bold, $font-large);
+    margin-bottom: $m-2;
+  }
+
   .heroImage {
+    width: 37rem;
+    height: 37rem;
+    border-radius: $circle;
+    border: solid 0.5rem $color-primary;
   }
 }

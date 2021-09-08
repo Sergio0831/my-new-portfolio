@@ -2,7 +2,7 @@
 @use "../../assets/styles/mixins" as *;
 
 .nav {
-  @include centered-grid(row, center);
+  @include centered-grid(center);
   overflow: hidden;
 }
 .navList {
