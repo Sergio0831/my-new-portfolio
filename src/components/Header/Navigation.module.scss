@@ -1,5 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "sass:math";
 
 .navigation {
   &-button {
@@ -31,34 +32,34 @@
     border-radius: $rounded;
     transition: all 0.7s cubic-bezier(0.83, 0, 0.17, 1);
 
-    &:first-child {
+    @include first-child {
       transform: rotate(0deg) translate(0.5rem, 0);
     }
 
-    &:nth-child(2) {
+    @include nth-child(2) {
       background-color: $color-primary;
     }
 
-    &:last-child {
+    @include last-child {
       transform: rotate(0deg) translate(-0.5rem, 0);
     }
 
-    &:not(:last-child) {
-      margin-bottom: $m-1 / 2;
+    @include not-last-child {
+      margin-bottom: math.div($m-1, 2);
     }
   }
 
   .show-nav {
-    &:first-child {
+    @include first-child {
       transform: rotate(45deg) translate(0.7rem, -0.7rem);
       transform-origin: top left;
     }
 
-    &:nth-child(2) {
+    @include nth-child(2) {
       opacity: 0;
     }
 
-    &:last-child {
+    @include last-child {
       transform: rotate(-45deg) translate(0.7rem, 0.6rem);
       transform-origin: bottom left;
     }

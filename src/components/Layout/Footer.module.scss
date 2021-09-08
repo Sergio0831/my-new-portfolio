@@ -6,11 +6,11 @@
   padding: $p-3 0;
   text-align: $align-center;
 
-  &-icons {
+  &Icons {
     margin-bottom: $m-1;
   }
 
-  &-copy {
+  &Copy {
     @include font($font-family-primary, $font-weight-medium, $font-small);
 
     color: $color-light;

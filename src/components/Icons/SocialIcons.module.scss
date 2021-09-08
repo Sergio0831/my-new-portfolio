@@ -1,6 +1,7 @@
 @use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
-.social-icon {
+.socialIcon {
   height: 3.5rem;
   width: 3.5rem;
   transition: color 0.2s ease;
@@ -10,6 +11,8 @@
   }
 }
 
-.social-icon-link:not(:last-child) {
-  margin-right: $m-1;
+.socialIconLink {
+  @include not-last-child {
+    margin-right: $m-1;
+  }
 }

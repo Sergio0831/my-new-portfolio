@@ -29,3 +29,46 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+// Child selectors
+@mixin first-child() {
+  &:first-of-type {
+    @content;
+  }
+}
+
+@mixin nth-child($num) {
+  &:nth-child(#{$num}n) {
+    @content;
+  }
+}
+
+@mixin last-child() {
+  &:last-of-type {
+    @content;
+  }
+}
+
+@mixin not-last-child() {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin transition-delay-up {
+  @for $i from 1 through 5 {
+    @include nth-child(#{$i}) {
+      transition-delay: #{$i * 0.2}s;
+    }
+  }
+}
+
+@mixin transition-delay-down {
+  @for $i from 1 through 5 {
+    @include nth-child(#{$i}) {
+      transition-delay: #{450 - (100 * $i)}ms;
+    }
+  }
+}
+
+// Breakpoints
