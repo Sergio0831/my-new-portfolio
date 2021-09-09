@@ -1,0 +1,47 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "sass:math";
+
+.infoCards {
+  display: $d-grid;
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  grid-gap: 12rem;
+}
+
+.infoCard {
+  background-color: $color-light;
+  border-radius: $rounded;
+  padding: $p-2 $p-4 $p-4;
+  text-align: $align-center;
+  transition: $base-transition;
+
+  &Title {
+    @include font($font-family-primary, $font-weight-semi-bold, $font-small);
+
+    position: $p-relative;
+    padding-bottom: math.div($p-1, 2);
+    display: $d-flex;
+    justify-content: $justify-center;
+    margin: $m-1 0 $m-2;
+
+    &::before {
+      content: "";
+      bottom: 0;
+      position: $p-absolute;
+      width: 5rem;
+      height: 1px;
+      background-color: $color-primary;
+    }
+  }
+
+  &Text {
+    @include font($font-family-secondary, $font-weight-regular, $font-xs);
+
+    line-height: 2.4rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-light;
+  }
+}

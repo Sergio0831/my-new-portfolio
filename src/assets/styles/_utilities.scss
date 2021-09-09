@@ -1,2 +1,7 @@
-.btn {
+@use "../../assets/styles/variables" as *;
+
+.section-center {
+  max-width: 140rem;
+  padding: 0 $p-2;
+  margin: 0 auto;
 }

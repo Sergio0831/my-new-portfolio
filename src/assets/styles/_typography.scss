@@ -1,0 +1,24 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.title {
+  @include font($font-family-primary, $font-weight-semi-bold, $font-large);
+  text-align: $align-center;
+  position: $p-relative;
+  display: $d-flex;
+  justify-content: $justify-center;
+
+  &::before {
+    content: "";
+    bottom: 0;
+    position: $p-absolute;
+    width: 10rem;
+    height: 3px;
+    background-color: $color-primary;
+  }
+}
+
+.subtitle {
+  @include font($font-family-secondary, $font-weight-regular, $font-medium);
+  text-align: $align-center;
+}

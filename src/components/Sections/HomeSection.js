@@ -12,7 +12,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const query = graphql`
-  query MyQuery {
+  query {
     contentfulAboutMe {
       name
       position

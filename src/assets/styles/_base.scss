@@ -33,6 +33,10 @@ h1 {
   margin: 0;
 }
 
+span {
+  display: inline-block;
+}
+
 ::selection {
   color: $color-light;
   background-color: $color-secondary;
