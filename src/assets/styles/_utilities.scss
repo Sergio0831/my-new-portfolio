@@ -1,4 +1,5 @@
 @use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
 .section-center {
   max-width: 120rem;
@@ -8,4 +9,26 @@
 
 .section-title {
   margin-bottom: $m-3 * 2;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: $rounded;
+  color: $color-light;
+
+  &-large {
+    background-color: $color-primary;
+
+    @include font($font-family-primary, $font-weight-semi-bold, $f-8);
+
+    width: 22rem;
+    padding: 1.1rem 0;
+    transition: all 300ms ease-in-out 0s;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background: transparent;
+      color: $color-text;
+    }
+  }
 }

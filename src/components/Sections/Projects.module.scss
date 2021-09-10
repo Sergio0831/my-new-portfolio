@@ -6,4 +6,11 @@
   padding-bottom: $p-4 * 2;
   background-color: $color-bg-primary;
   margin-top: 0;
+  text-align: center;
+
+  &Grid {
+    display: $d-grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: $m-5 * 2;
+  }
 }

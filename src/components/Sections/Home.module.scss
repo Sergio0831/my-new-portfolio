@@ -10,7 +10,10 @@
 }
 
 .hero {
-  @include centered-flex($justify-center);
+  @include centered-flex(
+    $justify-content: $justify-center,
+    $align-items: $align-center
+  );
 
   column-gap: $g-5 * 2;
 

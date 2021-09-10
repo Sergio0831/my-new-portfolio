@@ -9,9 +9,14 @@
 }
 
 // Layout
-@mixin centered-flex($justify-content) {
+@mixin centered-flex(
+  $flex-direction: null,
+  $justify-content: null,
+  $align-items: null
+) {
   display: $d-flex;
-  align-items: $align-center;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
   justify-content: $justify-content;
 }
 
@@ -21,15 +26,50 @@
   justify-content: $justify-content;
 }
 
+@mixin transform($Y: null, $X: null) {
+  transform: translate($Y, $X);
+}
+
 @mixin centered {
-  position: $p-absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @include absolute($top: 50%, $left: 50%);
+  @include transform($Y: -50%, $X: -50%);
+}
+
+// Width Height
+@mixin wh {
+  width: $base-width;
+  height: $base-height;
+}
+
+// Position
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position($p-absolute, $args...);
+}
+
+@mixin relative($args...) {
+  @include position($p-relative, $args...);
+}
+
+@mixin fixed($args...) {
+  @include position($p-fixed, $args...);
 }
 
 // Child selectors
-@mixin first-child() {
+@mixin first-child {
   &:first-of-type {
     @content;
   }
@@ -41,13 +81,13 @@
   }
 }
 
-@mixin last-child() {
+@mixin last-child {
   &:last-of-type {
     @content;
   }
 }
 
-@mixin not-last-child() {
+@mixin not-last-child {
   &:not(:last-child) {
     @content;
   }
