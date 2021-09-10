@@ -1,0 +1,38 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.about {
+  background-color: $color-bg-secondary;
+  padding-top: $p-2 * 2;
+
+  &Content {
+    display: $d-grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: $align-center;
+    grid-gap: 8rem;
+    padding-top: $p-4 * 2;
+    padding-bottom: $p-4 * 2;
+  }
+
+  &Bio {
+    @include font(
+      $font-family-secondary,
+      $font-weight-semi-bold,
+      $font-base * 2
+    );
+
+    line-height: 1.6;
+
+    span {
+      @include font($font-family-primary, $font-weight-semi-bold, 3rem);
+    }
+  }
+
+  .infoCards {
+    display: $d-grid;
+    justify-content: $justify-center;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 12rem;
+    transform: translateY(50%);
+  }
+}

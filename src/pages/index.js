@@ -1,13 +1,15 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
-import AboutSection from "../components/Sections/AboutSection"
-import HomeSection from "../components/Sections/HomeSection"
+import About from "../components/Sections/About"
+import Home from "../components/Sections/Home"
+import Projects from "../components/Sections/Projects"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Layout>
-      <HomeSection />
-      <AboutSection />
+      <Home />
+      <About />
+      <Projects />
     </Layout>
   )
 }

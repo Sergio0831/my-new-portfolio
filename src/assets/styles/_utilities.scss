@@ -1,7 +1,11 @@
 @use "../../assets/styles/variables" as *;
 
 .section-center {
-  max-width: 140rem;
+  max-width: 120rem;
   padding: 0 $p-2;
   margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: $m-3 * 2;
 }

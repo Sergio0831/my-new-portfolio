@@ -1,24 +1,21 @@
-import React from "react"
-import Code from "../components/Icons/Code"
-import Diamond from "../components/Icons/Diamond"
-import Stats from "../components/Icons/Stats"
+import "../assets/styles/_icons.scss"
 
 const infoCards = [
   {
     id: 1,
-    icon: <Code className="card-icon" />,
+    icon: "icon-code",
     title: "Web Development",
     text: "Write well designed, testable, efficient code by using best software development practices",
   },
   {
     id: 2,
-    icon: <Diamond className="card-icon" />,
+    icon: "icon-diamond",
     title: "Web Design",
     text: "Create website layout/user interface by using HTML/CSS best practices",
   },
   {
     id: 3,
-    icon: <Stats className="card-icon" />,
+    icon: "icon-stats",
     title: "SEO",
     text: "Website optimization, increase speed and keyword research. Creating campaigns and using Facebook Ads and Google Ads",
   },

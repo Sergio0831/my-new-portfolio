@@ -1,0 +1,9 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.projects {
+  padding-top: $p-3 * 6;
+  padding-bottom: $p-4 * 2;
+  background-color: $color-bg-primary;
+  margin-top: 0;
+}

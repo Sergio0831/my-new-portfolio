@@ -8,7 +8,8 @@ $color-bg-secondary: #f0f5f8;
 $color-light: #f7f7f7;
 
 // Font
-$font-xl: 6rem;
+$font-base: 1rem;
+$font-xl: $font-base * 6;
 $font-large: 4.8rem;
 $font-medium: 2.4rem;
 $font-small: 1.8rem;
@@ -26,7 +27,7 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 // Line height
-$line-height-base: 150%;
+$line-height-base: 1.5;
 
 // Border Radius
 $rounded: 0.5rem;

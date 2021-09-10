@@ -1,12 +1,13 @@
 import React from "react"
-import { homeSection } from "./HomeSection.module.scss"
+
 import {
+  home,
   hero,
   heroText,
   heroImage,
   heroHeading,
   heroSubheading,
-} from "./HomeSection.module.scss"
+} from "./Home.module.scss"
 import SocialIcons from "../Icons/SocialIcons"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -23,14 +24,14 @@ const query = graphql`
   }
 `
 
-const HomeSection = () => {
+const Home = () => {
   const {
     contentfulAboutMe: { name, position, image },
   } = useStaticQuery(query)
   const pathToImage = getImage(image)
 
   return (
-    <section className={homeSection}>
+    <section className={home}>
       <div className={hero}>
         <div className={heroText}>
           <h1 className={heroHeading}>{name}</h1>
@@ -43,4 +44,4 @@ const HomeSection = () => {
   )
 }
 
-export default HomeSection
+export default Home

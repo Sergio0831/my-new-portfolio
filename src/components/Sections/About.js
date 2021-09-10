@@ -6,7 +6,8 @@ import {
   aboutContent,
   aboutImage,
   aboutBio,
-} from "./AboutSection.module.scss"
+  infoCards,
+} from "./About.module.scss"
 import "../../assets/styles/_utilities.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
@@ -20,15 +21,17 @@ const query = graphql`
   }
 `
 
-const AboutSection = () => {
+const About = () => {
   const {
     BIO: { bio },
   } = useStaticQuery(query)
 
   return (
     <section className={about}>
-      <Title title="About Me" />
-      <Subtitle subtitle="Let me tell you who I'm." />
+      <div className={`section-title`}>
+        <Title title="About Me" />
+        <Subtitle subtitle="Let me tell you who I'm." />
+      </div>
       <div className={`section-center ${aboutContent}`}>
         <StaticImage
           src="../../assets/images/coding.svg"
@@ -41,9 +44,11 @@ const AboutSection = () => {
           {bio}
         </h3>
       </div>
-      <InfoCards />
+      <div className={`section-center ${infoCards}`}>
+        <InfoCards />
+      </div>
     </section>
   )
 }
 
-export default AboutSection
+export default About

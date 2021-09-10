@@ -2,18 +2,16 @@
 @use "../../assets/styles/mixins" as *;
 @use "sass:math";
 
-.infoCards {
-  display: $d-grid;
-  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
-  grid-gap: 12rem;
-}
-
 .infoCard {
   background-color: $color-light;
   border-radius: $rounded;
-  padding: $p-2 $p-4 $p-4;
+  padding: $p-2 $p-1 * 3.8 $p-2;
   text-align: $align-center;
   transition: $base-transition;
+
+  &Icon {
+    font-size: 3.2rem;
+  }
 
   &Title {
     @include font($font-family-primary, $font-weight-semi-bold, $font-small);
@@ -31,17 +29,20 @@
       width: 5rem;
       height: 1px;
       background-color: $color-primary;
+      transition: $base-transition;
     }
   }
 
   &Text {
     @include font($font-family-secondary, $font-weight-regular, $font-xs);
-
-    line-height: 2.4rem;
   }
 
   &:hover {
     background-color: $color-primary;
     color: $color-light;
+
+    .infoCardTitle::before {
+      background-color: $color-light;
+    }
   }
 }
