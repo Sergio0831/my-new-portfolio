@@ -3,11 +3,12 @@
 @use "sass:math";
 
 .infoCard {
-  background-color: $color-light;
+  background-color: $light;
   border-radius: $rounded;
   padding: $p-2 $p-1 * 3.8 $p-2;
   text-align: $align-center;
   transition: background-color 400ms ease-in-out 0s;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 25%);
 
   &Icon {
     font-size: $f-3;
@@ -28,7 +29,7 @@
       position: $p-absolute;
       width: 5rem;
       height: 1px;
-      background-color: $color-primary;
+      background-color: $primary;
       transition: $base-transition;
     }
   }
@@ -38,11 +39,11 @@
   }
 
   &:hover {
-    background-color: $color-primary;
-    color: $color-light;
+    background-color: $primary;
+    color: $light;
 
     .infoCardTitle::before {
-      background-color: $color-light;
+      background-color: $light;
     }
   }
 }

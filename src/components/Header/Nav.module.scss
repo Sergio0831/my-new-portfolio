@@ -26,7 +26,7 @@
 
 .navLink {
   @include font($font-family-primary, $font-weight-semi-bold, $font-xl);
-  color: $color-light;
+  color: $light;
   padding: $p-1 $p-3 + 0.5;
   border-radius: $rounded;
   transition: $base-transition;
@@ -34,6 +34,6 @@
   &Active,
   &:hover {
     transform: translateX(1rem);
-    background: $color-secondary;
+    background: $secondary;
   }
 }

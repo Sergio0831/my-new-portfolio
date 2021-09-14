@@ -1,9 +1,7 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.btn {
-  .btnDefault {
-  }
-  .btnOutline {
-  }
+.skills {
+  background-color: $bg-secondary;
+  padding: $p-6 0;
 }

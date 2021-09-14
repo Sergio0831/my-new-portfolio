@@ -2,14 +2,14 @@
 @use "../../assets/styles/mixins" as *;
 
 .about {
-  background-color: $color-bg-secondary;
+  background-color: $bg-secondary;
   padding-top: $p-2 * 2;
 
   &Content {
     display: $d-grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: $align-center;
-    grid-gap: 8rem;
+    grid-gap: $g-4 * 2;
     padding-top: $p-4 * 2;
     padding-bottom: $p-4 * 2;
   }

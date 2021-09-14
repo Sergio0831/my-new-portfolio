@@ -1,0 +1,31 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.skillContainer {
+  background-color: $text;
+  display: $d-flex;
+  flex-direction: column;
+  justify-content: $justify-center;
+  border-radius: $rounded;
+  padding: $p-1 * 1.5 0;
+  width: 12rem;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out 0s;
+  user-select: none;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  img {
+    margin-bottom: $m-1 * 1.5;
+    height: 7.2rem;
+  }
+
+  .skillTitle {
+    @include font($font-family-primary, $font-weight-semi-bold, $f-10);
+    color: $light;
+    text-align: $align-center;
+    letter-spacing: 1px;
+  }
+}

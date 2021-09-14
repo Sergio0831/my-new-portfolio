@@ -3,7 +3,7 @@
 
 .header {
   @include centered-flex(space-between);
-  width: 100%;
+  width: $base-width;
   padding: $p-4 $p-5 0;
   position: $p-absolute;
 }

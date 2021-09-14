@@ -15,11 +15,11 @@ const Project = () => {
     <article className={project}>
       <a href="https://my-house.netlify.app/" target="_blank" rel="noreferrer">
         <StaticImage
-          src="../../assets/images/my-house.png"
+          src="../../assets/images/todo.png"
           alt="project"
           className={projectImage}
           placeholder="blurred"
-          max-width={600}
+          layout="constrained"
         />
         <div className={projectOverlay}>
           <div className={projectText}>

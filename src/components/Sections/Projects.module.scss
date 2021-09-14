@@ -3,14 +3,14 @@
 
 .projects {
   padding-top: $p-3 * 6;
-  padding-bottom: $p-4 * 2;
-  background-color: $color-bg-primary;
+  padding-bottom: $p-6;
+  background-color: $bg-primary;
   margin-top: 0;
-  text-align: center;
+  text-align: $align-center;
 
   &Grid {
     display: $d-grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: $m-5 * 2;
+    margin-bottom: $m-4 * 2;
   }
 }

@@ -35,7 +35,7 @@
   @include transform($Y: -50%, $X: -50%);
 }
 
-// Width Height
+// Width Height 100%
 @mixin wh {
   width: $base-width;
   height: $base-height;

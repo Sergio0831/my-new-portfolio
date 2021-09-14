@@ -1,5 +1,4 @@
 import React from "react"
-
 import {
   home,
   hero,
@@ -8,9 +7,10 @@ import {
   heroHeading,
   heroSubheading,
 } from "./Home.module.scss"
-import SocialIcons from "../Icons/SocialIcons"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import "../../assets/styles/_icons.scss"
+import "../../assets/styles/_utilities.scss"
 
 const query = graphql`
   query {
@@ -36,7 +36,24 @@ const Home = () => {
         <div className={heroText}>
           <h1 className={heroHeading}>{name}</h1>
           <h2 className={heroSubheading}>{position}</h2>
-          <SocialIcons home />
+          <div className="social">
+            <a
+              className="social-link social-link-home icon-linkedin"
+              href="https://www.linkedin.com/in/ivcenko/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              &nbsp;
+            </a>
+            <a
+              className="social-link social-link-home icon-github"
+              href="https://www.linkedin.com/in/ivcenko/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              &nbsp;
+            </a>
+          </div>
         </div>
         <GatsbyImage className={heroImage} image={pathToImage} alt={name} />
       </div>

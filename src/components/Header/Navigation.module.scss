@@ -28,7 +28,7 @@
   &-icon {
     width: 2rem;
     height: 2px;
-    background: $color-text;
+    background: $text;
     border-radius: $rounded;
     transition: all 0.7s cubic-bezier(0.83, 0, 0.17, 1);
 
@@ -37,7 +37,7 @@
     }
 
     @include nth-child(2) {
-      background-color: $color-primary;
+      background-color: $primary;
     }
 
     @include last-child {

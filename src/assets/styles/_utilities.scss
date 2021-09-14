@@ -3,7 +3,6 @@
 
 .section-center {
   max-width: 120rem;
-  padding: 0 $p-2;
   margin: 0 auto;
 }
 
@@ -14,21 +13,42 @@
 .btn {
   cursor: pointer;
   border-radius: $rounded;
-  color: $color-light;
+  color: $light;
 
   &-large {
-    background-color: $color-primary;
+    background-color: $primary;
 
     @include font($font-family-primary, $font-weight-semi-bold, $f-8);
 
     width: 22rem;
     padding: 1.1rem 0;
     transition: all 300ms ease-in-out 0s;
-    border: 2px solid $color-primary;
+    border: 2px solid $primary;
 
     &:hover {
       background: transparent;
-      color: $color-text;
+      color: $text;
+    }
+  }
+}
+
+.social {
+  font-size: $f-7 * 2;
+
+  &-link {
+    transition: $base-transition;
+    width: 4rem;
+
+    &:not(:last-child) {
+      margin-right: $m-1;
+    }
+
+    &-home:hover {
+      color: $primary;
+    }
+
+    &-footer:hover {
+      color: $secondary;
     }
   }
 }

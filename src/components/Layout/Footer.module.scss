@@ -2,17 +2,13 @@
 @use "../../assets/styles/mixins" as *;
 
 .footer {
-  background-color: $color-primary;
+  background-color: $primary;
   padding: $p-3 0;
   text-align: $align-center;
-
-  &Icons {
-    margin-bottom: $m-1;
-  }
 
   &Copy {
     @include font($font-family-primary, $font-weight-medium, $font-small);
 
-    color: $color-light;
+    color: $light;
   }
 }

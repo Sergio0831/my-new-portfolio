@@ -1,0 +1,60 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.swiper-container {
+  position: relative;
+
+  .swiper {
+    height: 19.5rem;
+    max-width: 114rem;
+
+    &-pagination {
+      @include position($p-absolute, $bottom: 0, $left: 50%);
+      display: $d-flex;
+      z-index: 10;
+
+      &-bullet {
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid $primary;
+        border-radius: $rounded;
+        cursor: pointer;
+        transition: $base-transition;
+
+        &:not(:last-child) {
+          margin-right: $m-1;
+        }
+
+        &-active {
+          background: $primary;
+        }
+      }
+    }
+  }
+
+  .swiper-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $primary;
+    font-size: $f-4;
+    padding: $p-1;
+    border-radius: $circle;
+    @include position(absolute, $top: 4.3rem);
+    transition: background-color 400ms ease-in-out;
+
+    &:hover {
+      background-color: lighten($primary-light, 30%);
+    }
+
+    &-next {
+      right: -3rem;
+      transform: rotate(-90deg);
+    }
+
+    &-prev {
+      left: -3rem;
+      transform: rotate(90deg);
+    }
+  }
+}
