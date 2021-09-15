@@ -4,9 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { skillContainer, skillTitle } from "./Slider.module.scss"
 import "../../assets/styles/_swiper.scss"
 import "../../assets/styles/_icons.scss"
+import "../../assets/styles/_button.scss"
 import "swiper/scss"
-
 import { slides } from "../../data/slides"
+import { Button } from "./Button"
 
 const Slider = () => {
   return (
@@ -47,14 +48,14 @@ const Slider = () => {
         ))}
         <div className="swiper-pagination"></div>
       </Swiper>
-      <button
-        type="button"
+      <Button
+        round
         className="swiper-button swiper-button-prev icon-chevron-down"
-      ></button>
-      <button
-        type="button"
+      ></Button>
+      <Button
+        round
         className="swiper-button swiper-button-next icon-chevron-down"
-      ></button>
+      ></Button>
     </div>
   )
 }

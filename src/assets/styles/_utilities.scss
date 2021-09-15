@@ -10,26 +10,8 @@
   margin-bottom: $m-3 * 2;
 }
 
-.btn {
-  cursor: pointer;
-  border-radius: $rounded;
-  color: $light;
-
-  &-large {
-    background-color: $primary;
-
-    @include font($font-family-primary, $font-weight-semi-bold, $f-8);
-
-    width: 22rem;
-    padding: 1.1rem 0;
-    transition: all 300ms ease-in-out 0s;
-    border: 2px solid $primary;
-
-    &:hover {
-      background: transparent;
-      color: $text;
-    }
-  }
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
 .social {

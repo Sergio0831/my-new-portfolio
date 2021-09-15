@@ -2,6 +2,8 @@ import React from "react"
 import { footer, footerCopy } from "./Footer.module.scss"
 
 const Footer = () => {
+  const date = new Date().getFullYear()
+
   return (
     <footer className={footer}>
       <div className="social">
@@ -23,7 +25,7 @@ const Footer = () => {
         </a>
       </div>
       <p className={footerCopy}>
-        &copy; 2021, Designed & Coded by Sergejs Ivcenko
+        &copy; {date}, Designed & Coded by Sergejs Ivcenko
       </p>
     </footer>
   )

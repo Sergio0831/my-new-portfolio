@@ -33,15 +33,7 @@
   }
 
   .swiper-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: $primary;
-    font-size: $f-4;
-    padding: $p-1;
-    border-radius: $circle;
     @include position(absolute, $top: 4.3rem);
-    transition: background-color 400ms ease-in-out;
 
     &:hover {
       background-color: lighten($primary-light, 30%);
@@ -55,6 +47,10 @@
     &-prev {
       left: -3rem;
       transform: rotate(90deg);
+    }
+
+    @media only screen and (hover: none) {
+      display: none;
     }
   }
 }

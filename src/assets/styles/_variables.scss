@@ -58,6 +58,7 @@ $p-fixed: fixed;
 // Display
 $d-flex: flex;
 $d-grid: grid;
+$d-block: block;
 
 // Spaces
 // Padding
@@ -88,4 +89,4 @@ $base-width: 100%;
 $base-height: 100%;
 
 // Transition
-$base-transition: all 300ms ease-in-out;
+$base-transition: all 300ms ease;

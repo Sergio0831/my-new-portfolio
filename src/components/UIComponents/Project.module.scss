@@ -54,4 +54,19 @@
       @include transform($Y: 0, $X: 0);
     }
   }
+
+  @media only screen and (hover: none) {
+    .projectOverlay {
+      opacity: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 70%,
+        rgba(0, 0, 0, 0.6)
+      );
+    }
+
+    .projectText {
+      @include transform($Y: 0, $X: 0);
+    }
+  }
 }

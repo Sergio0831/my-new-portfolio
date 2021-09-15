@@ -1,0 +1,45 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.btn {
+  cursor: pointer;
+  border-radius: $rounded;
+  color: $light;
+  background-color: $primary;
+  transition: all 300ms ease-in-out 0s;
+
+  &-large {
+    @include font($font-family-primary, $font-weight-semi-bold, $f-8);
+
+    width: 22rem;
+    padding: 1.1rem 0;
+    border: 2px solid $primary;
+
+    &:hover {
+      background: transparent;
+      color: $text;
+    }
+  }
+
+  &-block {
+    padding: 0.5rem 0;
+    width: $base-width;
+    border: 2px solid $primary;
+
+    @include font($font-family-primary, $font-weight-semi-bold, $f-8);
+
+    &:hover {
+      background: transparent;
+      color: $text;
+    }
+  }
+
+  &-round {
+    border: none;
+    background-color: transparent;
+    color: $primary;
+    font-size: $f-4;
+    padding: $p-1;
+    border-radius: $circle;
+  }
+}

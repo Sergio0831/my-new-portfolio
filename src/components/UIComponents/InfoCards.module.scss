@@ -46,4 +46,13 @@
       background-color: $light;
     }
   }
+
+  @media only screen and (hover: none) {
+    background-color: $light;
+    color: $text;
+
+    .infoCardTitle::before {
+      background-color: $primary;
+    }
+  }
 }

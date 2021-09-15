@@ -1,5 +1,6 @@
 import React from "react"
 import "../../assets/styles/_utilities.scss"
+import "../../assets/styles/_button.scss"
 import Subtitle from "../UIComponents/Subtitle"
 import Title from "../UIComponents/Title"
 import { projects, projectsGrid } from "./Projects.module.scss"
