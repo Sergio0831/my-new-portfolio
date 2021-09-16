@@ -20,18 +20,11 @@ const Slider = () => {
         slidesPerGroup={5}
         slidesPerView={7}
         breakpoints={{
-          1440: {
-            slidesPerView: 7,
-            spaceBetween: 50,
-          },
-          1200: {
-            slidesPerView: 6,
-            spaceBetween: 40,
-          },
-          960: { slidesPerView: 6, spaceBetween: 40 },
-          720: { slidesPerView: 5, spaceBetween: 40 },
-          480: { slidesPerView: 4, spaceBetween: 30 },
-          320: { slidesPerView: 3, spaceBetween: 20 },
+          1440: { slidesPerView: 7, spaceBetween: 50 },
+          960: { slidesPerView: 6, spaceBetween: 40, slidesPerGroup: 5 },
+          720: { slidesPerView: 5, spaceBetween: 40, slidesPerGroup: 5 },
+          480: { slidesPerView: 4, spaceBetween: 30, slidesPerGroup: 4 },
+          320: { slidesPerView: 3, spaceBetween: 20, slidesPerGroup: 3 },
         }}
         speed={2000}
         loop={true}

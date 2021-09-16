@@ -19,6 +19,7 @@
 
     &-pagination {
       @include position($p-absolute, $bottom: 0, $left: 50%);
+      @include transform($X: -50%, $Y: 0);
       display: $d-flex;
       z-index: 10;
 

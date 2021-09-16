@@ -20,24 +20,30 @@
   gap: $g-3;
   flex-direction: column-reverse;
 
-  .heroText {
+  &Text {
     text-align: $align-center;
   }
 
-  .heroHeading {
+  &Heading {
     @include font($font-family-primary, $font-weight-regular, $f-1);
     line-height: 7.8rem;
   }
-  .heroSubheading {
+
+  &Subheading {
     @include font($font-family-secondary, $font-weight-bold, $f-2);
     margin-bottom: $m-2;
   }
 
-  .heroImage {
+  &ImageContainer {
     width: 37rem;
     height: 37rem;
     border-radius: $circle;
     border: solid 0.5rem $primary;
+    overflow: hidden;
+  }
+
+  &Image {
+    @include wh;
   }
 
   @include breakpoint($bp: 52.69em) {

@@ -1,5 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 @use "sass:math";
 
 .navigation {
@@ -40,7 +41,7 @@
 
   .show-nav {
     @include first-child {
-      transform: rotate(45deg) translate(0.7rem, -0.7rem);
+      transform: rotate(45deg) translate(0.8rem, -0.7rem);
       transform-origin: top left;
     }
 
@@ -49,8 +50,20 @@
     }
 
     @include last-child {
-      transform: rotate(-45deg) translate(0.7rem, 0.6rem);
+      transform: rotate(-45deg) translate(0.8rem, 0.6rem);
       transform-origin: bottom left;
+    }
+
+    @include sm {
+      @include first-child {
+        transform: rotate(45deg) translate(0.7rem, -0.7rem);
+        transform-origin: top left;
+      }
+
+      @include last-child {
+        transform: rotate(-45deg) translate(0.7rem, 0.6rem);
+        transform-origin: bottom left;
+      }
     }
   }
 }

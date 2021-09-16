@@ -38,9 +38,4 @@
     transform: translateX(1rem);
     background: $secondary;
   }
-
-  @media only screen and (hover: none) {
-    transform: translateX(0);
-    background: none;
-  }
 }

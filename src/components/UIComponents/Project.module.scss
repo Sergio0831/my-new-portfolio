@@ -27,7 +27,7 @@
     letter-spacing: 1px;
     text-align: start;
     transition: transform 400ms ease-in-out 0s;
-    @include transform($Y: 0, $X: 200%);
+    @include transform($X: 0, $Y: 200%);
   }
 
   &Title {

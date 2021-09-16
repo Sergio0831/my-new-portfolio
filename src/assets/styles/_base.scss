@@ -45,6 +45,16 @@ span {
   display: inline-block;
 }
 
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 ::selection {
   color: $light;
   background-color: $secondary;
