@@ -17,7 +17,9 @@ const Form = () => {
           id="email"
           class={formInput}
           name="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
+          placeholder="Email"
         />
         <label htmlFor="email" className={formLabel}>
           Email

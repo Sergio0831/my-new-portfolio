@@ -42,17 +42,6 @@
     width: $base-width;
     transition: $base-transition;
 
-    &:focus:invalid {
-      border-bottom: 1px solid $secondary;
-      outline: none;
-      caret-color: $secondary;
-
-      & + label {
-        color: $secondary;
-        transform: translateY(-6rem) scale(0.8);
-      }
-    }
-
     &:valid {
       border-bottom: 1px solid $primary;
       outline: none;
@@ -60,6 +49,17 @@
 
       & + label {
         color: $primary;
+        transform: translateY(-6rem) scale(0.8);
+      }
+    }
+
+    &:focus:invalid {
+      border-bottom: 1px solid $secondary;
+      outline: none;
+      caret-color: $secondary;
+
+      & + label {
+        color: $secondary;
         transform: translateY(-6rem) scale(0.8);
       }
     }
@@ -84,6 +84,21 @@
         transform: translateY(-6rem) scale(0.8);
       }
     }
+
+    &[type="email"]::placeholder {
+      visibility: hidden;
+    }
+
+    &[type="email"]:not(:placeholder-shown) {
+      border-bottom: 1px solid $secondary;
+      outline: none;
+      caret-color: $secondary;
+
+      & + label {
+        color: $secondary;
+        transform: translateY(-6rem) scale(0.8);
+      }
+    }
   }
 
   textarea {
@@ -99,7 +114,7 @@
 
       & + label {
         color: $secondary;
-        transform: translateY(-18.5rem) scale(0.8);
+        transform: translateY(-17rem) scale(0.8);
       }
     }
 
@@ -109,7 +124,7 @@
 
       & + label {
         color: $primary;
-        transform: translateY(-18.5rem) scale(0.8);
+        transform: translateY(-17rem) scale(0.8);
       }
     }
   }
