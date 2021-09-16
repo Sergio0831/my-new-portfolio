@@ -16,14 +16,23 @@ const Slider = () => {
         className="swiper"
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: true,
-        }}
-        slidesPerView={7}
-        speed={3000}
-        loop={true}
+        centeredSlides={true}
         slidesPerGroup={5}
+        slidesPerView={7}
+        // breakpoints={{
+        //   1200: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 30,
+        //     slidesPerGroup: 3,
+        //   },
+        //   // 960: { slidesPerView: 4 },
+        //   // 720: { slidesPerView: 4, spaceBetween: 20 },
+        //   // 480: { slidesPerView: 3, spaceBetween: 0 },
+        //   // 320: { slidesPerView: 2, spaceBetween: 0 },
+        // }}
+        speed={2000}
+        loop={true}
+        grabCursor={true}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",

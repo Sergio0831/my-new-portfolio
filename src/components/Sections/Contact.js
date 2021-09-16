@@ -6,7 +6,7 @@ import { contact } from "./Contact.module.scss"
 
 const Contact = () => {
   return (
-    <section className={contact}>
+    <section className={contact} id="contact">
       <Title title="Contact Me" />
       <Subtitle subtitle="This is how you can contact me..." />
       <Form />

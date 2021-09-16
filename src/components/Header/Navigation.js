@@ -1,5 +1,6 @@
 import clsx from "clsx"
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
+import { MenuContext } from "../../context/MenuContext"
 import Menu from "./Menu"
 import {
   navigation,
@@ -9,7 +10,8 @@ import {
 } from "./Navigation.module.scss"
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const nav = useContext(MenuContext)
+  const { isOpen, setIsOpen } = nav
 
   const classes = clsx({
     [navigationIcon]: true,
@@ -24,7 +26,7 @@ const Navigation = () => {
         <span className={classes}>&nbsp;</span>
         &nbsp;
       </button>
-      <Menu isOpen={isOpen} />
+      <Menu />
     </div>
   )
 }

@@ -12,12 +12,14 @@
 @mixin centered-flex(
   $flex-direction: null,
   $justify-content: null,
-  $align-items: null
+  $align-items: null,
+  $flex-wrap: null
 ) {
   display: $d-flex;
   flex-direction: $flex-direction;
   align-items: $align-items;
   justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
 }
 
 @mixin centered-grid($justify-content) {
@@ -108,5 +110,3 @@
     }
   }
 }
-
-// Breakpoints

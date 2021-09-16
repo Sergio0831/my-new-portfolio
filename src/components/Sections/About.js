@@ -27,7 +27,7 @@ const About = () => {
   } = useStaticQuery(query)
 
   return (
-    <section className={about}>
+    <section className={about} id="about">
       <div className={`section-title`}>
         <Title title="About Me" />
         <Subtitle subtitle="Let me tell you who I'm." />

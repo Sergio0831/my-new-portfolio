@@ -6,7 +6,7 @@ import { skills } from "./Skills.module.scss"
 
 const Skills = () => {
   return (
-    <section className={skills}>
+    <section className={skills} id="skills">
       <div className={`section-title`}>
         <Title title="My Skills" />
       </div>

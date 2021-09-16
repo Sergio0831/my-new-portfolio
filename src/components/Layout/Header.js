@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { MenuProvider } from "../../context/MenuContext"
 import Logo from "../Header/Logo"
 import Navigation from "../Header/Navigation"
 import { header } from "./Header.module.scss"
@@ -10,7 +11,9 @@ const Header = () => {
       <Link to="/">
         <Logo />
       </Link>
-      <Navigation />
+      <MenuProvider>
+        <Navigation />
+      </MenuProvider>
     </header>
   )
 }

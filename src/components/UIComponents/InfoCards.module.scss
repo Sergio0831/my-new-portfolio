@@ -15,7 +15,7 @@
   }
 
   &Title {
-    @include font($font-family-primary, $font-weight-semi-bold, $font-small);
+    @include font($font-family-primary, $font-weight-semi-bold, $f-8);
 
     position: $p-relative;
     padding-bottom: math.div($p-1, 2);
@@ -35,7 +35,7 @@
   }
 
   &Text {
-    @include font($font-family-secondary, $font-weight-regular, $font-xs);
+    @include font($font-family-secondary, $font-weight-regular, $f-9);
   }
 
   &:hover {

@@ -25,11 +25,13 @@
 }
 
 .navLink {
-  @include font($font-family-primary, $font-weight-semi-bold, $font-xl);
+  @include font($font-family-primary, $font-weight-semi-bold, $f-1);
   color: $light;
   padding: $p-1 $p-3 + 0.5;
   border-radius: $rounded;
   transition: $base-transition;
+  cursor: pointer;
+  text-transform: capitalize;
 
   &Active,
   &:hover {

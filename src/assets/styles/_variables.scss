@@ -8,14 +8,6 @@ $bg-secondary: #f0f5f8;
 $light: #f7f7f7;
 
 // Font
-$font-base: 1rem;
-$font-xl: $font-base * 6;
-$font-large: 4.8rem;
-$font-medium: 2.4rem;
-$font-small: 1.8rem;
-$font-xs: 1.6rem;
-$font-xxs: 1.4rem;
-
 $f-base: 1rem;
 $f-1: $f-base * 6;
 $f-2: $f-base * 4.8;
@@ -49,6 +41,7 @@ $circle: 50%;
 $align-center: center;
 $justify-center: center;
 $justify-between: space-between;
+$wrap: wrap;
 
 // Position
 $p-relative: relative;

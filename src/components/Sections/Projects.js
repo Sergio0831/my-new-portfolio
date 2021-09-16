@@ -9,7 +9,7 @@ import { Link } from "gatsby"
 
 const Projects = () => {
   return (
-    <section className={`section-center ${projects}`}>
+    <section className={`section-center ${projects}`} id="works">
       <div className={`section-title`}>
         <Title title="My Projects" />
         <Subtitle subtitle="Check out of some my projects..." />

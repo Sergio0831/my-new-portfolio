@@ -40,6 +40,7 @@
     &:focus:invalid {
       border-bottom: 1px solid $secondary;
       outline: none;
+      caret-color: $secondary;
 
       & + label {
         color: $secondary;
@@ -50,6 +51,7 @@
     &:valid {
       border-bottom: 1px solid $primary;
       outline: none;
+      caret-color: $primary;
 
       & + label {
         color: $primary;
@@ -63,6 +65,17 @@
 
       & + label {
         color: $secondary;
+        transform: translateY(-6rem) scale(0.8);
+      }
+    }
+
+    &[type="email"]:valid {
+      border-bottom: 1px solid $primary;
+      outline: none;
+      caret-color: $primary;
+
+      & + label {
+        color: $primary;
         transform: translateY(-6rem) scale(0.8);
       }
     }

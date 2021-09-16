@@ -1,6 +1,7 @@
 import clsx from "clsx"
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from "react-scroll"
+import React, { useContext } from "react"
+import links from "../../data/nav-links"
 import {
   nav,
   navList,
@@ -9,8 +10,11 @@ import {
   navLink,
   navLinkActive,
 } from "./Nav.module.scss"
+import { MenuContext } from "../../context/MenuContext"
 
-const Nav = ({ isOpen }) => {
+const Nav = () => {
+  const menu = useContext(MenuContext)
+  const { onCloseMenu, isOpen } = menu
   const classes = clsx({
     [navItem]: true,
     [navItemIn]: isOpen,
@@ -19,31 +23,24 @@ const Nav = ({ isOpen }) => {
   return (
     <nav className={nav}>
       <ul className={navList}>
-        <li className={classes}>
-          <Link to="#" className={`${navLink} ${navLinkActive}`}>
-            Home
-          </Link>
-        </li>
-        <li className={classes}>
-          <Link to="#" className={navLink}>
-            About
-          </Link>
-        </li>
-        <li className={classes}>
-          <Link to="#" className={navLink}>
-            Works
-          </Link>
-        </li>
-        <li className={classes}>
-          <Link to="#" className={navLink}>
-            Skills
-          </Link>
-        </li>
-        <li className={classes}>
-          <Link to="#" className={navLink}>
-            Contact
-          </Link>
-        </li>
+        {links.map(item => {
+          const { link } = item
+          return (
+            <li className={classes} key={link}>
+              <Link
+                className={navLink}
+                activeClass={navLinkActive}
+                onClick={onCloseMenu}
+                smooth={true}
+                duration={500}
+                spy={true}
+                to={link}
+              >
+                {link}
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )

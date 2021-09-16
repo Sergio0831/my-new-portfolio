@@ -7,7 +7,7 @@
   text-align: $align-center;
 
   &Copy {
-    @include font($font-family-primary, $font-weight-medium, $font-small);
+    @include font($font-family-primary, $font-weight-medium, $f-8);
 
     color: $light;
   }

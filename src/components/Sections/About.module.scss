@@ -7,22 +7,18 @@
 
   &Content {
     display: $d-grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     align-items: $align-center;
     grid-gap: $g-4 * 2;
   }
 
   &Bio {
-    @include font(
-      $font-family-secondary,
-      $font-weight-semi-bold,
-      $font-base * 2
-    );
+    @include font($font-family-secondary, $font-weight-semi-bold, $f-7);
 
     line-height: 1.6;
 
     span {
-      @include font($font-family-primary, $font-weight-semi-bold, 3rem);
+      @include font($font-family-primary, $font-weight-semi-bold, $f-4);
     }
   }
 

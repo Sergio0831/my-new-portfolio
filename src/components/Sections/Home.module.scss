@@ -12,21 +12,22 @@
 .hero {
   @include centered-flex(
     $justify-content: $justify-center,
-    $align-items: $align-center
+    $align-items: $align-center,
+    $flex-wrap: $wrap
   );
 
-  column-gap: $g-5 * 2;
+  gap: $g-5 * 2;
 
   .heroText {
     text-align: $align-center;
   }
 
   .heroHeading {
-    @include font($font-family-primary, $font-weight-regular, $font-xl);
+    @include font($font-family-primary, $font-weight-regular, $f-1);
     line-height: 7.8rem;
   }
   .heroSubheading {
-    @include font($font-family-secondary, $font-weight-bold, $font-large);
+    @include font($font-family-secondary, $font-weight-bold, $f-2);
     margin-bottom: $m-2;
   }
 

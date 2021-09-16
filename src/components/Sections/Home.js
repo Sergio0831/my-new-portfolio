@@ -31,7 +31,7 @@ const Home = () => {
   const pathToImage = getImage(image)
 
   return (
-    <section className={home}>
+    <section className={home} id="home">
       <div className={hero}>
         <div className={heroText}>
           <h1 className={heroHeading}>{name}</h1>
