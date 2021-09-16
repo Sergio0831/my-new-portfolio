@@ -3,7 +3,6 @@ import {
   home,
   hero,
   heroText,
-  heroImageContainer,
   heroImage,
   heroHeading,
   heroSubheading,
@@ -56,9 +55,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className={heroImageContainer}>
-          <GatsbyImage className={heroImage} image={pathToImage} alt={name} />
-        </div>
+        <GatsbyImage className={heroImage} image={pathToImage} alt={name} />
       </div>
     </section>
   )

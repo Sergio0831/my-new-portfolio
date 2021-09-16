@@ -34,16 +34,12 @@
     margin-bottom: $m-2;
   }
 
-  &ImageContainer {
+  &Image {
     width: 37rem;
     height: 37rem;
-    border-radius: $circle;
+    border-radius: 12rem 2rem 12rem 2rem;
     border: solid 0.5rem $primary;
     overflow: hidden;
-  }
-
-  &Image {
-    @include wh;
   }
 
   @include breakpoint($bp: 52.69em) {
