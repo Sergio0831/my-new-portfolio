@@ -1,15 +1,32 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 
 .about {
   background-color: $bg-secondary;
-  padding-top: $p-2 * 2;
+  padding-top: $p-4;
+  padding-bottom: $p-6;
+
+  @include breakpoint($bp: 52.69em) {
+    padding-bottom: 0;
+  }
 
   &Content {
     display: $d-grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-columns: 1fr;
     align-items: $align-center;
-    grid-gap: $g-4 * 2;
+    gap: $g-4;
+    margin-bottom: $m-6;
+
+    @include breakpoint($bp: 52.69em) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $g-4 * 2;
+    }
   }
 
   &Bio {
@@ -25,8 +42,20 @@
   .infoCards {
     display: $d-grid;
     justify-content: $justify-center;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    grid-gap: 12rem;
-    transform: translateY(50%);
+    grid-template-columns: 1fr;
+    gap: $g-3;
+    transform: translateY(0);
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint($bp: 52.69em) {
+      transform: translateY(50%);
+    }
+
+    @include xl {
+      gap: $g-6 * 2;
+    }
   }
 }

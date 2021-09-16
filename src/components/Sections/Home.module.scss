@@ -1,5 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 
 .home {
   background-image: url(../../assets/images/home-bg.svg);
@@ -16,7 +17,8 @@
     $flex-wrap: $wrap
   );
 
-  gap: $g-5 * 2;
+  gap: $g-3;
+  flex-direction: column-reverse;
 
   .heroText {
     text-align: $align-center;
@@ -36,5 +38,10 @@
     height: 37rem;
     border-radius: $circle;
     border: solid 0.5rem $primary;
+  }
+
+  @include breakpoint($bp: 52.69em) {
+    flex-direction: row;
+    gap: $g-4 * 2;
   }
 }

@@ -1,13 +1,18 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 
 .form {
-  max-width: 60rem;
+  max-width: 50rem;
   background-color: $light;
   margin: $m-6 auto;
   padding: $p-5 $p-5 $p-4;
   border-radius: $rounded;
   text-align: $align-center;
+
+  @include md {
+    max-width: 60rem;
+  }
 
   &Group {
     text-align: left;

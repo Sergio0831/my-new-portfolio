@@ -1,12 +1,21 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 
 .swiper-container {
   position: relative;
 
   .swiper {
     height: 19.5rem;
-    max-width: 114rem;
+    max-width: 100rem;
+
+    @include lg {
+      max-width: 100rem;
+    }
+
+    @include breakpoint($bp: 78.13em) {
+      max-width: 114rem;
+    }
 
     &-pagination {
       @include position($p-absolute, $bottom: 0, $left: 50%);
@@ -34,19 +43,54 @@
 
   .swiper-button {
     @include position(absolute, $top: 4.3rem);
+    display: none;
 
     &:hover {
       background-color: lighten($primary-light, 30%);
     }
 
     &-next {
-      right: -3rem;
+      right: 1rem;
       transform: rotate(-90deg);
     }
 
     &-prev {
-      left: -3rem;
+      left: 1rem;
       transform: rotate(90deg);
+    }
+
+    @include lg {
+      display: block;
+
+      &-next {
+        right: -2rem;
+      }
+
+      &-prev {
+        left: -2rem;
+      }
+    }
+
+    @include xl {
+      display: block;
+
+      &-next {
+        right: 0;
+      }
+
+      &-prev {
+        left: 0;
+      }
+    }
+
+    @include breakpoint($bp: 78.13em) {
+      &-next {
+        right: -3rem;
+      }
+
+      &-prev {
+        left: -3rem;
+      }
     }
 
     @media only screen and (hover: none) {

@@ -19,17 +19,20 @@ const Slider = () => {
         centeredSlides={true}
         slidesPerGroup={5}
         slidesPerView={7}
-        // breakpoints={{
-        //   1200: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 30,
-        //     slidesPerGroup: 3,
-        //   },
-        //   // 960: { slidesPerView: 4 },
-        //   // 720: { slidesPerView: 4, spaceBetween: 20 },
-        //   // 480: { slidesPerView: 3, spaceBetween: 0 },
-        //   // 320: { slidesPerView: 2, spaceBetween: 0 },
-        // }}
+        breakpoints={{
+          1440: {
+            slidesPerView: 7,
+            spaceBetween: 50,
+          },
+          1200: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+          },
+          960: { slidesPerView: 6, spaceBetween: 40 },
+          720: { slidesPerView: 5, spaceBetween: 40 },
+          480: { slidesPerView: 4, spaceBetween: 30 },
+          320: { slidesPerView: 3, spaceBetween: 20 },
+        }}
         speed={2000}
         loop={true}
         grabCursor={true}

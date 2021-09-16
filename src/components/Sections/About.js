@@ -32,18 +32,21 @@ const About = () => {
         <Title title="About Me" />
         <Subtitle subtitle="Let me tell you who I'm." />
       </div>
-      <div className={`section-center ${aboutContent}`}>
-        <StaticImage
-          src="../../assets/images/coding.svg"
-          alt="coding"
-          placeholder="blurred"
-          className={aboutImage}
-        />
-        <h3 className={aboutBio}>
-          <span>Hi,</span> <br />
-          {bio}
-        </h3>
+      <div className="section-center">
+        <div className={aboutContent}>
+          <StaticImage
+            src="../../assets/images/coding.svg"
+            alt="coding"
+            placeholder="blurred"
+            className={aboutImage}
+          />
+          <h3 className={aboutBio}>
+            <span>Hi,</span> <br />
+            {bio}
+          </h3>
+        </div>
       </div>
+
       <div className={`section-center ${infoCards}`}>
         <InfoCards />
       </div>

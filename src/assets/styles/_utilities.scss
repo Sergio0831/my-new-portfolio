@@ -1,9 +1,15 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 
 .section-center {
   max-width: 120rem;
   margin: 0 auto;
+  padding: 0 $p-3;
+
+  @include xl {
+    padding: 0;
+  }
 }
 
 .section-title {

@@ -1,16 +1,25 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 
 .projects {
-  padding-top: $p-3 * 6;
+  padding-top: $p-3;
   padding-bottom: $p-6;
   background-color: $bg-primary;
   margin-top: 0;
   text-align: $align-center;
 
+  @include breakpoint($bp: 52.69em) {
+    padding-top: $p-6 * 3;
+  }
+
   &Grid {
     display: $d-grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin-bottom: $m-4 * 2;
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
