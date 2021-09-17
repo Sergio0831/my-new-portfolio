@@ -7,7 +7,7 @@ module.exports = {
     title: "Sergejs Ivcenko Portfolio",
     description: "Gatsby and sass portfolio",
     author: "@sergejsivcenko",
-    siteUrl: `https://www.gatsbyjs.com`,
+    siteUrl: `https://ivcenko-new-portfolio.netlify.app/`,
   },
 
   plugins: [
@@ -28,6 +28,12 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFULL_SPACE_ID,
         accessToken: process.env.CONTENTFULL_API_KEY,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`autoprefixer`)()],
       },
     },
     {

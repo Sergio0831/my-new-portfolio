@@ -6,7 +6,6 @@
   background-color: $bg-secondary;
   padding-top: $p-4;
   padding-bottom: $p-6;
-  z-index: 2;
 
   @include breakpoint($bp: 52.69em) {
     padding-bottom: 0;
