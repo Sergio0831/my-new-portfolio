@@ -21,6 +21,18 @@
     }
   }
 
+  &-small {
+    @include font($font-family-primary, $font-weight-regular, $f-10);
+    width: 12rem;
+    padding: 0.6rem 0;
+    border: 2px solid $primary;
+
+    &:hover {
+      background: transparent;
+      color: $text;
+    }
+  }
+
   &-block {
     padding: 0.5rem 0;
     width: $base-width;

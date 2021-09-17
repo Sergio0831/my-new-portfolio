@@ -1,0 +1,12 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/breakpoints" as *;
+
+.projectsGrid {
+  display: $d-grid;
+  grid-template-columns: 1fr;
+  margin-bottom: $m-4 * 2;
+
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
+}

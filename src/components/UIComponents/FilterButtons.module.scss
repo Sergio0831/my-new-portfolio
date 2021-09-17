@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
+
+.filterButtons {
+  @include centered-flex($justify-content: $justify-center);
+
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: $g-1 * 1.5;
+  margin-bottom: $m-6;
+  padding: 0 $p-3;
+}
