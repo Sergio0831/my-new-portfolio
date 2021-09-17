@@ -21,8 +21,20 @@
     }
   }
 
+  &-medium {
+    @include font($font-family-primary, $font-weight-medium, $f-9);
+    width: 15rem;
+    padding: 0.8rem 0;
+    border: 2px solid $primary;
+
+    &:hover {
+      background: transparent;
+      color: $text;
+    }
+  }
+
   &-small {
-    @include font($font-family-primary, $font-weight-regular, $f-10);
+    @include font($font-family-primary, $font-weight-medium, $f-10);
     width: 12rem;
     padding: 0.6rem 0;
     border: 2px solid $primary;
@@ -30,6 +42,16 @@
     &:hover {
       background: transparent;
       color: $text;
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    color: $text;
+
+    &:hover {
+      background: $primary;
+      color: $light;
     }
   }
 

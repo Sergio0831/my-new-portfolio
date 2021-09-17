@@ -1,17 +1,11 @@
 import React from "react"
 import Subtitle from "../UIComponents/Subtitle"
 import Title from "../UIComponents/Title"
-import {
-  about,
-  aboutContent,
-  aboutImage,
-  aboutBio,
-  infoCards,
-} from "./About.module.scss"
-import "../../assets/styles/_utilities.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 import InfoCards from "../UIComponents/InfoCards"
+import { about, aboutContent, aboutBio, infoCards } from "./About.module.scss"
+import "../../assets/styles/_utilities.scss"
 
 const query = graphql`
   query BIO {
@@ -38,7 +32,6 @@ const About = () => {
             src="../../assets/images/coding.svg"
             alt="coding"
             placeholder="blurred"
-            className={aboutImage}
           />
           <h3 className={aboutBio}>
             <span>Hi,</span> <br />

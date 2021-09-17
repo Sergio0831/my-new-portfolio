@@ -1,5 +1,5 @@
+import React, { useContext } from "react"
 import clsx from "clsx"
-import React, { useContext, useState } from "react"
 import { MenuContext } from "../../context/MenuContext"
 import Menu from "./Menu"
 import {

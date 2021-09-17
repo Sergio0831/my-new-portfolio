@@ -1,8 +1,8 @@
-import clsx from "clsx"
 import React, { useContext } from "react"
+import clsx from "clsx"
 import Nav from "./Nav"
-import { menu, showMenu } from "./Menu.module.scss"
 import { MenuContext } from "../../context/MenuContext"
+import { menu, showMenu } from "./Menu.module.scss"
 
 const Menu = () => {
   const nav = useContext(MenuContext)

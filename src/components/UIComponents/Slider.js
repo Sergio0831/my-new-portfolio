@@ -1,13 +1,13 @@
 import React from "react"
 import { Autoplay, Navigation, Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { slides } from "../../data/slides"
+import { Button } from "./Button"
 import { skillContainer, skillTitle } from "./Slider.module.scss"
 import "../../assets/styles/_swiper.scss"
 import "../../assets/styles/_icons.scss"
 import "../../assets/styles/_button.scss"
 import "swiper/scss"
-import { slides } from "../../data/slides"
-import { Button } from "./Button"
 
 const Slider = () => {
   return (
@@ -40,8 +40,8 @@ const Slider = () => {
             return '<span class="swiper-pagination-bullet"></span>'
           },
         }}
-        onSwiper={swiper => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSwiper={swiper => swiper}
+        onSlideChange={() => {}}
       >
         {slides.map(slide => (
           <SwiperSlide key={slide.title}>

@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
         <a
           className="social-link social-link-footer icon-github"
-          href="https://www.linkedin.com/in/ivcenko/"
+          href="https://github.com/Sergio0831"
           target="_blank"
           rel="noreferrer"
         >

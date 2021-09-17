@@ -1,10 +1,27 @@
 import React from "react"
 import { Button } from "./Button"
+import emailjs from "emailjs-com"
 import { form, formGroup, formInput, formLabel } from "./Form.module.scss"
 
 const Form = () => {
+  const sendEmail = e => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.EMAILJS_USER_ID
+      )
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+  }
+
   return (
-    <form className={form}>
+    <form className={form} onSubmit={sendEmail}>
       <div className={formGroup}>
         <input type="name" id="name" class={formInput} name="name" required />
         <label htmlFor="name" className={formLabel}>

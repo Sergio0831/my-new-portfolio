@@ -1,5 +1,5 @@
-import clsx from "clsx"
 import React from "react"
+import clsx from "clsx"
 import "../../assets/styles/_button.scss"
 
 export const Button = ({
@@ -15,7 +15,7 @@ export const Button = ({
 }) => {
   const classes = clsx(
     {
-      ["btn"]: true,
+      btn: true,
       "btn-large": large,
       "btn-small": small,
       "btn-outline": outline,

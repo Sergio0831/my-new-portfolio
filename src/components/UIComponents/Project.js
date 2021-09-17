@@ -1,5 +1,5 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import {
   project,
   projectImage,
@@ -21,7 +21,7 @@ const Project = () => {
           placeholder="blurred"
           layout="constrained"
           quality={100}
-          maxWidth={1000}
+          maxwidth={1000}
         />
         <div className={projectOverlay}>
           <div className={projectText}>

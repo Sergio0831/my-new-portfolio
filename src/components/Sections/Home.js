@@ -1,14 +1,17 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from "react-scroll"
+import MyResume from "../../assets/images/SergejsIvcenkoResume.pdf"
 import {
   home,
   hero,
   heroText,
+  heroLinks,
   heroImage,
   heroHeading,
   heroSubheading,
 } from "./Home.module.scss"
-import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "../../assets/styles/_icons.scss"
 import "../../assets/styles/_utilities.scss"
 
@@ -36,22 +39,20 @@ const Home = () => {
         <div className={heroText}>
           <h1 className={heroHeading}>{name}</h1>
           <h2 className={heroSubheading}>{position}</h2>
-          <div className="social">
-            <a
-              className="social-link social-link-home icon-linkedin"
-              href="https://www.linkedin.com/in/ivcenko/"
-              target="_blank"
-              rel="noreferrer"
+          <div className={heroLinks}>
+            <Link
+              className="btn btn-medium"
+              smooth={true}
+              duration={500}
+              spy={true}
+              to="contact"
             >
-              &nbsp;
-            </a>
-            <a
-              className="social-link social-link-home icon-github"
-              href="https://www.linkedin.com/in/ivcenko/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              &nbsp;
+              Contact Me
+            </Link>
+            <a className="btn btn-medium btn-outline" href={MyResume} download>
+              {" "}
+              Resume
+              <i className="icon-file-download-solid"></i>
             </a>
           </div>
         </div>

@@ -11,7 +11,7 @@ const ProjectsPage = () => {
     <Layout>
       <main className="pt">
         <div className="section-title">
-          <Title title="This is my Works" />
+          <Title title="This is My Works" />
           <Subtitle subtitle="Take a look around and explore all works" />
         </div>
         <FilterButtons />

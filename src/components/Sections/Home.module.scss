@@ -35,6 +35,26 @@
     margin-bottom: $m-2;
   }
 
+  &Links {
+    @include centered-flex($justify-content: $justify-center);
+    gap: $g-1;
+
+    a {
+      &:last-child {
+        @include centered-flex(
+          $justify-content: $justify-center,
+          $align-items: $align-center
+        );
+
+        gap: $g-1 * 1.5;
+
+        i {
+          font-size: $f-6;
+        }
+      }
+    }
+  }
+
   &Image {
     width: 37rem;
     height: 37rem;

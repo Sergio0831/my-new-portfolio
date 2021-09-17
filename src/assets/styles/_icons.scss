@@ -12,6 +12,7 @@
 
 [class^="icon-"],
 [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
@@ -24,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-exclamation-circle-solid:before {
+  content: "\e908";
+}
+.icon-trophy-solid:before {
+  content: "\e909";
+}
+.icon-file-download-solid:before {
+  content: "\e90a";
+}
 .icon-arrow-out:before {
   content: "\e904";
 }

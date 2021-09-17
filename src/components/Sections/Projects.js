@@ -1,11 +1,12 @@
 import React from "react"
-import "../../assets/styles/_utilities.scss"
-import "../../assets/styles/_button.scss"
+
 import Subtitle from "../UIComponents/Subtitle"
 import Title from "../UIComponents/Title"
-import { projects } from "./Projects.module.scss"
 import { Link } from "gatsby"
 import AllProjects from "../UIComponents/AllProjects"
+import { projects } from "./Projects.module.scss"
+import "../../assets/styles/_utilities.scss"
+import "../../assets/styles/_button.scss"
 
 const Projects = () => {
   return (

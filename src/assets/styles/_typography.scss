@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.title {
+.title-styled {
   @include font($font-family-primary, $font-weight-semi-bold, $f-2);
   text-align: $align-center;
   position: $p-relative;
@@ -19,7 +19,7 @@
   }
 }
 
-.subtitle {
+.subtitle-styled {
   @include font($font-family-secondary, $font-weight-regular, $f-5);
   text-align: $align-center;
 }

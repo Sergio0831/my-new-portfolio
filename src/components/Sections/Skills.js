@@ -1,7 +1,7 @@
 import React from "react"
-import "../../assets/styles/_utilities.scss"
 import Slider from "../UIComponents/Slider"
 import Title from "../UIComponents/Title"
+import "../../assets/styles/_utilities.scss"
 import { skills } from "./Skills.module.scss"
 
 const Skills = () => {
