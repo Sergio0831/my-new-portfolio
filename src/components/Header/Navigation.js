@@ -20,12 +20,12 @@ const Navigation = () => {
 
   return (
     <div className={navigation}>
-      <button className={navigationButton} onClick={() => setIsOpen(!isOpen)}>
+      <div className={navigationButton} onClick={() => setIsOpen(!isOpen)}>
         <span className={classes}>&nbsp;</span>
         <span className={classes}>&nbsp;</span>
         <span className={classes}>&nbsp;</span>
         &nbsp;
-      </button>
+      </div>
       <Menu />
     </div>
   )

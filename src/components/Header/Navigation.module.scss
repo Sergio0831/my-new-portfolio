@@ -9,7 +9,7 @@
     border: none;
     cursor: pointer;
     position: $p-fixed;
-    z-index: 6;
+    z-index: 2000;
     top: 4.6rem;
     right: 5rem;
     background: transparent;
@@ -24,6 +24,7 @@
 
     @include first-child {
       transform: rotate(0deg) translate(0.5rem, 0);
+      transform-origin: top left;
     }
 
     @include nth-child(2) {
@@ -32,6 +33,7 @@
 
     @include last-child {
       transform: rotate(0deg) translate(-0.5rem, 0);
+      transform-origin: bottom left;
     }
 
     @include not-last-child {

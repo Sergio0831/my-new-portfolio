@@ -2,8 +2,21 @@
 @use "../../assets/styles/mixins" as *;
 
 .nav {
+  @include position($p-fixed, $top: 0, $left: 0);
   @include centered-grid(center);
+
+  z-index: -1500;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
+
+.showNav {
+  z-index: 1500;
+  opacity: 1;
+}
+
 .navList {
   text-align: $align-center;
 }
@@ -12,14 +25,12 @@
   transform: translateY(100%);
   transition: all 0.3s ease;
   opacity: 0;
-  z-index: -5;
 
   @include transition-delay-down;
 
   &In {
     transform: translateY(0);
     opacity: 1;
-    z-index: 5;
     @include transition-delay-up;
   }
 }
@@ -32,6 +43,7 @@
   transition: $base-transition;
   cursor: pointer;
   text-transform: capitalize;
+  opacity: 1;
 
   &Active,
   &:hover {

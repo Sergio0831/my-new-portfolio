@@ -9,24 +9,30 @@ import {
   navItemIn,
   navLink,
   navLinkActive,
+  showNav,
 } from "./Nav.module.scss"
 import { MenuContext } from "../../context/MenuContext"
 
 const Nav = () => {
   const menu = useContext(MenuContext)
   const { onCloseMenu, isOpen } = menu
-  const classes = clsx({
+  const navItemClasses = clsx({
     [navItem]: true,
     [navItemIn]: isOpen,
   })
 
+  const navClasses = clsx({
+    [nav]: true,
+    [showNav]: isOpen,
+  })
+
   return (
-    <nav className={nav}>
+    <nav className={navClasses}>
       <ul className={navList}>
         {links.map(item => {
           const { link } = item
           return (
-            <li className={classes} key={link}>
+            <li className={navItemClasses} key={link}>
               <Link
                 className={navLink}
                 activeClass={navLinkActive}

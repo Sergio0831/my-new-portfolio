@@ -2,18 +2,19 @@ import React, { useContext } from "react"
 import clsx from "clsx"
 import Nav from "./Nav"
 import { MenuContext } from "../../context/MenuContext"
-import { menu, showMenu } from "./Menu.module.scss"
+import { menuBg, showMenu } from "./Menu.module.scss"
 
 const Menu = () => {
   const nav = useContext(MenuContext)
   const { isOpen } = nav
   const classes = clsx({
-    [menu]: true,
+    [menuBg]: true,
     [showMenu]: isOpen,
   })
 
   return (
-    <div className={classes}>
+    <div>
+      <div className={classes}>&nbsp;</div>
       <Nav />
     </div>
   )
