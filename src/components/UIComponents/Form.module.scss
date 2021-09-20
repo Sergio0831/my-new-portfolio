@@ -28,7 +28,7 @@
     transform-origin: 0 0;
     display: $d-block;
     pointer-events: none;
-    transition: $base-transition;
+    transition: color 0.3s ease, transform 0.3s ease;
     cursor: text;
   }
 
@@ -40,7 +40,8 @@
     border-bottom: 1px solid $text;
     background: none;
     width: $base-width;
-    transition: $base-transition;
+    transition: border-bottom 0.3s ease, outline 0.3s ease,
+      caret-color 0.3s ease;
 
     &:valid {
       border-bottom: 1px solid $primary;
