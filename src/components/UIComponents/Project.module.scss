@@ -32,6 +32,8 @@
 
   &Title {
     @include font($font-family-primary, $font-weight-bold, $f-7);
+
+    margin-bottom: 0.5rem;
   }
 
   &Tech {

@@ -26,7 +26,7 @@ const useForm = () => {
       )
       .then(res => {
         console.log(res)
-        if (res.text === "OK" && res.status === 200) {
+        if (res.status === 200) {
           setValues({
             name: "",
             email: "",
@@ -35,13 +35,12 @@ const useForm = () => {
           })
           setMessage("Thank you for contacting me.")
           setIsModalOpen(true)
-        } else {
-          setIsModalOpen(true)
-          setMessage("Something went wrong. Please try again.")
-          setValues({ ...values, [e.target.name]: e.target.value })
         }
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        setIsModalOpen(true)
+        setMessage("Something went wrong. Please try again.")
+      })
   }
 
   const closeModal = () => {

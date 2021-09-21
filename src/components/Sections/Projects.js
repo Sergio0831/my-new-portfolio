@@ -1,12 +1,11 @@
 import React from "react"
-
 import Subtitle from "../UIComponents/Subtitle"
 import Title from "../UIComponents/Title"
 import { Link } from "gatsby"
-import AllProjects from "../UIComponents/AllProjects"
 import { projects } from "./Projects.module.scss"
 import "../../assets/styles/_utilities.scss"
 import "../../assets/styles/_button.scss"
+import Project from "../UIComponents/Project"
 
 const Projects = () => {
   return (
@@ -15,7 +14,7 @@ const Projects = () => {
         <Title title="My Projects" />
         <Subtitle subtitle="Check out of some my projects..." />
       </div>
-      <AllProjects />
+      <Project />
       <Link to="/projects" className="btn btn-large">
         All Projects
       </Link>

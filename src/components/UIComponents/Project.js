@@ -1,5 +1,6 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useEffect } from "react"
+import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   project,
   projectImage,
@@ -10,28 +11,39 @@ import {
   underline,
 } from "./Project.module.scss"
 
-const Project = () => {
+const Project = ({ projects = [] }) => {
+  useEffect(() => {
+    console.log(projects.tags)
+  }, [projects])
+
   return (
-    <article className={project}>
-      <a href="https://my-house.netlify.app/" target="_blank" rel="noreferrer">
-        <StaticImage
-          src="../../assets/images/todo.png"
-          alt="project"
-          className={projectImage}
-          placeholder="blurred"
-          layout="constrained"
-          quality={100}
-          maxwidth={1000}
-        />
-        <div className={projectOverlay}>
-          <div className={projectText}>
-            <h4 className={projectTitle}>Newsletter Form</h4>
-            <p className={projectTech}>React, PHP</p>
-            <div className={underline}>&nbsp;</div>
-          </div>
-        </div>
-      </a>
-    </article>
+    <>
+      {projects.map(item => {
+        const { id, name, frontImage, tags, slug } = item
+        const pathToImage = getImage(frontImage)
+        const tag = tags.map(tag => tag.content).join(", ")
+
+        //console.log(newTag)
+        return (
+          <article key={id} className={project}>
+            <Link to={`/${slug}`}>
+              <GatsbyImage
+                image={pathToImage}
+                alt={slug}
+                className={projectImage}
+              />
+              <div className={projectOverlay}>
+                <div className={projectText}>
+                  <h4 className={projectTitle}>{name}</h4>
+                  <p className={projectTech}>{tag}</p>
+                  <div className={underline}>&nbsp;</div>
+                </div>
+              </div>
+            </Link>
+          </article>
+        )
+      })}
+    </>
   )
 }
 
