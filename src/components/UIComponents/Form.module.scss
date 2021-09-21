@@ -9,6 +9,7 @@
   padding: $p-5 $p-5 $p-4;
   border-radius: $rounded;
   text-align: $align-center;
+  position: $p-relative;
 
   @include md {
     max-width: 60rem;

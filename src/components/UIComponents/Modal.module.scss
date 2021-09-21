@@ -1,0 +1,14 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.modal {
+  @include position($p-absolute, $top: -5rem, $left: 0, $right: 0);
+  background-color: $secondary;
+  color: $light;
+  padding: $p-1 0;
+  border-radius: $rounded;
+}
+
+.modalContent {
+  @include font($font-family-primary, $font-weight-medium, $f-7);
+}
