@@ -6,22 +6,30 @@ import "../../assets/styles/_utilities.scss"
 import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
-  query {
-    allProjects: allContentfulProjects(sort: { fields: name, order: ASC }) {
-      nodes {
-        id
-        name
-        tags {
-          content
-        }
-        last
-        slug
-        frontImage {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
+  query ProjectsPage {
+    projects: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            demo
+            description
+            github
+            last
+            new
+            slug
+            tags
+            title
+            imageFront {
+              childImageSharp {
+                gatsbyImageData(
+                  blurredOptions: { width: 100 }
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                )
+              }
+            }
+          }
+          id
         }
       }
     }
@@ -29,9 +37,8 @@ const query = graphql`
 `
 
 const AllProjects = () => {
-  const {
-    allProjects: { nodes: projects },
-  } = useStaticQuery(query)
+  const data = useStaticQuery(query)
+  const projects = data.projects.edges
 
   return (
     <>

@@ -12,6 +12,7 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -24,10 +25,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        spaceId: process.env.CONTENTFULL_SPACE_ID,
-        accessToken: process.env.CONTENTFULL_API_KEY,
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
       },
     },
     {

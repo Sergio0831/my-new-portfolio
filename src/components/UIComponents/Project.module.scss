@@ -4,7 +4,6 @@
 .project {
   position: $p-relative;
   overflow: hidden;
-  height: 50rem;
 
   &Overlay {
     @include absolute($top: 0, $left: 0);
@@ -17,8 +16,8 @@
     transition: opacity 400ms ease-in-out 0s;
   }
 
-  &Image {
-    min-height: 50rem;
+  img {
+    border-radius: $rounded;
   }
 
   &Text {

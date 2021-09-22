@@ -19,10 +19,10 @@ const useForm = () => {
     e.preventDefault()
     emailjs
       .sendForm(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        process.env.GATSBY_EMAILJS_SERVICE_ID,
+        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
         e.target,
-        process.env.EMAILJS_USER_ID
+        process.env.GATSBY_EMAILJS_USER_ID
       )
       .then(res => {
         console.log(res)

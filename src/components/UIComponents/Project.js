@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import {
   project,
   projectImage,
@@ -13,36 +14,37 @@ import {
 
 const Project = ({ projects = [] }) => {
   useEffect(() => {
-    console.log(projects.tags)
+    console.log(projects)
   }, [projects])
-
   return (
     <>
-      {projects.map(item => {
-        const { id, name, frontImage, tags, slug } = item
-        const pathToImage = getImage(frontImage)
-        const tag = tags.map(tag => tag.content).join(", ")
+      {projects &&
+        projects.map(item => {
+          const { id } = item.node
 
-        //console.log(newTag)
-        return (
-          <article key={id} className={project}>
-            <Link to={`/${slug}`}>
-              <GatsbyImage
-                image={pathToImage}
+          const { title, slug, tags } = item.node.frontmatter
+          console.log(title)
+          const pahToImage = getImage(item.node.frontmatter.imageFront)
+          return (
+            <Link key={id} className={project} to={`/${slug}`}>
+              <StaticImage
+                //image={pahToImage}
                 alt={slug}
                 className={projectImage}
+                src="../../assets/images/front/book.png"
+                placeholder="tracedSVG"
+                layout="constrained"
               />
               <div className={projectOverlay}>
                 <div className={projectText}>
-                  <h4 className={projectTitle}>{name}</h4>
-                  <p className={projectTech}>{tag}</p>
+                  <h4 className={projectTitle}>{title}</h4>
+                  <p className={projectTech}>tags</p>
                   <div className={underline}>&nbsp;</div>
                 </div>
               </div>
             </Link>
-          </article>
-        )
-      })}
+          )
+        })}
     </>
   )
 }
