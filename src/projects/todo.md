@@ -7,6 +7,6 @@ new: false
 github: https://github.com/Sergio0831/todo-app
 demo: https://sergejs-todo-app.netlify.app/
 tags: ["JavaScript", "SASS"]
-imageFront: "../assets/images/front/todo.png"
+imageFront: "../assets/images/front/react-todo.png"
 imageBack:
 ---

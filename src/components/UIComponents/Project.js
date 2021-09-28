@@ -1,7 +1,6 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   project,
   projectImage,
@@ -9,42 +8,27 @@ import {
   projectText,
   projectTitle,
   projectTech,
+  projectTags,
   underline,
 } from "./Project.module.scss"
+import "../../assets/styles/_icons.scss"
 
-const Project = ({ projects = [] }) => {
-  useEffect(() => {
-    console.log(projects)
-  }, [projects])
+const Project = ({ id, title, slug, tag, image }) => {
   return (
     <>
-      {projects &&
-        projects.map(item => {
-          const { id } = item.node
-
-          const { title, slug, tags } = item.node.frontmatter
-          console.log(title)
-          const pahToImage = getImage(item.node.frontmatter.imageFront)
-          return (
-            <Link key={id} className={project} to={`/${slug}`}>
-              <StaticImage
-                //image={pahToImage}
-                alt={slug}
-                className={projectImage}
-                src="../../assets/images/front/book.png"
-                placeholder="tracedSVG"
-                layout="constrained"
-              />
-              <div className={projectOverlay}>
-                <div className={projectText}>
-                  <h4 className={projectTitle}>{title}</h4>
-                  <p className={projectTech}>tags</p>
-                  <div className={underline}>&nbsp;</div>
-                </div>
-              </div>
-            </Link>
-          )
-        })}
+      <Link key={id} className={project} to={`/${slug}`}>
+        <GatsbyImage image={image} alt={slug} className={projectImage} />
+        <div className={projectOverlay}>
+          <div className={projectText}>
+            <h4 className={projectTitle}>{title}</h4>
+            <div className={projectTech}>
+              <p className={projectTags}>{tag}</p>
+              <i className="icon-right-arrow">&nbsp;</i>
+            </div>
+            <div className={underline}>&nbsp;</div>
+          </div>
+        </div>
+      </Link>
     </>
   )
 }

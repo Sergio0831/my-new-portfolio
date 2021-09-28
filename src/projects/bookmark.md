@@ -7,6 +7,6 @@ new: false
 github: https://github.com/Sergio0831/bookmark-landing-page
 demo: https://sergejs-bookmark.netlify.app/
 tags: ["React", "Styled Components"]
-imageFront: "../assets/images/front/subs.png"
+imageFront: "../assets/images/front/bookmark.png"
 imageBack:
 ---

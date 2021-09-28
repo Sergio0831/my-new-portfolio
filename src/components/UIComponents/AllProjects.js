@@ -4,10 +4,13 @@ import FilterButtons from "../UIComponents/FilterButtons"
 import { projectsGrid } from "./AllProjects.module.scss"
 import "../../assets/styles/_utilities.scss"
 import { graphql, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 
 const query = graphql`
   query ProjectsPage {
-    projects: allMarkdownRemark {
+    projects: allMarkdownRemark(
+      sort: { order: ASC, fields: frontmatter___title }
+    ) {
       edges {
         node {
           frontmatter {
@@ -44,7 +47,24 @@ const AllProjects = () => {
     <>
       <FilterButtons projects={projects} />
       <section className={`section-center ${projectsGrid}`}>
-        <Project projects={projects} />
+        {projects &&
+          projects.map(item => {
+            const { id } = item.node
+            const { title, slug, tags } = item.node.frontmatter
+            const tag = tags.map(tag => tag).join(", ")
+            const image = getImage(item.node.frontmatter.imageFront)
+
+            return (
+              <Project
+                key={id}
+                id={id}
+                title={title}
+                slug={slug}
+                tag={tag}
+                image={image}
+              />
+            )
+          })}
       </section>
     </>
   )
