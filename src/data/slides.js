@@ -8,7 +8,8 @@ import WP from "../assets/images/slider/wp.svg"
 import GATSBY from "../assets/images/slider/gatsby.svg"
 import BOOTSTRAP from "../assets/images/slider/bootstrap.svg"
 import NETLIFY from "../assets/images/slider/netlify.svg"
-import CONTENTFUL from "../assets/images/slider/contentful.svg"
+import GRAPHQL from "../assets/images/slider/graphql.svg"
+import NEXTJS from "../assets/images/slider/nextjs.svg"
 import JAVA from "../assets/images/slider/java.svg"
 
 export const slides = [
@@ -45,6 +46,14 @@ export const slides = [
     title: "GATSBY",
   },
   {
+    image: NEXTJS,
+    title: "NEXTJS",
+  },
+  {
+    image: GRAPHQL,
+    title: "GRAPHQL",
+  },
+  {
     image: BOOTSTRAP,
     title: "BOOTSTRAP",
   },
@@ -52,10 +61,7 @@ export const slides = [
     image: NETLIFY,
     title: "NETLIFY",
   },
-  {
-    image: CONTENTFUL,
-    title: "CONTENTFUL",
-  },
+
   {
     image: JAVA,
     title: "JAVA",

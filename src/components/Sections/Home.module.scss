@@ -18,7 +18,6 @@
     $flex-wrap: $wrap
   );
 
-  gap: $g-3;
   flex-direction: column-reverse;
 
   &Text {
@@ -46,7 +45,7 @@
           $align-items: $align-center
         );
 
-        gap: $g-1 * 1.5;
+        gap: $g-1;
 
         i {
           font-size: $f-6;
@@ -68,6 +67,7 @@
   &Image {
     width: 35rem;
     height: 35rem;
+    margin-bottom: $m-4;
     border-radius: 1rem;
     overflow: hidden;
     transform: rotate(5deg);
@@ -82,6 +82,10 @@
 
     @media (hover: none) {
       transform: rotate(0deg);
+    }
+
+    @include breakpoint($bp: 52.69em) {
+      margin-bottom: 0;
     }
   }
 

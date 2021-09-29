@@ -57,7 +57,6 @@ const Projects = () => {
             const { title, slug, tags } = item.node.frontmatter
             const tag = tags.map(tag => tag).join(", ")
             const image = getImage(item.node.frontmatter.imageFront)
-            console.log({ ...image })
             return (
               <Project
                 key={id}

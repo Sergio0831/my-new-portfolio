@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Project from "./Project"
 import FilterButtons from "../UIComponents/FilterButtons"
 import { projectsGrid } from "./AllProjects.module.scss"
@@ -40,12 +40,37 @@ const query = graphql`
 `
 
 const AllProjects = () => {
+  const allTags = []
   const data = useStaticQuery(query)
-  const projects = data.projects.edges
+  const [projects, setProjects] = useState(data.projects.edges)
+  projects.map(project => {
+    project.node.frontmatter.tags.map(tag => {
+      allTags.push(tag)
+    })
+  })
+  const newTags = ["All", ...new Set(allTags)]
+
+  const filterProjects = button => {
+    if (button === "All") {
+      setProjects(projects)
+      return
+    }
+
+    const newProjects = projects.filter(project =>
+      project.node.frontmatter.tags.map(tag => tag === button)
+    )
+    setProjects(newProjects)
+  }
+
+  // const newTag = projects.filter(project =>
+  //   project.node.frontmatter.tags.every(tag => tag === button)
+  // )
+
+  // console.log(newTag)
 
   return (
     <>
-      <FilterButtons projects={projects} />
+      <FilterButtons newTags={newTags} filterProjects={filterProjects} />
       <section className={`section-center ${projectsGrid}`}>
         {projects &&
           projects.map(item => {

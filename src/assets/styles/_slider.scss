@@ -1,0 +1,34 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.slick-slider {
+  margin-top: 0;
+
+  @media only screen and (min-width: 660px) {
+    margin-top: $m-5 * 2;
+  }
+}
+
+.slick-dots {
+  display: flex !important;
+  width: $base-width;
+  justify-content: $justify-center;
+
+  @include position($position: $p-absolute, $bottom: -6rem);
+}
+
+.slick-dots li {
+  height: 1.3rem;
+  width: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $primary;
+  border-radius: $circle;
+  margin: 0 $m-1;
+  transition: background-color 300ms ease;
+}
+
+li.slick-active {
+  background-color: $primary;
+}

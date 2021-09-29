@@ -1,5 +1,5 @@
 import React from "react"
-import Slider from "../UIComponents/Slider"
+import Carousel from "../UIComponents/Carousel"
 import Title from "../UIComponents/Title"
 import "../../assets/styles/_utilities.scss"
 import { skills } from "./Skills.module.scss"
@@ -11,7 +11,7 @@ const Skills = () => {
         <Title title="My Skills" />
       </div>
       <div className={`section-center`}>
-        <Slider />
+        <Carousel />
       </div>
     </section>
   )

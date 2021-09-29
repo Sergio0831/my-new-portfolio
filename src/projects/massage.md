@@ -6,7 +6,7 @@ last: false
 new: false
 github: https://github.com/Sergio0831/Massage_Therapist_Website
 demo: https://oksanatazova.lv/
-tags: [" jQuery", "SASS"]
+tags: ["jQuery", "SASS"]
 imageFront: "../assets/images/front/oksanatazova.png"
 imageBack:
 ---

@@ -1,0 +1,23 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.arrow {
+  @include position(absolute, $top: -50%);
+
+  background-color: lighten($primary-light, 40%);
+  transition: background-color 400ms ease;
+
+  &:hover {
+    background-color: lighten($primary-light, 20%);
+  }
+
+  &Next {
+    right: 1rem;
+    transform: rotate(-90deg);
+  }
+
+  &Prev {
+    right: 6rem;
+    transform: rotate(90deg);
+  }
+}
