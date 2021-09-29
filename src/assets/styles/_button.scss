@@ -89,7 +89,7 @@
     @include font($font-family-primary, $font-weight-medium, $f-8);
 
     &:hover {
-      background: transparent;
+      background-color: transparent;
       color: $text;
     }
 

@@ -8,5 +8,5 @@ github: https://github.com/Sergio0831/officelite-coming-soon-site
 demo: https://officelite.netlify.app/
 tags: ["React", "SASS"]
 imageFront: "../assets/images/front/officelite.png"
-imageBack:
+imageSingleProject: "../assets/images/single-page/bookmark.png"
 ---

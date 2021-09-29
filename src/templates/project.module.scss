@@ -1,0 +1,22 @@
+@use "../assets/styles/variables" as *;
+@use "../assets/styles/mixins" as *;
+
+.project {
+  height: 100%;
+  padding-top: 11rem;
+  padding-bottom: $p-5;
+
+  .back {
+    padding: 1.3rem;
+    background-color: lighten($primary-light, 20%);
+    color: $light;
+    font-size: $f-6;
+    transform: rotate(180deg);
+    border-radius: $rounded;
+    transition: background-color 300ms ease;
+
+    &:hover {
+      background-color: lighten($primary-light, 10%);
+    }
+  }
+}

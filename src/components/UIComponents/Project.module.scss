@@ -1,11 +1,16 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
 @use "../../assets/styles/animation" as *;
 
 .project {
   position: $p-relative;
   overflow: hidden;
-  //height: 50rem;
+  margin-bottom: $m-2;
+
+  @include md {
+    margin-bottom: 0;
+  }
 
   &Overlay {
     @include absolute($top: 0, $left: 0);

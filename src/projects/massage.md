@@ -8,5 +8,5 @@ github: https://github.com/Sergio0831/Massage_Therapist_Website
 demo: https://oksanatazova.lv/
 tags: ["jQuery", "SASS"]
 imageFront: "../assets/images/front/oksanatazova.png"
-imageBack:
+imageSingleProject: "../assets/images/single-page/bookmark.png"
 ---

@@ -16,7 +16,7 @@ import "../../assets/styles/_icons.scss"
 const Project = ({ id, title, slug, tag, image }) => {
   return (
     <>
-      <Link key={id} className={project} to={`/${slug}`}>
+      <Link key={id} className={project} to={`/projects/${slug}`}>
         <GatsbyImage image={image} alt={slug} className={projectImage} />
         <div className={projectOverlay}>
           <div className={projectText}>

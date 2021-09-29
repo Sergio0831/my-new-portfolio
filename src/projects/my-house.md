@@ -8,5 +8,5 @@ github: https://github.com/Sergio0831/my-house
 demo: https://my-house.netlify.app/
 tags: ["JavaScript", "SASS"]
 imageFront: "../assets/images/front/my-house.png"
-imageBack:
+imageSingleProject: "../assets/images/single-page/bookmark.png"
 ---
