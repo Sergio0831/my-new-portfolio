@@ -5,46 +5,70 @@
 
 .navigation {
   &-button {
-    display: $d-grid;
+    padding: $p-1;
+    width: 4rem;
+    height: 4rem;
     border: none;
+    border-radius: $circle;
     cursor: pointer;
-    position: $p-fixed;
+    @include position($p-fixed, $top: 3.6rem, $right: 4rem);
+
+    background-color: transparent;
+    transition: background-color 300ms ease;
     z-index: 2000;
-    top: 4.6rem;
-    right: 5rem;
-    background: transparent;
+
+    &:hover {
+      background-color: lighten($primary-light, 30%);
+    }
+
+    @media (hover: none) {
+      background-color: transparent;
+      &:focus,
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    // @include sm {
+    //   &:focus,
+    //   &:active {
+    //     background-color: transparent;
+    //   }
+    // }
   }
 
   &-icon {
     width: 2rem;
     height: 2px;
+    position: $p-absolute;
     background: $text;
     border-radius: $rounded;
     transition: transform 0.7s cubic-bezier(0.83, 0, 0.17, 1),
       transform-origin 0.7s cubic-bezier(0.83, 0, 0.17, 1);
 
     @include first-child {
-      transform: rotate(0deg) translate(0.5rem, 0);
+      top: 1rem;
+      right: 5px;
       transform-origin: top left;
     }
 
     @include nth-child(2) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: $primary;
     }
 
     @include last-child {
-      transform: rotate(0deg) translate(-0.5rem, 0);
+      bottom: 1rem;
+      left: 5px;
       transform-origin: bottom left;
-    }
-
-    @include not-last-child {
-      margin-bottom: math.div($m-1, 2);
     }
   }
 
   .show-nav {
     @include first-child {
-      transform: rotate(45deg) translate(0.8rem, -0.7rem);
+      transform: rotate(45deg) translate(0.2rem, -0.1rem);
       transform-origin: top left;
     }
 
@@ -53,18 +77,18 @@
     }
 
     @include last-child {
-      transform: rotate(-45deg) translate(0.8rem, 0.6rem);
+      transform: rotate(-45deg) translate(0.7rem, 0.3rem);
       transform-origin: bottom left;
     }
 
     @include sm {
       @include first-child {
-        transform: rotate(45deg) translate(0.7rem, -0.7rem);
+        transform: rotate(45deg) translate(0.2rem, 0.2rem);
         transform-origin: top left;
       }
 
       @include last-child {
-        transform: rotate(-45deg) translate(0.7rem, 0.6rem);
+        transform: rotate(-45deg) translate(0.7rem, 0.5rem);
         transform-origin: bottom left;
       }
     }

@@ -1,7 +1,7 @@
 @use "./variables" as *;
 
 // Typografy
-@mixin font($font-family, $font-weight, $font-size) {
+@mixin font($font-family, $font-weight, $font-size: null) {
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight;

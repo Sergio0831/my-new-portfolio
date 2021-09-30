@@ -16,10 +16,12 @@
   &Grid {
     display: $d-grid;
     grid-template-columns: 1fr;
-    margin-bottom: $m-4 * 2;
+    margin-bottom: $m-4;
+    column-gap: $g-2;
 
-    @include md {
+    @include lg {
       grid-template-columns: 1fr 1fr;
+      margin-bottom: $m-4 * 2;
     }
   }
 }

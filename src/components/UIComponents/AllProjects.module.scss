@@ -6,8 +6,8 @@
   grid-template-columns: 1fr;
   margin-bottom: $m-4 * 2;
 
-  @include md {
+  @include lg {
     grid-template-columns: 1fr 1fr;
-    gap: $g-2;
+    column-gap: $g-2;
   }
 }

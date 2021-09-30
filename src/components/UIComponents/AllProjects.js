@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Project from "./Project"
 import FilterButtons from "../UIComponents/FilterButtons"
 import { projectsGrid } from "./AllProjects.module.scss"
@@ -46,7 +46,9 @@ const AllProjects = () => {
   projects.map(project => {
     project.node.frontmatter.tags.map(tag => {
       allTags.push(tag)
+      return tag
     })
+    return project
   })
   const newTags = ["All", ...new Set(allTags)]
 

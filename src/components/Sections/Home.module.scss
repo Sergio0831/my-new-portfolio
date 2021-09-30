@@ -51,7 +51,7 @@
           font-size: $f-6;
           color: $secondary;
           transition: color 300ms ease-in-out;
-          animation: pulse 1s infinite;
+          animation: pulse 500ms infinite;
           animation-direction: alternate;
         }
 
@@ -84,13 +84,13 @@
       transform: rotate(0deg);
     }
 
-    @include breakpoint($bp: 52.69em) {
+    @include lg {
       margin-bottom: 0;
     }
   }
 
-  @include breakpoint($bp: 52.69em) {
+  @include lg {
     flex-direction: row;
-    gap: $g-4 * 2;
+    column-gap: $g-4 * 2;
   }
 }

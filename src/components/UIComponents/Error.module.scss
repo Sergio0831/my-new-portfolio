@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.error {
+  min-height: calc(100vh - 13.4rem);
+  padding-top: 5rem;
+  text-align: center;
+}
+.errorTitle {
+  @include font($font-family-secondary, $font-weight-regular, 16rem);
+}
+.errorIcon {
+}

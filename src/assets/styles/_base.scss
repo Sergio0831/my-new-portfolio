@@ -10,13 +10,9 @@
 }
 
 html {
-  font-size: 43.75%; // 1rem = 7px; 7px/16px = 50%
+  font-size: 50%; // 1rem = 7px; 7px/16px = 43.8%
 
-  @include sm {
-    font-size: 56.2%; // 1rem = 9px; 9px/16px = 56.2%
-  }
-
-  @include xl {
+  @include md {
     font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
   }
 }

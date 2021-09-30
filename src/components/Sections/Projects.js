@@ -2,10 +2,9 @@ import React from "react"
 import Subtitle from "../UIComponents/Subtitle"
 import Title from "../UIComponents/Title"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { sectionProjects } from "./Projects.module.scss"
+import { sectionProjects, sectionProjectsGrid } from "./Projects.module.scss"
 import "../../assets/styles/_utilities.scss"
 import "../../assets/styles/_button.scss"
-import { projectsGrid } from "../UIComponents/AllProjects.module.scss"
 import Project from "../UIComponents/Project"
 import { getImage } from "gatsby-plugin-image"
 
@@ -50,7 +49,7 @@ const Projects = () => {
         <Title title="My Projects" />
         <Subtitle subtitle="Check out of some my projects..." />
       </div>
-      <div className={projectsGrid}>
+      <div className={sectionProjectsGrid}>
         {projects &&
           projects.map(item => {
             const { id } = item.node
