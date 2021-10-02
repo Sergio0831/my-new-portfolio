@@ -43,6 +43,7 @@ const AllProjects = () => {
   const allTags = []
   const data = useStaticQuery(query)
   const [projects, setProjects] = useState(data.projects.edges)
+
   projects.map(project => {
     project.node.frontmatter.tags.map(tag => {
       allTags.push(tag)
@@ -52,18 +53,6 @@ const AllProjects = () => {
   })
   const newTags = ["All", ...new Set(allTags)]
 
-  const filterProjects = value => {
-    if (value === "All") {
-      setProjects(projects)
-      return
-    }
-
-    const newProjects = projects.filter(project =>
-      project.node.frontmatter.tags.map(tag => tag === value)
-    )
-    setProjects(newProjects)
-  }
-
   // const newTag = projects.filter(project =>
   //   project.node.frontmatter.tags.every(tag => tag === button)
   // )
@@ -72,7 +61,11 @@ const AllProjects = () => {
 
   return (
     <>
-      <FilterDropdown newTags={newTags} filterProjects={filterProjects} />
+      <FilterDropdown
+        newTags={newTags}
+        projects={projects}
+        setProjects={setProjects}
+      />
       <section className={`section-center ${projectsGrid}`}>
         {projects &&
           projects.map(item => {

@@ -9,7 +9,7 @@ import {
 } from "./FilterDropdown.module.scss"
 import "../../assets/styles/_icons.scss"
 
-const FilterDropdown = ({ newTags, filterProjects }) => {
+const FilterDropdown = ({ newTags, projects, setProjects }) => {
   const [isOpen, setOpen] = useState(false)
   const [items, setItem] = useState(newTags)
   const [selectedItem, setSelectedItem] = useState(null)
@@ -19,6 +19,18 @@ const FilterDropdown = ({ newTags, filterProjects }) => {
   const handleItemClick = name => {
     selectedItem == name ? setSelectedItem(null) : setSelectedItem(name)
     setOpen(false)
+  }
+
+  const filterProjects = () => {
+    if (selectedItem === "All") {
+      setProjects(projects)
+      return
+    }
+
+    const newProjects = projects.filter(project =>
+      project.node.frontmatter.tags.includes(selectedItem)
+    )
+    setProjects(newProjects)
   }
 
   return (

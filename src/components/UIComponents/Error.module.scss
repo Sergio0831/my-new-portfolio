@@ -3,11 +3,22 @@
 
 .error {
   min-height: calc(100vh - 13.4rem);
-  padding-top: 5rem;
-  text-align: center;
+  @include centered-flex(
+    $flex-direction: column,
+    $justify-content: $justify-center,
+    $align-items: $align-center
+  );
 }
 .errorTitle {
   @include font($font-family-secondary, $font-weight-regular, 16rem);
+  line-height: 1;
+
+  span {
+    color: $secondary;
+  }
 }
 .errorIcon {
+  margin-top: $m-1;
+  font-size: 12rem;
+  color: $secondary;
 }
