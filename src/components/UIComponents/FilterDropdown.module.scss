@@ -1,0 +1,91 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/breakpoints" as *;
+
+// .dropdown {
+//   @include centered-flex($justify-content: $justify-center);
+
+//   flex-grow: 1;
+//   flex-wrap: wrap;
+//   gap: $g-1 * 1.5;
+//   margin-bottom: $m-6;
+//   padding: 0 $p-3;
+// }
+
+.dropdown {
+  width: 27rem;
+  position: $p-relative;
+  margin: 0 auto $m-3;
+  @include font($font-family-primary, $font-weight-regular, $f-7);
+
+  &Header {
+    cursor: pointer;
+    width: $base-width;
+    margin-bottom: $m-1;
+    padding: $p-1;
+    border: 2px solid $secondary;
+    border-radius: $rounded;
+    background-color: $white;
+
+    @include centered-flex(
+      $justify-content: $justify-between,
+      $align-items: $align-center
+    );
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: $light;
+    }
+  }
+
+  &Body {
+    border: 2px solid $secondary;
+    border-radius: $rounded;
+    transition: opacity 400ms ease, z-index 400ms ease;
+    position: $p-absolute;
+    opacity: 0;
+    // height: 35rem;
+    // overflow-y: scroll;
+
+    &.open {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+
+  &Item {
+    width: $base-width;
+    padding: $p-1 1.5rem;
+    background-color: $white;
+    border: none;
+    text-align: start;
+    transition: background-color 300ms ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $light;
+    }
+
+    &.selected {
+      background-color: $light;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: $light;
+    }
+  }
+
+  i {
+    font-size: $f-10;
+    color: $secondary;
+    transform: rotate(-90deg);
+    transition: transform 200ms ease-in-out;
+
+    &.open {
+      transform: rotate(0deg);
+    }
+  }
+}

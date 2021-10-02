@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Project from "./Project"
-import FilterButtons from "../UIComponents/FilterButtons"
+import FilterDropdown from "../UIComponents/FilterDropdown"
 import { projectsGrid } from "./AllProjects.module.scss"
 import "../../assets/styles/_utilities.scss"
 import { graphql, useStaticQuery } from "gatsby"
@@ -52,14 +52,14 @@ const AllProjects = () => {
   })
   const newTags = ["All", ...new Set(allTags)]
 
-  const filterProjects = button => {
-    if (button === "All") {
+  const filterProjects = value => {
+    if (value === "All") {
       setProjects(projects)
       return
     }
 
     const newProjects = projects.filter(project =>
-      project.node.frontmatter.tags.map(tag => tag === button)
+      project.node.frontmatter.tags.map(tag => tag === value)
     )
     setProjects(newProjects)
   }
@@ -72,7 +72,7 @@ const AllProjects = () => {
 
   return (
     <>
-      <FilterButtons newTags={newTags} filterProjects={filterProjects} />
+      <FilterDropdown newTags={newTags} filterProjects={filterProjects} />
       <section className={`section-center ${projectsGrid}`}>
         {projects &&
           projects.map(item => {

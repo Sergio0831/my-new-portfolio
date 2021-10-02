@@ -6,7 +6,7 @@ last: true
 new: false
 github: https://github.com/Sergio0831/natours
 demo: https://tours-nature.netlify.app/
-tags: ["Javacript", "SASS"]
+tags: ["JavaScript", "SASS"]
 imageFront: "../assets/images/front/natours.png"
 imageSingleProject: "../assets/images/single-page/bookmark.png"
 ---
