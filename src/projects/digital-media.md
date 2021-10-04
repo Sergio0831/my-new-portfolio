@@ -8,5 +8,5 @@ github: https://github.com/Sergio0831/digital_media
 demo: https://digital-media.netlify.app/
 tags: ["Bootstrap", "CSS"]
 imageFront: "../assets/images/front/digital-media.png"
-imageSingleProject: "../assets/images/single-page/bookmark.png"
+imageSingleProject: "../assets/images/single-page/digital-media.png"
 ---

@@ -8,5 +8,5 @@ github: https://github.com/Sergio0831/breaking-news
 demo: https://breaking-news.netlify.app/
 tags: ["JavaScript", "CSS", "Rest API"]
 imageFront: "../assets/images/front/breaking-news.png"
-imageSingleProject: "../assets/images/single-page/bookmark.png"
+imageSingleProject: "../assets/images/single-page/breaking-news.png"
 ---

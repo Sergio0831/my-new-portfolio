@@ -8,5 +8,5 @@ github: https://github.com/Sergio0831/coronavirusApp
 demo: https://coronavirus-statistic.netlify.app/
 tags: ["JavaScript", "CSS", "Rest API"]
 imageFront: "../assets/images/front/coronavirus.png"
-imageSingleProject: "../assets/images/single-page/bookmark.png"
+imageSingleProject: "../assets/images/single-page/coronavirus.png"
 ---

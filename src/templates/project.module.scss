@@ -9,10 +9,10 @@
   padding-bottom: $p-5;
 
   .back {
-    padding: 1.3rem;
+    padding: 1rem;
     background-color: lighten($primary-light, 20%);
     color: $light;
-    font-size: $f-6;
+    font-size: $f-7;
     transform: rotate(180deg);
     border-radius: $rounded;
     transition: background-color 300ms ease;
