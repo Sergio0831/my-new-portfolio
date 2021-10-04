@@ -40,35 +40,52 @@ const query = graphql`
 `
 
 const AllProjects = () => {
-  const allTags = []
+  const tagsArray = []
   const data = useStaticQuery(query)
   const [projects, setProjects] = useState(data.projects.edges)
+  const [isOpen, setOpen] = useState(false)
+  const [filtered, setFiltered] = useState(projects)
+  const [selectedItem, setSelectedItem] = useState(null)
+  const allTags = projects.map(project =>
+    project.node.frontmatter.tags.map(tag => tagsArray.push(tag))
+  )
+  const newTags = ["All", ...new Set(tagsArray)]
 
-  projects.map(project => {
-    project.node.frontmatter.tags.map(tag => {
-      allTags.push(tag)
-      return tag
-    })
-    return project
-  })
-  const newTags = ["All", ...new Set(allTags)]
+  const handleToggleDropdown = () => setOpen(prev => !prev)
 
-  // const newTag = projects.filter(project =>
-  //   project.node.frontmatter.tags.every(tag => tag === button)
-  // )
+  const handleFilterProjects = e => {
+    const name = e.target.name
+    if (selectedItem === name) {
+      setSelectedItem(null)
+    }
+    if (name === "All") {
+      setFiltered(projects)
+      setSelectedItem(null)
+      setOpen(false)
+    } else {
+      setSelectedItem(name)
+      const newProjects = projects.filter(project =>
+        project.node.frontmatter.tags.some(tag => tag === name)
+      )
+      setFiltered(newProjects)
+      setOpen(false)
+    }
+  }
 
-  // console.log(newTag)
+  const props = {
+    newTags,
+    selectedItem,
+    isOpen,
+    onToggleDropdown: handleToggleDropdown,
+    onFilterProjects: handleFilterProjects,
+  }
 
   return (
     <>
-      <FilterDropdown
-        newTags={newTags}
-        projects={projects}
-        setProjects={setProjects}
-      />
+      <FilterDropdown {...props} />
       <section className={`section-center ${projectsGrid}`}>
-        {projects &&
-          projects.map(item => {
+        {filtered &&
+          filtered.map(item => {
             const { id } = item.node
             const { title, slug, tags } = item.node.frontmatter
             const tag = tags.map(tag => tag).join(", ")

@@ -4,9 +4,9 @@ description: The standard chunk of Lorem Ipsum used since the 1500s is reproduce
 slug: to-do-list
 last: true
 new: false
-github: https://github.com/Sergio0831/todo-app
-demo: https://sergejs-todo-app.netlify.app/
-tags: ["JavaScript", "SASS"]
+github: https://github.com/Sergio0831/react-todo-app
+demo: https://react-todo-ivcenko.netlify.app/
+tags: ["React", "Styled Components"]
 imageFront: "../assets/images/front/react-todo.png"
 imageSingleProject: "../assets/images/single-page/todo.png"
 ---

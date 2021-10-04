@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import {
   dropdown,
   dropdownHeader,
@@ -9,38 +9,21 @@ import {
 } from "./FilterDropdown.module.scss"
 import "../../assets/styles/_icons.scss"
 
-const FilterDropdown = ({ newTags, projects, setProjects }) => {
-  const [isOpen, setOpen] = useState(false)
-  const [items, setItem] = useState(newTags)
-  const [selectedItem, setSelectedItem] = useState(null)
-
-  const toggleDropdown = () => setOpen(prev => !prev)
-
-  const handleItemClick = name => {
-    selectedItem == name ? setSelectedItem(null) : setSelectedItem(name)
-    setOpen(false)
-  }
-
-  const filterProjects = () => {
-    if (selectedItem === "All") {
-      setProjects(projects)
-      return
-    }
-
-    const newProjects = projects.filter(project =>
-      project.node.frontmatter.tags.includes(selectedItem)
-    )
-    setProjects(newProjects)
-  }
-
+const FilterDropdown = ({ ...props }) => {
+  const { newTags, selectedItem, isOpen, onToggleDropdown, onFilterProjects } =
+    props
   return (
     <div className={dropdown}>
-      <button type="button" className={dropdownHeader} onClick={toggleDropdown}>
-        {selectedItem || items[0]}
+      <button
+        type="button"
+        className={dropdownHeader}
+        onClick={onToggleDropdown}
+      >
+        {selectedItem || newTags[0]}
         <i className={`icon-chevron-down ${isOpen ? open : null}`}></i>
       </button>
       <div className={`${dropdownBody} ${isOpen ? open : null}`}>
-        {items.map(item => (
+        {newTags.map(item => (
           <button
             key={item}
             type="button"
@@ -48,7 +31,7 @@ const FilterDropdown = ({ newTags, projects, setProjects }) => {
             className={`${dropdownItem} ${
               selectedItem === item ? selected : null
             }`}
-            onClick={e => handleItemClick(e.target.name)}
+            onClick={onFilterProjects}
           >
             {item}
           </button>

@@ -23,7 +23,7 @@ const Form = () => {
           <input
             type="name"
             id="name"
-            class={formInput}
+            className={formInput}
             name="name"
             value={values.name}
             onChange={handleChange}
@@ -37,7 +37,7 @@ const Form = () => {
           <input
             type="email"
             id="email"
-            class={formInput}
+            className={formInput}
             name="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             placeholder="Email"
@@ -53,7 +53,7 @@ const Form = () => {
           <input
             type="text"
             id="subject"
-            class={formInput}
+            className={formInput}
             name="subject"
             value={values.subject}
             onChange={handleChange}
@@ -67,7 +67,7 @@ const Form = () => {
           <textarea
             name="message"
             id="message"
-            class={formInput}
+            className={formInput}
             rows="5"
             value={values.message}
             onChange={handleChange}
