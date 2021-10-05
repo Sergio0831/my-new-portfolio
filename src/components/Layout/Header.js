@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className={header}>
-      <Link to="/">
+      <Link to="/" rel="noopener noreferrer" aria-label="Logo">
         <Logo />
       </Link>
       {location.pathname === "/" && (

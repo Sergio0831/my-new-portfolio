@@ -11,7 +11,8 @@ const Footer = () => {
           className="social-link social-link-footer icon-linkedin"
           href="https://www.linkedin.com/in/ivcenko/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
+          aria-label="Linkedin"
         >
           &nbsp;
         </a>
@@ -19,7 +20,8 @@ const Footer = () => {
           className="social-link social-link-footer icon-github"
           href="https://github.com/Sergio0831"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
         >
           &nbsp;
         </a>

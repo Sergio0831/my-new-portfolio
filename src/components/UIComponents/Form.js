@@ -77,10 +77,10 @@ const Form = () => {
             Message
           </label>
         </div>
-        <Button type="submit" block className="mb-2">
+        <Button type="submit" block className="mb-2" aria-label="Submit">
           Send
         </Button>
-        <Button type="reset" block onClick={clearForm}>
+        <Button type="reset" block onClick={clearForm} aria-label="Reset">
           Clear
         </Button>
       </form>

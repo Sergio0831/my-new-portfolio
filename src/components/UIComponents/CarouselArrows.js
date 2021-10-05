@@ -10,6 +10,7 @@ export const NextArrow = ({ onClick }) => {
       round
       className={`icon-chevron-down ${arrow} ${arrowNext}`}
       onClick={onClick}
+      aria-label="Arrow Next"
     ></Button>
   )
 }
@@ -20,6 +21,7 @@ export const PrevArrow = ({ onClick }) => {
       round
       className={`icon-chevron-down ${arrow} ${arrowPrev}`}
       onClick={onClick}
+      aria-label="Arrow Prev"
     ></Button>
   )
 }

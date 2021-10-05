@@ -12,6 +12,7 @@ import {
 } from "./project.module.scss"
 import "../assets/styles/_utilities.scss"
 import "../assets/styles/_icons.scss"
+import Seo from "../components/SEO/SEO"
 
 const Project = ({ data }) => {
   const singleProject = data.markdownRemark
@@ -20,6 +21,7 @@ const Project = ({ data }) => {
   const pathToImage = getImage(imageSingleProject)
   return (
     <Layout>
+      <Seo title="Project" />
       <section className={`${project} section-center`}>
         <Link className={`${back} icon-right-arrow`} to="/projects/" />
         <Title title={title} />

@@ -5,10 +5,12 @@ import About from "../components/Sections/About"
 import Projects from "../components/Sections/Projects"
 import Skills from "../components/Sections/Skills"
 import Contact from "../components/Sections/Contact"
+import Seo from "../components/SEO/SEO"
 
 export default function HomePage() {
   return (
     <Layout>
+      <Seo title="Home" />
       <Home />
       <About />
       <Projects />

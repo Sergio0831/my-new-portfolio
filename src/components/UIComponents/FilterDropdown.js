@@ -18,6 +18,7 @@ const FilterDropdown = ({ ...props }) => {
         type="button"
         className={dropdownHeader}
         onClick={onToggleDropdown}
+        aria-label="Dropdown"
       >
         {selectedItem || newTags[0]}
         <i className={`icon-chevron-down ${isOpen ? open : null}`}></i>
@@ -25,6 +26,7 @@ const FilterDropdown = ({ ...props }) => {
       <div className={`${dropdownBody} ${isOpen ? open : null}`}>
         {newTags.map(item => (
           <button
+            aria-label="Dropdown Item"
             key={item}
             type="button"
             name={item}

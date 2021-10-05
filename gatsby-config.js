@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Sergejs Ivcenko Portfolio",
-    description: "Gatsby and sass portfolio",
+    description: "Gatsby and SASS portfolio",
     author: "@sergejsivcenko",
     siteUrl: `https://ivcenko-new-portfolio.netlify.app/`,
   },
