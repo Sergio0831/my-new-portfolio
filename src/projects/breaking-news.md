@@ -1,7 +1,6 @@
 ---
 title: Breaking News
-description: Breaking News App with my own design.
-News can be chosen by category from the menu. Data fetched from NY Times. The app is fully responsive and mobile-friendly. Built with JavaScript and CSS. 
+description: Breaking News App with my own design. News can be chosen by category from the menu. Data fetched from NY Times The app is fully responsive and mobile-friendly. Built with JavaScript and CSS.
 slug: breaking-news
 last: false
 new: false
