@@ -1,6 +1,6 @@
 ---
 title: Covid-19 Statistic
-description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+description: Covid-19 Statistic with my own design provides the latest Covid-19 statistics from any country is chosen from dropdown menu.Data fetched from covid-API and displayed in a styled HTML table. The app is fully responsive. App built with JavaScript and CSS.
 slug: covid-19-statistic
 last: false
 new: false

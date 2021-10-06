@@ -1,6 +1,7 @@
 ---
 title: Breaking News
-description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+description: Breaking News App with my own design.
+News can be chosen by category from the menu. Data fetched from NY Times. The app is fully responsive and mobile-friendly. Built with JavaScript and CSS. 
 slug: breaking-news
 last: false
 new: false

@@ -1,6 +1,6 @@
 ---
 title: Massage Therapist
-description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+description: This website with my own design. Website is for existing business, it's for self employed massage therapist based in Latvia. This website with two languages latvian and russian. Fully responsive and mobile-friendly. Built with jQuery and SASS.
 slug: massage-therapist
 last: false
 new: false

@@ -1,6 +1,6 @@
 ---
 title: My House
-description: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+description: My House website with my own design. This e-commerce website includes shopping cart, login and create account pages. Fully responsive and mobile-friendly. Contentful used to keep data and the localStorage used to keep cart data. Website built with JavaScript and SASS.
 slug: my-house
 last: false
 new: false
