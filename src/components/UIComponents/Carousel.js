@@ -10,9 +10,10 @@ import "../../assets/styles/_slider.scss"
 const Carousel = () => {
   const settings = {
     customPaging: () => {
-      return <Button round />
+      return <Button aria-label="Pagination" round />
     },
     dots: true,
+    lazyLoad: true,
     dotsClass: "slick-dots",
     infinite: true,
     speed: 600,

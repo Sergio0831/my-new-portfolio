@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-loadable-components-ssr`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,6 +52,9 @@ module.exports = {
               variants: ["400, 700"],
             },
           ],
+        },
+        formatAgents: {
+          woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
         },
       },
     },

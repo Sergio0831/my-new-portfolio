@@ -10,7 +10,6 @@ import BOOTSTRAP from "../assets/images/slider/bootstrap.svg"
 import NETLIFY from "../assets/images/slider/netlify.svg"
 import GRAPHQL from "../assets/images/slider/graphql.svg"
 import NEXTJS from "../assets/images/slider/nextjs.svg"
-import JAVA from "../assets/images/slider/java.svg"
 
 export const slides = [
   {
@@ -60,10 +59,5 @@ export const slides = [
   {
     image: NETLIFY,
     title: "NETLIFY",
-  },
-
-  {
-    image: JAVA,
-    title: "JAVA",
   },
 ]

@@ -1,8 +1,9 @@
 import React from "react"
-import Carousel from "../UIComponents/Carousel"
+import loadable from "@loadable/component"
 import Title from "../UIComponents/Title"
 import "../../assets/styles/_utilities.scss"
 import { skills } from "./Skills.module.scss"
+const Carousel = loadable(() => import("../UIComponents/Carousel"))
 
 const Skills = () => {
   return (
