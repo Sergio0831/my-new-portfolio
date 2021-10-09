@@ -7,7 +7,7 @@
   padding-top: $p-4;
   padding-bottom: $p-6;
 
-  @include breakpoint($bp: 52.69em) {
+  @include lg {
     padding-bottom: 0;
   }
 
@@ -18,7 +18,7 @@
     gap: $g-4;
     margin-bottom: $m-6;
 
-    @include breakpoint($bp: 52.69em) {
+    @include lg {
       padding-bottom: 0;
       margin-bottom: 0;
     }
@@ -50,7 +50,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include breakpoint($bp: 52.69em) {
+    @include lg {
       transform: translateY(50%);
     }
 

@@ -1,13 +1,14 @@
 import React, { useContext } from "react"
+import loadable from "@loadable/component"
 import clsx from "clsx"
 import { MenuContext } from "../../context/MenuContext"
-import Menu from "./Menu"
 import {
   navigation,
   navigationButton,
   navigationIcon,
   showNav,
 } from "./Navigation.module.scss"
+const Menu = loadable(() => import("./Menu"))
 
 const Navigation = () => {
   const nav = useContext(MenuContext)

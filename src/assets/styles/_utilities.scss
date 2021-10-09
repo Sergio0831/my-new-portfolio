@@ -5,11 +5,8 @@
 .section-center {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 $p-3;
-
-  @include xl {
-    padding: 0;
-  }
+  padding-left: $p-3;
+  padding-right: $p-3;
 }
 
 .section-title {

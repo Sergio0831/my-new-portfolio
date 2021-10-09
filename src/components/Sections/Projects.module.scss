@@ -9,7 +9,7 @@
   margin-top: 0;
   text-align: $align-center;
 
-  @include breakpoint($bp: 52.69em) {
+  @include lg {
     padding-top: $p-6 * 3;
   }
 
