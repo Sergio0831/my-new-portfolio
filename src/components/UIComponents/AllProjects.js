@@ -42,11 +42,11 @@ const query = graphql`
 const AllProjects = () => {
   const tagsArray = []
   const data = useStaticQuery(query)
-  const [projects, setProjects] = useState(data.projects.edges)
+  const [projects] = useState(data.projects.edges)
   const [isOpen, setOpen] = useState(false)
   const [filtered, setFiltered] = useState(projects)
   const [selectedItem, setSelectedItem] = useState(null)
-  const allTags = projects.map(project =>
+  projects.map(project =>
     project.node.frontmatter.tags.map(tag => tagsArray.push(tag))
   )
   const newTags = ["All", ...new Set(tagsArray)]

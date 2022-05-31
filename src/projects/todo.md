@@ -4,6 +4,7 @@ description: The classic todo app with a beautiful design from frontendmentor.io
 slug: to-do-list
 last: false
 new: false
+number: 6
 github: https://github.com/Sergio0831/react-todo-app
 demo: https://react-todo-ivcenko.netlify.app/
 tags: ["React", "Styled Components"]

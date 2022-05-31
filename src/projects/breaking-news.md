@@ -4,6 +4,7 @@ description: Breaking News App with my own design. News can be chosen by categor
 slug: breaking-news
 last: false
 new: false
+number: 1
 github: https://github.com/Sergio0831/breaking-news
 demo: https://breaking-news.netlify.app/
 tags: ["JavaScript", "CSS", "Rest API"]

@@ -4,6 +4,7 @@ description: Covid-19 Statistic with my own design provides the latest Covid-
 slug: covid-19-statistic
 last: false
 new: false
+number: 2
 github: https://github.com/Sergio0831/coronavirusApp
 demo: https://coronavirus-statistic.netlify.app/
 tags: ["JavaScript", "CSS", "Rest API"]

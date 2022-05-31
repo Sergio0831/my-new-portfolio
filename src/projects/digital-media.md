@@ -4,6 +4,7 @@ description: This landing page with beautiful design. This website includes smot
 slug: digital-media-company
 last: false
 new: false
+number: 3
 github: https://github.com/Sergio0831/digital_media
 demo: https://digital-media.netlify.app/
 tags: ["Bootstrap", "CSS"]

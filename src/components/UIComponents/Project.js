@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import {
   project,
-  projectImage,
   projectOverlay,
   projectText,
   projectTitle,
@@ -17,7 +16,7 @@ const Project = ({ id, title, slug, tag, image }) => {
   return (
     <>
       <Link key={id} className={project} to={`/projects/${slug}`}>
-        <GatsbyImage image={image} alt={slug} className={projectImage} />
+        <GatsbyImage image={image} alt={slug} />
         <div className={projectOverlay}>
           <div className={projectText}>
             <h4 className={projectTitle}>{title}</h4>

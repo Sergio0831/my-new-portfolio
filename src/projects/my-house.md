@@ -4,6 +4,7 @@ description: My House website with my own design. This e-commerce website includ
 slug: my-house
 last: false
 new: false
+number: 5
 github: https://github.com/Sergio0831/my-house
 demo: https://my-house.netlify.app/
 tags: ["JavaScript", "SASS"]

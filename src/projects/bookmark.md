@@ -4,6 +4,7 @@ description: This landing page website with a beautiful design from frontendment
 slug: bookmark-landing-page
 last: true
 new: false
+number: 8
 github: https://github.com/Sergio0831/bookmark-landing-page
 demo: https://sergejs-bookmark.netlify.app/
 tags: ["React", "Styled Components"]

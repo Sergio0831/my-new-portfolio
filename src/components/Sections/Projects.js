@@ -12,7 +12,7 @@ const query = graphql`
   query {
     projects: allMarkdownRemark(
       filter: { frontmatter: { last: { eq: true } } }
-      sort: { fields: frontmatter___title, order: ASC }
+      sort: { fields: frontmatter___number, order: DESC }
     ) {
       edges {
         node {

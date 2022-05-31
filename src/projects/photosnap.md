@@ -4,6 +4,7 @@ description: Multi-page website with a beautiful design from frontendmentor.io. 
 slug: photosnap
 last: true
 new: true
+number: 10
 github: https://github.com/Sergio0831/officelite-coming-soon-site
 demo: https://photosnap-ivcenko.netlify.app/
 tags: ["React", "Typescript", "SASS"]
