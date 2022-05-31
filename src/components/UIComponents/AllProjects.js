@@ -9,7 +9,7 @@ import { getImage } from "gatsby-plugin-image"
 const query = graphql`
   query ProjectsPage {
     projects: allMarkdownRemark(
-      sort: { order: ASC, fields: frontmatter___title }
+      sort: { fields: frontmatter___number, order: DESC }
     ) {
       edges {
         node {
