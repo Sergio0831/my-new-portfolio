@@ -31,6 +31,196 @@
 	font-style: normal;
 }
 
+/* Variables */
+:root {
+	/* Colors */
+	--monochrome-clr-light: #fff;
+	--monochrome-clr-dark: #303338;
+	--primary-clr-light: #567ae4;
+	--primary-clr-base: #305aad;
+	--primary-clr-dark: #152739;
+	--secondary-clr-light: #f68f6f;
+	--secondary-clr-base: #ff7f50;
+	--clr-inherit: inherit;
+	--clr-current: currentColor;
+
+	/* Fonts */
+	--font-headings: 'Sf Pro Display';
+	--font-body: 'SF Pro Text';
+
+	/* Font size */
+	--text-xs: 0.75rem; /* 12px */
+	--text-sm: 0.875rem; /* 14px */
+	--text-base: 1rem; /* 16px */
+	--text-md: 1.125rem; /* 18px */
+	--text-lg: 1.375rem; /* 22px */
+	--text-xl: 1.75rem; /* 28px */
+	--text-2xl: 2.25rem; /* 36px */
+	--text-3xl: 3.25rem; /* 52px */
+	--text-full: 100%; /* 100% */
+
+	/* Font weight */
+	--fw-normal: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+
+	/* Line height */
+	--lh-small: 120%;
+	--lh-large: 160%;
+
+	/* Border radius */
+	--rounded: 0.25rem; /* 4px */
+	--rounded-md: 0.5rem; /* 8px */
+	--rounded-lg: 0.75rem; /* 12px */
+	--rounded-full: 100%; /* 100% */
+
+	/* Spacing */
+	--spacing-1: 0.25rem; /* 4px */
+	--spacing-1-5: 0.375rem; /* 6px */
+	--spacing-2: 0.5rem; /* 8px */
+	--spacing-2-5: 0.625rem; /* 10px */
+	--spacing-3: 0.75rem; /* 12px */
+	--spacing-4: 1rem; /* 16px */
+	--spacing-5: 1.25rem; /* 20px */
+	--spacing-6: 1.5rem; /* 24px */
+	--spacing-7: 1.75rem; /* 28px */
+	--spacing-8: 2rem; /* 32px */
+	--spacing-9: 2.25rem; /* 36px */
+	--spacing-10: 2.5rem; /* 40px */
+	--spacing-11: 2.75rem; /* 44px */
+	--spacing-12: 3rem; /* 48px */
+	--spacing-14: 3.5rem; /* 56px */
+	--spacing-14: 3.75rem; /* 60px */
+	--spacing-16: 4rem; /* 64px */
+	--spacing-20: 5rem; /* 80px */
+
+	/* Display */
+	--d-flex: flex;
+	--d-grid: grid;
+	--d-block: block;
+	--d-inline-block: inline-block;
+
+	/* Widht */
+	--w-full: 100%;
+	--w-screen: 100vw;
+	--w-min: min-content;
+	--w-max: max-content;
+	--w-fit: fit-content;
+
+	/* Height */
+	--h-full: 100%;
+	--h-screen: 100vh;
+
+	/* Box shadow */
+	--button-shadow: 0 0.625rem 1.25rem 0 rgba(255, 112, 52, 0.3);
+	--blue-shadow: 0 0.625rem 1.25rem 0 rgba(65, 105, 225, 0.2);
+	--card-shadow: 0 0.313rem 1.25rem 0 rgba(65, 105, 225, 0.2);
+
+	/* Transition */
+	--transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Media for the system dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-bg: var(--primary-clr-dark);
+		--body-text: var(--monochrome-clr-light);
+	}
+}
+
+/* Media for the system lignt mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-bg: var(--monochrome-clr-light);
+		--body-text: var(--monochrome-clr-dark);
+	}
+}
+
+/* Reset styles */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	display: var(--d-inline-block);
+}
+
+img,
+picture {
+	display: var(--d-block);
+	max-width: var(--w-full);
+	height: var(--h-full);
+	object-fit: cover;
+}
+
+input,
+button,
+textarea {
+	font: inherit;
+}
+
+textarea {
+	resize: vertical;
+}
+
+/* Base styles */
+html {
+	font-size: var(--text-full);
+}
+
 body {
-	font-family: 'Sf Pro Display';
+	background-color: var(--body-bg);
+	color: var(--body-text);
+	font-family: var(--font-body);
+	line-height: var(--lh-large);
+	font-weight: var(--fw-normal);
+	font-size: var(--text-base);
+}
+
+/* Typography */
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+	line-height: var(--lh-small);
+	font-weight: var(--fw-bold);
+	font-family: var(--font-headings);
+}
+
+.heading-1 {
+	font-size: var(--text-3xl);
+}
+
+.heading-2 {
+	font-size: var(--text-2xl);
+}
+
+.heading-3 {
+	font-size: var(--text-xl);
+}
+
+.heading-4 {
+	font-size: var(--text-lg);
+}
+
+/* Utility classes */
+.wrapper-outer {
+	width: min(75rem, calc(100% - 3.75rem));
+	margin: 0 auto;
+}
+
+.wrapper-inner {
+	width: min(60rem, calc(100% - 3.75rem));
+	margin: 0 auto;
 }
