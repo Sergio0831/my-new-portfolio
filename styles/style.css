@@ -130,11 +130,23 @@
 }
 
 /* Media for the system lignt mode */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--body-bg: var(--monochrome-clr-light);
 		--body-text: var(--monochrome-clr-dark);
 	}
+}
+
+/* Color scheme for the dark mode */
+[color-scheme='dark'] {
+	--body-bg: var(--primary-clr-dark);
+	--body-text: var(--monochrome-clr-light);
+}
+
+/* Color scheme for the light mode */
+[color-scheme='light'] {
+	--body-bg: var(--monochrome-clr-light);
+	--body-text: var(--monochrome-clr-dark);
 }
 
 /* Reset styles */
@@ -186,6 +198,8 @@ body {
 	line-height: var(--lh-large);
 	font-weight: var(--fw-normal);
 	font-size: var(--text-base);
+	transition: background-color var(--transition-base),
+		color var(--transition-base);
 }
 
 /* Typography */
