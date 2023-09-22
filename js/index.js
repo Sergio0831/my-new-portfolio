@@ -1,38 +1,26 @@
 'use strict';
 
-const themeBtn = document.querySelector('.theme-btn');
+import { getCurrentTheme, loadTheme } from './theme.js';
 
-const getCurrentTheme = () => {
-	let theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-		? 'dark'
-		: 'light';
-	localStorage.getItem('theme')
-		? (theme = localStorage.getItem('theme'))
-		: null;
-	return theme;
-};
-
-const loadTheme = (theme) => {
-	const root = document.querySelector(':root');
-	if (theme === 'light') {
-		themeBtn.textContent = 'Dark Mode';
-		themeBtn.setAttribute('aria-label', 'Dark Theme');
-	} else {
-		themeBtn.textContent = 'Light Mode';
-		themeBtn.setAttribute('aria-label', 'Light Theme');
-	}
-	root.setAttribute('color-scheme', `${theme}`);
-};
-
+// Wait for DOM content fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+	const themeBtn = document.querySelector('.theme-btn');
+
+	// Add click event to the themeBtn to change theme on button click
 	themeBtn.addEventListener('click', () => {
+		// get current theme
 		let theme = getCurrentTheme();
 
+		// if theme is a dark, set theme to the light and otherwise
 		theme === 'dark' ? (theme = 'light') : (theme = 'dark');
 
+		// set current theme to the local storage
 		localStorage.setItem('theme', `${theme}`);
 		loadTheme(theme);
 	});
 
-	loadTheme(getCurrentTheme());
+	// Get current theme
+	const theme = getCurrentTheme();
+	// Load current theme
+	loadTheme(theme);
 });

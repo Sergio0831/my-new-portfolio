@@ -12,16 +12,61 @@
     <link rel="preload" href="./fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./styles/style.css">
-    <script defer src="./js/index.js"></script>
+    <script type="module" defer src="./js/index.js"></script>
     <title>Sergejs Ivcenko Portfolio | Front End Web Developer - Dublin</title>
 </head>
 
 <body>
-    <h1>Home Page</h1>
-    <a href="./pages/about-me.html">About Me</a>
-    <a href="./pages/projects/index.html">Projects</a>
-    <a href="./pages/contact-me.html">Contact Me</a>
-    <button type="button" class="theme-btn" aria-label="Light Theme">Light Mode</button>
+    <!-- Header start -->
+    <header class="header">
+        <div class="wrapper-outer center-y space-between">
+            <!-- Logo start -->
+            <img src="./images/logo-light.svg" alt="Logo">
+            <!-- Logo end -->
+
+            <!-- Navigation start -->
+            <div class="navigation">
+                <button type="button" class="navigation__btn btn btn-round center" aria-label="Open Navigation">
+                    <span class="navigation__icon"></span>
+                </button>
+                <div class="navigation__bg"></div>
+                <!-- Main nav start -->
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="/" class="navigation__link">Home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="./pages/about-me.html" class="navigation__link">About Me</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="./pages/projects/index.html" class="navigation__link">Projects</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="./pages/contact-me.html" class="navigation__link">Contact Me</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Main nav end -->
+            </div>
+            <!-- Navigation end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <main>
+
+    </main>
+    <!-- Footer start -->
+    <footer class="footer text-center">
+        <p class="footer__copy">© Copyright <span id="year"></span>. Made by Sergejs Ivcenko</p>
+    </footer>
+    <!-- Footer start -->
+
+    <!-- Theme button start -->
+    <button type="button" class="theme-btn btn btn-round" role="switch" aria-label="Light Theme"></button>
+    <!-- Theme button end -->
 </body>
 
 </html>
