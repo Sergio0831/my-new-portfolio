@@ -1,3 +1,5 @@
+import { moonIcon, sunIcon } from './themeIcons.js';
+
 // Arrow function to get current theme from the local storage
 export const getCurrentTheme = () => {
 	let theme = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -16,10 +18,10 @@ export const loadTheme = (theme) => {
 	const root = document.querySelector(':root');
 	// Change button icon and aria-label, based on what is current theme
 	if (theme === 'light') {
-		themeBtn.textContent = 'Dark Mode';
+		themeBtn.innerHTML = moonIcon;
 		themeBtn.setAttribute('aria-label', 'Dark Theme');
 	} else {
-		themeBtn.textContent = 'Light Mode';
+		themeBtn.innerHTML = sunIcon;
 		themeBtn.setAttribute('aria-label', 'Light Theme');
 	}
 	// Set to the htm theme

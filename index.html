@@ -12,6 +12,7 @@
     <link rel="preload" href="./fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" defer src="./js/index.js"></script>
     <title>Sergejs Ivcenko Portfolio | Front End Web Developer - Dublin</title>
 </head>
@@ -21,33 +22,43 @@
     <header class="header">
         <div class="wrapper-outer center-y space-between">
             <!-- Logo start -->
-            <img src="./images/logo-light.svg" alt="Logo">
+            <a href="/" class="header__logo outline"><img src="./images/logo-light.svg" alt="Logo"></a>
             <!-- Logo end -->
 
             <!-- Navigation start -->
             <div class="navigation">
-                <button type="button" class="navigation__btn btn btn-round center" aria-label="Open Navigation">
+                <button type="button" class="navigation__btn btn btn-round center outline" aria-label="Open Navigation"
+                    aria-pressed="false">
                     <span class="navigation__icon"></span>
                 </button>
-                <div class="navigation__bg"></div>
-                <!-- Main nav start -->
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item">
-                            <a href="/" class="navigation__link">Home</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="./pages/about-me.html" class="navigation__link">About Me</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="./pages/projects/index.html" class="navigation__link">Projects</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="./pages/contact-me.html" class="navigation__link">Contact Me</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Main nav end -->
+                <div class="navigation__bg" aria-expanded="false">
+                    <!-- Main nav start -->
+                    <nav class="navigation__nav">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="/" class="navigation__link"><span data-title="Home">Home</span></a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="./pages/about-me.html" class="navigation__link"><span
+                                        data-title="About Me">About
+                                        Me</span></a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="./pages/projects/index.html" class="navigation__link"><span
+                                        data-title="Projects">Projects</span></a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="./pages/blog.html" class="navigation__link"><span
+                                        data-title="Blog">Blog</span></a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="./pages/contact-me.html" class="navigation__link"><span
+                                        data-title="Contact Me">Contact Me</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Main nav end -->
+                </div>
             </div>
             <!-- Navigation end -->
 
@@ -57,16 +68,21 @@
 
     <main>
 
+
+
     </main>
+
+    <!-- Theme button start -->
+    <button type="button" class="theme-btn btn btn-round center" role="switch" aria-label="Light Theme"></button>
+    <!-- Theme button end -->
+
     <!-- Footer start -->
     <footer class="footer text-center">
-        <p class="footer__copy">© Copyright <span id="year"></span>. Made by Sergejs Ivcenko</p>
+        <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
     </footer>
     <!-- Footer start -->
 
-    <!-- Theme button start -->
-    <button type="button" class="theme-btn btn btn-round" role="switch" aria-label="Light Theme"></button>
-    <!-- Theme button end -->
+
 </body>
 
 </html>
