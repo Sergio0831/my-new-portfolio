@@ -1,8 +1,12 @@
+// Animation function for nav links
 export const animateNavLinks = () => {
+	// Select all navigation items
 	const navLinks = document.querySelectorAll('.navigation__item');
 
+	// Create a timeline for the animation with initial settings
 	const timeLine = gsap.timeline({ paused: true });
 
+	// Define animation properties for the nav links
 	timeLine.from(
 		navLinks,
 		{
@@ -16,7 +20,9 @@ export const animateNavLinks = () => {
 		'-=0.9',
 	);
 
+	// Reverse the timeline
 	timeLine.reverse();
 
+	// Return the timeline
 	return timeLine;
 };

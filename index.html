@@ -7,81 +7,138 @@
     <meta name="description"
         content="Passionate, creative, and problem-solving Frontend Web Developer. I create modern, clean, mobile-first, responsive, functional, and beautiful interfaces.">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Preloading logo image -->
+    <link rel="preload" as="image" href="./images/logo-dark.svg" alt="Logo">
+    <!-- Preloading fonts -->
     <link rel="preload" href="./fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script type="module" defer src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
     <title>Sergejs Ivcenko Portfolio | Front End Web Developer - Dublin</title>
 </head>
 
 <body>
-    <!-- Header start -->
-    <header class="header">
-        <div class="wrapper-outer center-y space-between">
-            <!-- Logo start -->
-            <a href="/" class="header__logo outline"><img src="./images/logo-light.svg" alt="Logo"></a>
-            <!-- Logo end -->
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="./images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
 
-            <!-- Navigation start -->
-            <div class="navigation">
-                <button type="button" class="navigation__btn btn btn-round center outline" aria-label="Open Navigation"
-                    aria-pressed="false">
-                    <span class="navigation__icon"></span>
-                </button>
-                <div class="navigation__bg" aria-expanded="false">
-                    <!-- Main nav start -->
-                    <nav class="navigation__nav">
-                        <ul class="navigation__list">
-                            <li class="navigation__item">
-                                <a href="/" class="navigation__link"><span data-title="Home">Home</span></a>
-                            </li>
-                            <li class="navigation__item">
-                                <a href="./pages/about-me.html" class="navigation__link"><span
-                                        data-title="About Me">About
-                                        Me</span></a>
-                            </li>
-                            <li class="navigation__item">
-                                <a href="./pages/projects/index.html" class="navigation__link"><span
-                                        data-title="Projects">Projects</span></a>
-                            </li>
-                            <li class="navigation__item">
-                                <a href="./pages/blog.html" class="navigation__link"><span
-                                        data-title="Blog">Blog</span></a>
-                            </li>
-                            <li class="navigation__item">
-                                <a href="./pages/contact-me.html" class="navigation__link"><span
-                                        data-title="Contact Me">Contact Me</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- Main nav end -->
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link active"><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link "><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link "><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
                 </div>
+                <!-- Navigation end -->
+
             </div>
-            <!-- Navigation end -->
+        </header>
+        <!-- Header end -->
 
-        </div>
-    </header>
-    <!-- Header end -->
+        <!-- Main start -->
+        <main class="center-y">
+            <section class="home__section wrapper-outer">
+                <div class="wrapper-inner grid-columns">
+                    <div class="home__content">
+                        <div>
+                            <h1 class="home__title heading-1">Hello, I&apos;m <span>Sergejs</span></h1>
+                            <p class="home__desc">
+                                Welcome to my portfolio! I&apos;m a passionate, creative and problem solving Frontend
+                                Web
+                                Developer. I create modern, clean,
+                                mobile first, responsive, functional and beautiful interfaces using various tools and
+                                technologies.
+                            </p>
+                        </div>
+                        <div class="home__socials">
+                            <a href="https://github.com/Sergio0831" target="_blank" aria-label="GitHub Profile"
+                                class="home__socials-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82A7.616 7.616 0 0012 7.868a7.643 7.643 0 00-2.003.269c-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118a3.092 3.092 0 00-.824 2.147c0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385A8 8 0 0112 4a8 8 0 012.534 15.59z" />
+                                </svg></a>
+                            <a href="https://www.linkedin.com/in/ivcenko/" target="_blank" aria-label="LinkedIn Profile"
+                                class="home__socials-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="./assets/Sergejs_Ivcenko_CV.pdf" class="home__btn btn-primary" download>
+                            Download CV
+                        </a>
+                    </div>
+                    <!-- Home image start -->
+                    <picture class="home__image">
+                        <!-- Avif format -->
+                        <source
+                            srcset="./images/home-page/portrait-960.avif 960w, ./images/home-page/portrait-820.avif 820w, ./images/home-page/portrait-460.avif 460w"
+                            type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 460px">
+                        <!-- Fallback image -->
+                        <img srcset="./images/home-page/portrait-960.webp 960w, ./images/home-page/portrait-820.webp 820w, ./images/home-page/portrait-460.webp 460w"
+                            sizes="(max-width: 960px) calc(100vw - 60px), 460px"
+                            src="./images/home-page/portrait-460.webp" class="home__portrait"
+                            alt="Sergejs Ivcenko Portrait" width="460" height="460" loading="eager">
+                    </picture>
+                    <!-- Home image end -->
+                </div>
+            </section>
+        </main>
+        <!-- Main end -->
 
-    <main>
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
 
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
 
-
-    </main>
-
-    <!-- Theme button start -->
-    <button type="button" class="theme-btn btn btn-round center" role="switch" aria-label="Light Theme"></button>
-    <!-- Theme button end -->
-
-    <!-- Footer start -->
-    <footer class="footer text-center">
-        <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
-    </footer>
-    <!-- Footer start -->
-
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
 
 </body>
 
