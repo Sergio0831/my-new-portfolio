@@ -6,17 +6,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Passionate about web development, web design, and SEO.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <!-- Preloading logo image -->
+    <link rel="preload" as="image" href="../images/logo-dark.svg">
+    <!-- Preloading fonts -->
     <link rel="preload" href="../fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="../js/index.js"></script>
+    <base href="../">
     <title>About Me | Sergejs Ivcenko - Web Development, Web Design & SEO</title>
 </head>
 
 <body>
-    <h1>About Me Page</h1>
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="../images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
+
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link active"><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link "><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
+                </div>
+                <!-- Navigation end -->
+
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main start -->
+        <main class="about-me">
+            <!-- Wrapper start -->
+            <div class="wrapper-outer">
+                <!-- About Me sections start -->
+                <section class="about-me__section">
+                    <h1 class="about-me__title heading-2">About Me</h1>
+                    <div class="grid-columns">
+                        <div class="about-me__info">
+                            <p>I'm a passionate Front End Web Developer with experience in building websites and writing
+                                code. Before starting a career
+                                in web development, I used to work in the hospitality industry as a Head Chef, Sous
+                                Chef,
+                                and Chef, where I honed my
+                                leadership and management skills, creativity, ability to work under pressure,
+                                communication
+                                skills, business skills,
+                                discipline, and attention to detail.</p>
+                            <p>Now, I'm fully dedicated to pursuing my passion for web development and am currently a
+                                student in the Front-End Web
+                                Developer Traineeship at CDETB. I'm always eager to learn and grow in the industry and
+                                stay
+                                up to date with the latest
+                                trends and technologies.</p>
+                            <p>My goal is to become an experienced front-end developer and work on challenging projects
+                                that
+                                allow me to use my
+                                creativity and problem-solving skills. I'm excited to continue exploring new
+                                technologies
+                                and tools to build beautiful,
+                                responsive, and user-friendly websites.</p>
+                        </div>
+                        <!-- About Me image start -->
+                        <picture>
+                            <!-- Avif format -->
+                            <source
+                                srcset="../images/about-page/developer-960.avif 960w, ../images/about-page/developer-820.avif 820w, ../images/about-page/developer-460.avif 460w"
+                                type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 460px">
+                            <!-- Fallback image -->
+                            <img srcset="../images/about-page/developer-960.webp 960w, ../images/about-page/developer-820.webp 820w, ../images/about-page/developer-460.webp 460w"
+                                sizes="(max-width: 960px) calc(100vw - 60px), 460px"
+                                src="../images/about-page/developer-500.webp" class="about-me__image"
+                                alt="Sergejs Ivcenko Portrait" width="460" height="345" loading="eager">
+                        </picture>
+                        <!-- About Me image end -->
+                    </div>
+                </section>
+                <!-- About Me sections end -->
+                <!-- What I do section start -->
+                <section class="what-i-do">
+                    <h2 class="what-i-do__title heading-3">What I Do</h2>
+                    <div class="grid-columns">
+                        <section class="what-i-do__column">
+                            <h3 class="what-i-do__column-title heading-4">Web Development</h3>
+                            <p>I write well-designed, testable, and efficient code by using the best web development
+                                practices. With my knowledge of
+                                programming languages such as HTML, CSS, JavaScript, and various frameworks, I create
+                                dynamic and interactive websites
+                                that fully responsive and optimized for different devices.</p>
+                        </section>
+                        <section class="what-i-do__column">
+                            <h3 class="what-i-do__column-title heading-4">Web Design</h3>
+                            <p>I have a keen eye for design and I'm always up to date with the latest design trends and
+                                best practices to ensure my
+                                designs are up-to-date and modern. Whether I'm building a brand-new website from scratch
+                                or redesigning an existing one,
+                                I create beautiful and user-friendly website.</p>
+                        </section>
+                        <section class="what-i-do__column">
+                            <h3 class="what-i-do__column-title heading-4">SEO
+                            </h3>
+                            <p>I use various techniques and tools to optimize website load times, enhance page speed,
+                                and improve overall website
+                                functionality. I also conduct thorough keyword research and implement SEO strategies to
+                                improve search engine rankings
+                                and increase website traffic.</p>
+                        </section>
+                    </div>
+                </section>
+                <section class="skills">
+                    <h2 class="skills__title heading-3">My Skills</h2>
+                    <ul class="skills__list">
+                        <li class="skills__item">HTML</li>
+                        <li class="skills__item">CSS</li>
+                        <li class="skills__item">SCSS</li>
+                        <li class="skills__item">JavaScript</li>
+                        <li class="skills__item">TypeScript</li>
+                        <li class="skills__item">React</li>
+                        <li class="skills__item">NextJs</li>
+                        <li class="skills__item">Redux</li>
+                        <li class="skills__item">GraphQL</li>
+                        <li class="skills__item">RestAPI</li>
+                        <li class="skills__item">WordPress</li>
+                        <li class="skills__item">Prisma</li>
+                        <li class="skills__item">Gulp</li>
+                        <li class="skills__item">Figma</li>
+                        <li class="skills__item">Git</li>
+                        <li class="skills__item">GitHub</li>
+                        <li class="skills__item">Responsive Design</li>
+                        <li class="skills__item">Web Accessibility</li>
+                        <li class="skills__item">Project Management</li>
+                        <li class="skills__item">Communication</li>
+                        <li class="skills__item">Problem-Solving</li>
+                        <li class="skills__item">Creativity</li>
+                    </ul>
+                </section>
+                <!-- What I do section end -->
+            </div>
+            <!-- Wrapper end -->
+        </main>
+        <!-- Main end -->
+
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
+
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
+
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
 </body>
 
 </html>

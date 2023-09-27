@@ -125,6 +125,7 @@
 	/* Height */
 	--h-full: 100%;
 	--h-screen: 100vh;
+	--h-auto: auto;
 
 	/* Position */
 	--p-relative: relative;
@@ -250,8 +251,8 @@ body {
 .heading-3,
 .heading-4 {
 	line-height: var(--lh-small);
-	font-weight: var(--fw-bold);
 	font-family: var(--font-headings);
+	letter-spacing: 1px;
 }
 
 .heading-1 {
@@ -287,13 +288,15 @@ body {
 	will-change: transform;
 }
 
-.btn-round:hover {
-	transform: translate(5px, -5px) scale(1.05);
-	box-shadow: var(--blue-shadow-hover);
+@media (hover: hover) {
+	.btn-round:hover {
+		transform: translate(5px, -5px) scale(1.05);
+		box-shadow: var(--blue-shadow-hover);
+	}
 }
 
 .btn-round:active {
-	transform: translate(0, 0) scale(1);
+	transform: translate(0, 0) scale(0.95);
 	box-shadow: var(--blue-shadow);
 }
 
@@ -308,14 +311,20 @@ body {
 	will-change: transform;
 }
 
-.btn-primary:hover,
+@media (hover: hover) {
+	.btn-primary:hover {
+		transform: translate(5px, -5px) scale(1.05);
+		box-shadow: var(--button-shadow-hover);
+	}
+}
+
 .btn-primary:focus-visible {
 	transform: translate(5px, -5px) scale(1.05);
 	box-shadow: var(--button-shadow-hover);
 }
 
 .btn-primary:active {
-	transform: translate(0, 0) scale(1);
+	transform: translate(0, 0) scale(0.95);
 	box-shadow: var(--button-shadow);
 }
 
@@ -411,6 +420,7 @@ body {
 		background-color var(--transition-base);
 	border-radius: var(--rounded);
 	transition-delay: 0.9s;
+	will-change: transform;
 }
 
 .navigation__icon::after,
@@ -476,6 +486,7 @@ body {
 /* Nav links styles */
 .navigation__item {
 	margin-bottom: var(--spacing-7);
+	will-change: transform;
 }
 
 .navigation__item:last-child {
@@ -510,10 +521,6 @@ span[data-title]::before {
 }
 
 /* Home page styles */
-.home__section .grid-columns {
-	grid-auto-columns: 1fr auto;
-}
-
 .home__content {
 	display: var(--d-grid);
 	row-gap: var(--spacing-4);
@@ -559,6 +566,51 @@ span[data-title]::before {
 	border-radius: var(--rounded-md);
 }
 
+/* About Me Page styles */
+.about-me__section .grid-columns {
+	row-gap: var(--spacing-8);
+}
+
+.about-me__image {
+	height: var(--h-auto);
+	border-radius: var(--rounded-md);
+}
+
+.about-me__section,
+.what-i-do,
+.skills {
+	margin-bottom: var(--spacing-10);
+}
+
+.about-me__title,
+.what-i-do__title,
+.skills__title {
+	margin-bottom: var(--spacing-5);
+}
+
+.what-i-do__column-title {
+	margin-bottom: var(--spacing-3);
+}
+
+.what-i-do .grid-columns {
+	row-gap: var(--spacing-6);
+}
+
+.skills__list {
+	display: var(--d-flex);
+	flex-wrap: wrap;
+	gap: var(--spacing-3);
+}
+
+.skills__item {
+	color: var(--monochrome-clr-light);
+	font-weight: var(--fw-semibold);
+	border-radius: var(--rounded-md);
+	background-color: var(--monochrome-clr-dark);
+	padding: 0.625em 1.25em;
+	font-size: var(--text-md);
+}
+
 /* Dark / Light theme button switch styles */
 .theme-btn-wrapper {
 	position: var(--p-relative);
@@ -567,7 +619,7 @@ span[data-title]::before {
 
 .theme-btn {
 	position: var(--p-fixed);
-	bottom: 4rem;
+	bottom: 4.5rem;
 	left: calc(((100% + var(--wrapper-width)) / 2) - 3.75rem);
 }
 
@@ -593,6 +645,27 @@ span[data-title]::before {
 	.home__desc {
 		font-size: 1.25rem;
 	}
+
+	/* About Me page styles */
+	.about-me__section,
+	.what-i-do,
+	.skills {
+		margin-bottom: var(--spacing-15);
+	}
+
+	.about-me__title,
+	.what-i-do__title,
+	.skills__title {
+		margin-bottom: var(--spacing-8);
+	}
+
+	.what-i-do__column-title {
+		margin-bottom: var(--spacing-4);
+	}
+
+	.skills__item {
+		font-size: 1.25rem;
+	}
 }
 
 /* Media query for the desktop screen with min-width of the 960px - 60rem */
@@ -600,5 +673,23 @@ span[data-title]::before {
 	/* Utility classes */
 	.grid-columns {
 		grid-auto-flow: column;
+	}
+
+	/* Home page styles */
+	.home__section .grid-columns {
+		grid-template-columns: 1fr auto;
+	}
+
+	/* About Me Page styles */
+	.about-me__section .grid-columns {
+		grid-auto-columns: 47% 28.5rem;
+		row-gap: var(--spacing-8);
+		justify-content: var(--justify-between);
+	}
+
+	.what-i-do .grid-columns {
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: var(--justify-between);
+		column-gap: 8%;
 	}
 }

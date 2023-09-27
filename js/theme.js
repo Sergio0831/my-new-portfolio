@@ -25,12 +25,12 @@ export const loadTheme = (theme) => {
 		themeBtn.innerHTML = moonIcon;
 		themeBtn.setAttribute('aria-label', 'Dark Theme');
 		themeBtn.setAttribute('aria-checked', 'false');
-		logoImg.src = './images/logo-dark.svg';
+		logoImg.src = 'images/logo-dark.svg';
 	} else {
 		themeBtn.innerHTML = sunIcon;
 		themeBtn.setAttribute('aria-label', 'Light Theme');
 		themeBtn.setAttribute('aria-checked', 'true');
-		logoImg.src = './images/logo-light.svg';
+		logoImg.src = 'images/logo-light.svg';
 	}
 	// Set the 'color-scheme attribute of the 'root' element to the specified theme
 	root.setAttribute('color-scheme', `${theme}`);
