@@ -7,21 +7,243 @@
     <meta name="description"
         content="Passionate, creative, and problem-solving Frontend Web Developer. I create modern, clean, mobile-first, responsive, functional, and beautiful interfaces.">
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <!-- Preloading logo image -->
+    <link rel="preload" as="image" href="../../images/logo-dark.svg">
     <link rel="preload" href="../../fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../styles/swiper.min.css">
     <link rel="stylesheet" href="../../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="../../js/index.js"></script>
+    <base href="../../">
     <title>Sergejs Ivcenko Portfolio | Front End Web Developer - Dublin</title>
 </head>
 
 <body>
-    <h1>Projects Page</h1>
-    <a href="./audiophile.html">Audiophile</a>
-    <a href="./photosnap.html">Photosnap</a>
-    <a href="./coffeechino.html">Coffeechino</a>
-    <a href="./entertainment.html">Entertainment</a>
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="../../images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
+
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link"><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link active"><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
+                </div>
+                <!-- Navigation end -->
+
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main start -->
+        <main class="projects">
+            <section class="projects__section wrapper-outer">
+                <div class="wrapper-inner">
+                    <h1 class="projects__title heading-2">Projects</h1>
+                    <p>Welcome to the My Projects page! Here you will find a selection of some of my most exciting and
+                        innovative front-end web
+                        development projects. Each project represents a unique challenge and an opportunity for me. Some
+                        projects build from
+                        existing design, and some of them I planned, designed, and build from scratch. For all my
+                        projects I’m using modern
+                        design principles and the latest front-end technologies and tools.</p>
+                </div>
+            </section>
+            <div class="projects__slider">
+                <!-- Slider cards start -->
+                <div class="slider-cards">
+                    <div class="swiper-wrapper">
+                        <!-- Coffeechino slide start -->
+                        <div class="swiper-slide slider-cards__slide">
+                            <article class="project-card">
+                                <div class="project-card__header">
+                                    <img class="project-card__logo" src="../../images/projects/coffee.svg"
+                                        alt="Coffeechino Logo" loading="lazy">
+                                    <ul class="project-card__list">
+                                        <li class="project-card__item">HTML</li>
+                                        <li class="project-card__item">CSS</li>
+                                        <li class="project-card__item">JS</li>
+                                    </ul>
+                                </div>
+                                <div class="project-card__info">
+                                    <h2 class="project-card__title heading-3">Coffee Chino</h2>
+                                    <p class="project-card__desc">Fully responsive landing page website for a real
+                                        business to showcase your Coffee Shop.</p>
+                                </div>
+                                <a href="../../pages/projects/coffeechino.html"
+                                    class="project-card__link btn-primary btn-primary--small">View Project
+                                    <svg class="project-card__icon" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="4" d="M42 24H6m24-12l12 12-12 12" />
+                                    </svg></a>
+                            </article>
+                        </div>
+                        <!-- Coffeechino slide end -->
+                        <!-- Audiophile slide start -->
+                        <div class="swiper-slide slider-cards__slide">
+                            <article class="project-card">
+                                <div class="project-card__header">
+                                    <img class="project-card__logo" src="../../images/projects/audiophile.svg"
+                                        alt="Audiophile Logo" loading="lazy">
+                                    <ul class="project-card__list">
+                                        <li class="project-card__item">NextJs</li>
+                                        <li class="project-card__item">SCSS</li>
+                                        <li class="project-card__item">TS</li>
+                                        <li class="project-card__item">GraphQL</li>
+                                    </ul>
+                                </div>
+                                <div class="project-card__info">
+                                    <h2 class="project-card__title heading-3">Audiophile e-commerce website</h2>
+                                    <p class="project-card__desc">Multi-page e-commerce website for selling audio
+                                        and
+                                        speakers. With fully functional shopping cart, checkout and form
+                                        validation.</p>
+                                </div>
+                                <a href="../../pages/projects/audiophile.html"
+                                    class="project-card__link btn-primary btn-primary--small">View
+                                    Project
+                                    <svg class="project-card__icon" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="4" d="M42 24H6m24-12l12 12-12 12" />
+                                    </svg></a>
+                            </article>
+                        </div>
+                        <!-- Entertainmet slide end -->
+                        <div class="swiper-slide slider-cards__slide">
+                            <article class="project-card">
+                                <div class="project-card__header">
+                                    <img class="project-card__logo" src="../../images/projects/movie.svg"
+                                        alt="Entertainmet Logo" loading="lazy">
+                                    <ul class="project-card__list">
+                                        <li class="project-card__item">NextJs</li>
+                                        <li class="project-card__item">SCSS</li>
+                                        <li class="project-card__item">TS</li>
+                                    </ul>
+                                </div>
+                                <div class="project-card__info">
+                                    <h2 class="project-card__title heading-3">Entertainment web app</h2>
+                                    <p class="project-card__desc">Multi-page entertainment web app with JSON data,
+                                        API,
+                                        routing, state management, sign-up/login, and search
+                                        functionality.</p>
+                                </div>
+                                <a href="../../pages/projects/entertainment.html"
+                                    class="project-card__link btn-primary btn-primary--small">View
+                                    Project
+                                    <svg class="project-card__icon" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="4" d="M42 24H6m24-12l12 12-12 12" />
+                                    </svg></a>
+                            </article>
+                        </div>
+                        <!-- Entertainmet slide end -->
+                        <!-- Photosnap slide end -->
+                        <div class="swiper-slide slider-cards__slide">
+                            <article class="project-card">
+                                <div class="project-card__header">
+                                    <img class="project-card__logo" src="../../images/projects/photosnap.svg"
+                                        loading="lazy" alt="Entertainmet Logo">
+                                    <ul class="project-card__list">
+                                        <li class="project-card__item">React</li>
+                                        <li class="project-card__item">SCSS</li>
+                                        <li class="project-card__item">TS</li>
+                                    </ul>
+                                </div>
+                                <div class="project-card__info">
+                                    <h2 class="project-card__title heading-3">Photosnap</h2>
+                                    <p class="project-card__desc">Multi-page website for a photo-sharing app with
+                                        animation, routing, yearly/monthly payments plan, and lazy-loading
+                                        images.</p>
+                                </div>
+                                <a href="../../pages/projects/photosnap.html"
+                                    class="project-card__link btn-primary btn-primary--small">View
+                                    Project
+                                    <svg class="project-card__icon" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="4" d="M42 24H6m24-12l12 12-12 12" />
+                                    </svg></a>
+                            </article>
+                        </div>
+                        <!-- Photosnap slide end -->
+
+                    </div>
+                </div>
+                <!-- Slider cards end -->
+                <!-- Projects images slider start -->
+                <div class="slider-img">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider-img__slide"><img
+                                src="../../images/projects/coffeechino-650.webp" alt="Coffeechino"></div>
+                        <div class="swiper-slide slider-img__slide"><img src="../../images/projects/audiophile-650.webp"
+                                alt="Coffeechino"></div>
+                        <div class="swiper-slide slider-img__slide"><img
+                                src="../../images/projects/entertainment-650.webp" alt="Coffeechino"></div>
+                        <div class="swiper-slide slider-img__slide"><img src="../../images/projects/photosnap-650.webp"
+                                alt="Coffeechino"></div>
+                    </div>
+                </div>
+                <!-- Projects images slider end -->
+            </div>
+        </main>
+        <!-- Main end -->
+
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
+
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
+
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
 
 </body>
 

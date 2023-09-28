@@ -1,5 +1,6 @@
 'use strict';
 
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
 import { animateNavLinks } from './animations.js';
 import { getCurrentTheme, loadTheme } from './theme.js';
 import { toggleMenu } from './toggleMenu.js';
@@ -18,6 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		toggleMenu();
 		timeLine.reversed(!timeLine.reversed());
 	});
+
+	const swiperProjectsImg = new Swiper('.slider-img', {
+		direction: 'vertical',
+		loop: false,
+		speed: 1800,
+	});
+
+	const swiperProjectsCards = new Swiper('.slider-cards', {
+		direction: 'vertical',
+		loop: false,
+		speed: 1800,
+	});
+
+	swiperProjectsImg.controller.control = swiperProjectsCards;
+	swiperProjectsCards.controller.control = swiperProjectsImg;
 
 	// Attach a click event handler to the themeBtn to change a theme on button click
 	themeBtn.addEventListener('click', () => {
