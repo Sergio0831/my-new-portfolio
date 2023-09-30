@@ -87,12 +87,16 @@
                         design principles and the latest front-end technologies and tools.</p>
                 </div>
             </section>
+            <!-- Projects slider start -->
             <div class="projects__slider">
-                <!-- Slider cards start -->
-                <div class="slider-cards">
-                    <div class="swiper-wrapper">
-                        <!-- Coffeechino slide start -->
-                        <div class="swiper-slide slider-cards__slide">
+                <div class="swiper-wrapper">
+                    <!-- Coffeechino slide start -->
+                    <div class="swiper-slide projects__slider-slide">
+                        <div class="slide-wrapper wrapper-inner">
+                            <img src="../../images/projects/coffeechino-650.webp" alt="Coffeechino" class="project-img"
+                                loading="lazy"
+                                srcset="../../images/projects/coffeechino-460.webp 460w, ../../images/projects/coffeechino-650.webp 650w"
+                                sizes="(min-width: 460px) 650px, calc(100vw - 30px)">
                             <article class="project-card">
                                 <div class="project-card__header">
                                     <img class="project-card__logo" src="../../images/projects/coffee.svg"
@@ -109,7 +113,8 @@
                                         business to showcase your Coffee Shop.</p>
                                 </div>
                                 <a href="../../pages/projects/coffeechino.html"
-                                    class="project-card__link btn-primary btn-primary--small">View Project
+                                    class="project-card__link btn-primary btn-primary--small">View
+                                    Project
                                     <svg class="project-card__icon" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 48 48">
                                         <path fill="none" stroke="currentColor" stroke-linecap="round"
@@ -117,9 +122,15 @@
                                     </svg></a>
                             </article>
                         </div>
-                        <!-- Coffeechino slide end -->
-                        <!-- Audiophile slide start -->
-                        <div class="swiper-slide slider-cards__slide">
+                    </div>
+                    <!-- Coffeechino slide end -->
+                    <!-- Audiophile slide start -->
+                    <div class="swiper-slide projects__slider-slide">
+                        <div class="slide-wrapper wrapper-inner">
+                            <img src="../../images/projects/audiophile-650.webp"
+                                srcset="../../images/projects/audiophile-460.webp 460w, ../../images/projects/audiophile-650.webp 650w"
+                                sizes="(min-width: 460px) 650px, calc(100vw - 30px)" alt="Audiophile"
+                                class="project-img" loading="lazy">
                             <article class="project-card">
                                 <div class="project-card__header">
                                     <img class="project-card__logo" src="../../images/projects/audiophile.svg"
@@ -148,8 +159,15 @@
                                     </svg></a>
                             </article>
                         </div>
-                        <!-- Entertainmet slide end -->
-                        <div class="swiper-slide slider-cards__slide">
+                    </div>
+                    <!-- Audiophile slide end -->
+                    <!-- Entertainmet slide start -->
+                    <div class="swiper-slide projects__slider-slide">
+                        <div class="slide-wrapper wrapper-inner">
+                            <img src="../../images/projects/entertainment-650.webp"
+                                srcset="../../images/projects/entertainment-460.webp 460w, ../../images/projects/entertainment-650.webp 650w"
+                                sizes="(min-width: 460px) 650px, calc(100vw - 30px)" alt="Entertainmet"
+                                class="project-img" loading="lazy">
                             <article class="project-card">
                                 <div class="project-card__header">
                                     <img class="project-card__logo" src="../../images/projects/movie.svg"
@@ -177,9 +195,15 @@
                                     </svg></a>
                             </article>
                         </div>
-                        <!-- Entertainmet slide end -->
-                        <!-- Photosnap slide end -->
-                        <div class="swiper-slide slider-cards__slide">
+                    </div>
+                    <!-- Entertainmet slide end -->
+                    <!-- Photosnap slide start -->
+                    <div class="swiper-slide projects__slider-slide">
+                        <div class="slide-wrapper wrapper-inner">
+                            <img src="../../images/projects/photosnap-650.webp"
+                                srcset="../../images/projects/photosnap-460.webp 460w, ../../images/projects/photosnap-650.webp 650w"
+                                sizes="(min-width: 460px) 650px, calc(100vw - 30px)" alt="Photosnap" class="project-img"
+                                loading="lazy">
                             <article class="project-card">
                                 <div class="project-card__header">
                                     <img class="project-card__logo" src="../../images/projects/photosnap.svg"
@@ -206,26 +230,49 @@
                                     </svg></a>
                             </article>
                         </div>
-                        <!-- Photosnap slide end -->
+                    </div>
+                    <!-- Photosnap slide end -->
+                </div>
 
-                    </div>
+                <!-- Projects slider custom pagination start -->
+                <div class="projects__slider-pagination">
+                    <span class="projects__slider-current">01</span> / <span class="projects__slider-total">04</span>
                 </div>
-                <!-- Slider cards end -->
-                <!-- Projects images slider start -->
-                <div class="slider-img">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide slider-img__slide"><img
-                                src="../../images/projects/coffeechino-650.webp" alt="Coffeechino"></div>
-                        <div class="swiper-slide slider-img__slide"><img src="../../images/projects/audiophile-650.webp"
-                                alt="Coffeechino"></div>
-                        <div class="swiper-slide slider-img__slide"><img
-                                src="../../images/projects/entertainment-650.webp" alt="Coffeechino"></div>
-                        <div class="swiper-slide slider-img__slide"><img src="../../images/projects/photosnap-650.webp"
-                                alt="Coffeechino"></div>
-                    </div>
+                <!-- Projects slider custom pagination start -->
+
+                <!-- Projects slider custom pagination start -->
+                <div class="projects__slider-navigation">
+                    <button class="slide-btn prev-slide" type="button" aria-label="Prev Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g fill="none">
+                                <path
+                                    d="M24 0v24H0V0h24zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018zm.265-.113l-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022zm-.715.002a.023.023 0 00-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01-.184-.092z" />
+                                <path fill="currentColor"
+                                    d="M12.707 3.636a1 1 0 00-1.414 0L5.636 9.293a1 1 0 101.414 1.414L11 6.757V20a1 1 0 102 0V6.757l3.95 3.95a1 1 0 001.414-1.414l-5.657-5.657z" />
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="slide-btn next-slide" type="button" aria-label="Next Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g fill="none">
+                                <path
+                                    d="M24 0v24H0V0h24zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018zm.265-.113l-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022zm-.715.002a.023.023 0 00-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01-.184-.092z" />
+                                <path fill="currentColor"
+                                    d="M11 17.243l-3.95-3.95a1 1 0 10-1.414 1.414l5.657 5.657a1 1 0 001.414 0l5.657-5.657a1 1 0 00-1.414-1.414L13 17.243V4a1 1 0 10-2 0v13.243z" />
+                            </g>
+                        </svg>
+                    </button>
                 </div>
-                <!-- Projects images slider end -->
+                <!-- Projects slider custom pagination end -->
+
+                <!-- Projects slider scrollbar start -->
+                <div class="projects__slider-scrollbar">
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <!-- Projects slider scrollbar end -->
+
             </div>
+            <!-- Projects slider end -->
         </main>
         <!-- Main end -->
 
