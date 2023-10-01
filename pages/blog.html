@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Passionate about web development, web design, and SEO.">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <!-- Preloading logo image -->
+    <link rel="preload" as="image" href="../images/logo-dark.svg">
+    <!-- Preloading fonts -->
+    <link rel="preload" href="../fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="../js/index.js"></script>
+    <base href="../">
+    <title>About Me | Sergejs Ivcenko - Web Development, Web Design & SEO</title>
+</head>
+
+<body>
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="../images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
+
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link active"><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link "><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
+                </div>
+                <!-- Navigation end -->
+
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main start -->
+        <main>
+            <!-- Wrapper start -->
+            <div class="wrapper-outer">
+                <section class="wrapper-inner">
+                    <h1 class="heading-2">My Web Development Blog is coming soon!</h1>
+                </section>
+            </div>
+            <!-- Wrapper end -->
+        </main>
+        <!-- Main end -->
+
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
+
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
+
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
+</body>
+
+</html>
