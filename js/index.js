@@ -3,7 +3,7 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
 import { animateNavLinks } from './animations.js';
 import { getCurrentTheme, loadTheme } from './theme.js';
-import { toggleMenu } from './toggleMenu.js';
+import { closeMenu, toggleMenu } from './toggleMenu.js';
 
 // Wait for DOM content fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,14 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	const projectsSliderCurrent = document.querySelector(
 		'.projects__slider-current',
 	);
+	const projectSlider = document.querySelector('.project__slider');
+	const navLinks = document.querySelectorAll('.navigation__link');
+
+	// Remove focus state from the navigation links by default
+	navLinks.forEach((link) => {
+		link.setAttribute('tabindex', '-1');
+	});
 
 	// Create and initialize the animation timeline
 	const timeLine = animateNavLinks();
 
 	// Attach a click event handler to the navigation button toggle the navigation and play/reverse the timeline
 	navBtn.addEventListener('click', () => {
-		toggleMenu();
+		toggleMenu(navBtn);
 		timeLine.reversed(!timeLine.reversed());
+	});
+
+	// Attach 'keydown' event handler to the document and close navigation menu when 'esc' key pressed
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeMenu(navBtn);
+			timeLine.reversed(!timeLine.reversed());
+		}
 	});
 
 	// Initialize Swiper for the projets slider
@@ -104,6 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			ease: Power2.easeOut,
 			delay: 0.3,
 		});
+	});
+
+	// Single project desktop/mobile screenshot slider
+	const swiperProject = new Swiper(projectSlider, {
+		loop: false,
+		speed: 1000,
+		slidesPerView: 1,
+		grabCursor: true,
 	});
 
 	// Attach a click event handler to the themeBtn to change a theme on button click

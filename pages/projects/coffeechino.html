@@ -10,13 +10,306 @@
     <link rel="preload" href="../../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../styles/swiper.min.css">
     <link rel="stylesheet" href="../../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="../../js/index.js"></script>
+    <base href="../../">
     <title>Coffee Chino | Coffee Shop Website - HTML, CSS, JavaScript</title>
 </head>
 
 <body>
-    <h1>CoffeeChino</h1>
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="../../images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
+
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav center-x">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link"><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link active"><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
+                </div>
+                <!-- Navigation end -->
+
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main start -->
+        <main class="project">
+            <!-- Wrapper start -->
+            <div class="wrapper-outer">
+                <!-- Project section start -->
+                <section class="project__info-section">
+                    <a href="../pages/projects/index.html" class="back-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
+                            <path fill="currentColor"
+                                d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5z" />
+                            <path fill="currentColor"
+                                d="M6 8.5a.47.47 0 01-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0 .2.2.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71-.1.1-.23.15-.35.15z" />
+                        </svg>
+                        <span>Back</span>
+                    </a>
+                    <div class="project__columns">
+                        <div class="project__info">
+                            <h1 class="project__title heading-2">Coffee Chino Coffee Shop</h1>
+                            <p>To create an effective online website for a business, I executed a comprehensive plan to
+                                design,
+                                develop, test, and
+                                maintain Coffee Chino's website. This project demonstrates my commitment to a seamless
+                                user
+                                experience, responsive
+                                design, and attention to detail. By creating the Coffee Chino website, I demonstrated my
+                                ability
+                                to plan, design,
+                                develop, and have a user-centric mindset. This project demonstrates my ability to
+                                combine
+                                design
+                                with technical
+                                excellence, ensuring an enjoyable online experience for visitors.</p>
+                            <div class="project__links">
+                                <a href="https://github.com/Sergio0831/coffeechino" target="_blank"
+                                    aria-label="View GitHub Code">View Code</a>
+                                <a href="https://sergejs-ivcenko.com/coffeechino/" target="_blank"
+                                    aria-label="View Live Site">
+                                    <span>View the site</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
+                                        <path fill="currentColor"
+                                            d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5z" />
+                                        <path fill="currentColor"
+                                            d="M10 8.5a.47.47 0 01-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15-3.15-3.15c-.2-.2-.2-.51 0-.71.2-.2.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <picture>
+                            <!-- Avif format -->
+                            <source
+                                srcset="../../images/projects/coffeechino/desktop-portrait-960.avif 960w, ../../images/projects/coffeechino/desktop-portrait-820.avif 820w, ../../images/projects/coffeechino/desktop-portrait-460.avif 460w"
+                                type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 460px">
+                            <!-- Fallback image -->
+                            <img srcset="../../images/projects/coffeechino/desktop-portrait-960.webp 960w, ../../images/projects/coffeechino/desktop-portrait-820.webp 820w, ../../images/projects/coffeechino/desktop-portrait-460.webp 460w"
+                                sizes="(max-width: 960px) calc(100vw - 60px), 460px"
+                                src="../../images/projects/coffeechino/desktop-portrait-460.webp" class="project__image"
+                                alt="Coffee Chino Projest Desktop Portrait" width="460" height="306" loading="eager"
+                                fetchpriority="high">
+                        </picture>
+                    </div>
+                </section>
+                <!-- Project section end -->
+                <div class="project__columns">
+                    <!-- Keys section start -->
+                    <section class="project__key-section">
+                        <h2 class="heading-3">Key Achievements</h2>
+                        <div class="project__keys">
+                            <!-- Project keys list start -->
+                            <ul class="project__keys-list">
+                                <li class="project__keys-item">
+                                    I've put together a meticulous project plan, outlining a roadmap for creating an
+                                    attractive Coffee Shop website. Every
+                                    aspect of design, user experience and functionality has been carefully considered
+                                    and implemented.
+                                </li>
+                                <li class="project__keys-item">
+                                    I have used the latest version of <a href="https://html.spec.whatwg.org/multipage"
+                                        target="_blank">HTML</a>,
+                                    to ensure the code is modern and semantic.
+                                </li>
+                                <li class="project__keys-item">
+                                    My dedication to user accessibility has been demonstrated through fully responsive
+                                    design. The site adapts to
+                                    different devices and screens, ensuring a consistent and engaging experience for all
+                                    visitors.
+                                </li>
+                                <li class="project__keys-item">
+                                    JavaScript integration has brought dynamic functionality to life. Smooth mobile menu
+                                    navigation, image gallery with
+                                    lightbox gallery and testimonials slider has better user interactivity.
+                                </li>
+                                <li class="project__keys-item">
+                                    Coffee Chino website visitors can access all necessary contact information.
+                                </li>
+                                <li class="project__keys-item">
+                                    Implemented fully functional contact form.
+                                </li>
+                                <li class="project__keys-item">
+                                    Integrated Google Map provides visitors to locate the Coffee Shop
+                                </li>
+                                <li class="project__keys-item">
+                                    Through constant validation using the <a href="https://validator.w3.org"
+                                        target="_blank">W3C</a> online
+                                    validator, I have ensured that the
+                                    HTML and CSS code met industry
+                                    standards, promoting optimal performance and compatibility.
+                                </li>
+                            </ul>
+                            <!-- Project keys list end -->
+                        </div>
+                    </section>
+                    <!-- Keys section end -->
+                    <!-- Project tools section start -->
+                    <section class="project__tools-section">
+                        <h2 class="heading-3">Tools Used</h2>
+                        <!-- Project tools list start -->
+                        <ul class="project__tools">
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48"
+                                    height="48">
+                                    <path fill="#E44D26"
+                                        d="M2.807 0l3.857 43.219L23.974 48l17.358-4.776L45.194 0H2.807zM37.17 10.232l-.242 2.766-.106 1.268H16.516l.485 5.398H36.34l-.13 1.338-1.246 13.926-.092.875-10.87 2.988-.014.008-10.864-2.862-.737-8.177h5.326l.378 4.21 5.894 1.574H24v-.21l5.92-1.495.619-6.778h-18.39l-1.305-14.696-.127-1.497h26.58l-.127 1.364z" />
+                                </svg>
+                                <span class="project__tool-name">HTML</span>
+                            </li>
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48"
+                                    height="48">
+                                    <path fill="#1572B6"
+                                        d="M3 0l3.825 43.2L24 48l17.169-4.797L45 0H3zm33.822 14.127l-.483 5.427-1.455 16.272L24 38.832l-.006.003-10.875-3.012-.762-8.508h5.328l.396 4.416 5.913 1.596.006-.006 5.919-1.596.807-7.353-18.624.051-.528-5.031 19.599-.228.396-5.385-20.52.057-.345-5.004h26.592l-.474 5.295z" />
+                                </svg>
+                                <span class="project__tool-name">CSS</span>
+                            </li>
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48"
+                                    height="48">
+                                    <path fill="#F7DF1E"
+                                        d="M3.75.375a3 3 0 00-3 3V44.25a3 3 0 003 3h40.875a3 3 0 003-3V3.375a3 3 0 00-3-3H3.75zm21.795 39.942c-.692 1.406-2.013 2.33-3.543 2.776-2.352.54-4.601.232-6.274-.772-1.12-.687-1.995-1.745-2.588-2.963l3.57-2.186c.03.013.124.182.25.401.455.763.848 1.303 1.62 1.682.758.259 2.422.424 3.065-.91.393-.679.268-2.86.268-5.274 0-3.794.017-7.571.017-11.321h4.39c0 4.125.023 8.032 0 12.057.01 2.468.224 4.667-.775 6.51zm18.215-1.24c-1.526 5.22-10.036 5.39-13.436 1.94-.719-.811-1.17-1.235-1.598-2.172 1.807-1.04 1.807-1.04 3.566-2.057.955 1.468 1.838 2.275 3.427 2.606 2.155.263 4.324-.478 3.837-2.767-.5-1.87-4.413-2.325-7.077-4.324-2.704-1.816-3.338-6.23-1.116-8.75.741-.933 2.004-1.63 3.33-1.964l1.382-.179c2.656-.053 4.316.648 5.534 2.008.339.344.616.714 1.133 1.517-1.414.902-1.41.893-3.436 2.205-.433-.932-1.15-1.517-1.91-1.772-1.178-.357-2.664.032-2.972 1.277-.107.383-.085.74.085 1.374.477 1.089 2.08 1.562 3.516 2.222 4.137 1.678 5.534 3.477 5.877 5.618.331 1.843-.08 3.04-.142 3.218z" />
+                                </svg>
+                                <span class="project__tool-name">CSS</span>
+                            </li>
+                        </ul>
+                        <!-- Project tools list start -->
+                    </section>
+                    <!-- Project tools section start -->
+                </div>
+            </div>
+            <!-- Wrapper end -->
+            <!-- Project showcase section start -->
+            <section class="project__showcase-section" aria-label="Showcase Image">
+                <picture>
+                    <!-- Avif format -->
+                    <source
+                        srcset="../../images/projects/coffeechino/showcase/showcase-1920.webp 1920w, ../../images/projects/coffeechino/showcase/showcase-1440.avif 1440w, ../../images/projects/coffeechino/showcase/showcase-820.avif 820w, ../../images/projects/coffeechino/showcase/showcase-460.avif 460w"
+                        type="image/avif" sizes="(min-width: 1440px) 1920px, 100vw">
+                    <!-- Fallback image -->
+                    <img srcset="../../images/projects/coffeechino/showcase/showcase-1920.webp 1920w, ../../images/projects/coffeechino/showcase/showcase-1440.webp 1440w, ../../images/projects/coffeechino/showcase/showcase-820.webp 820w, ../../images/projects/coffeechino/showcase/showcase-460.webp 460w"
+                        sizes="100vw" src="../../images/projects/coffeechino/showcase/showcase-1920.webp"
+                        class="project__image" alt="Coffee Chino Project Showcase" width="1920" height="1080"
+                        loading="lazy">
+                </picture>
+            </section>
+            <!-- Project showcase section end -->
+            <!-- Project slider section start -->
+            <section class="project__slider-section wrapper-outer" aria-label="Project Slider">
+                <!-- Project slider start -->
+                <div class="project__slider">
+                    <div class="swiper-wrapper">
+                        <!-- Desktop image slide start -->
+                        <div class="swiper-slide project__slider-slide">
+                            <picture>
+                                <!-- Avif format -->
+                                <source
+                                    srcset="../../images/projects/coffeechino/slider/desktop.avif 1200w, ../../images/projects/coffeechino/slider/desktop-960.avif 960w, ../../images/projects/coffeechino/slider/desktop-820.avif 820w, ../../images/projects/coffeechino/slider/desktop-460.avif 460w"
+                                    type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 1200px">
+                                <!-- Fallback image -->
+                                <img srcset="../../images/projects/coffeechino/slider/desktop-960.webp 960w, ../../images/projects/coffeechino/slider/desktop-820.webp 820w, ../../images/projects/coffeechino/slider/desktop-460.webp 460w"
+                                    sizes="(max-width: 960px) calc(100vw - 60px), 1200px"
+                                    src="../../images/projects/coffeechino/slider/desktop.webp" class="project__image"
+                                    alt="Coffee Chino Projest Desktop" width="1200" height="675" loading="lazy">
+                            </picture>
+                        </div>
+                        <!-- Desktop image slide end -->
+                        <!-- Mobile image slide start -->
+                        <div class="swiper-slide project__slider-slide">
+                            <picture>
+                                <!-- Avif format -->
+                                <source
+                                    srcset="../../images/projects/coffeechino/slider/mobile.avif 1200w, ../../images/projects/coffeechino/slider/mobile-960.avif 960w, ../../images/projects/coffeechino/slider/mobile-820.avif 820w, ../../images/projects/coffeechino/slider/mobile-460.avif 460w"
+                                    type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 1200px">
+                                <!-- Fallback image -->
+                                <img srcset="../../images/projects/coffeechino/slider/mobile-960.webp 960w, ../../images/projects/coffeechino/slider/mobile-820.webp 820w, ../../images/projects/coffeechino/slider/mobile-460.webp 460w"
+                                    sizes="(max-width: 960px) calc(100vw - 60px), 1200px"
+                                    src="../../images/projects/coffeechino/slider/mobile.webp" class="project__image"
+                                    alt="Coffee Chino Projest Mobile" width="1200" height="675" loading="lazy">
+                            </picture>
+                        </div>
+                        <!-- Mobile image slide end -->
+                    </div>
+                    <!-- Projects slider custom navigation start -->
+                    <div class="project__slider-navigation center-y">
+                        <button type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M40.521 35.7H27.128v5.357h4.822a1.607 1.607 0 110 3.214H19.092a1.607 1.607 0 110-3.214h4.822V35.7H10.52a3.772 3.772 0 01-3.75-3.75V10.52a3.771 3.771 0 013.75-3.75h30a3.771 3.771 0 013.75 3.75V31.95a3.771 3.771 0 01-3.75 3.75zm0-3.215h-30a.536.536 0 01-.536-.535V10.52a.536.536 0 01.536-.536h30a.536.536 0 01.536.536V31.95a.536.536 0 01-.536.535z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <button type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M14.904 10.577a1.442 1.442 0 011.442-1.442h17.308a1.442 1.442 0 011.442 1.442v28.846a1.442 1.442 0 01-1.442 1.442H16.346a1.442 1.442 0 01-1.442-1.442V10.577zm1.442-4.327a4.327 4.327 0 00-4.327 4.327v28.846a4.327 4.327 0 004.327 4.327h17.308a4.327 4.327 0 004.327-4.327V10.577a4.327 4.327 0 00-4.327-4.327H16.346zm4.327 30.721a1.01 1.01 0 100 2.02h8.654a1.01 1.01 0 000-2.02h-8.654z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Projects slider custom navigation end -->
+                </div>
+
+                <!-- Project slider end -->
+            </section>
+            <!-- Project slider section start -->
+        </main>
+        <!-- Main end -->
+
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
+
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
+
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
 </body>
 
 </html>

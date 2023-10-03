@@ -126,7 +126,7 @@
 	--w-max: max-content;
 	--w-fit: fit-content;
 	--w-auto: auto;
-	--wrapper-width: min(75rem, calc(var(--w-full) - 3.75rem));
+	--wrapper-outer-width: min(75rem, calc(var(--w-full) - 3.75rem));
 	--wrapper-inner-width: min(60rem, var(--w-full));
 
 	/* Height */
@@ -138,6 +138,11 @@
 	--p-relative: relative;
 	--p-absolute: absolute;
 	--p-fixed: fixed;
+
+	/* Top/Right/Bottom/Left */
+	--inset-x-0: 0;
+	--inset-y-0: 0;
+	--inset-0: 0;
 
 	/* Opacity */
 	--opacity-full: 1;
@@ -296,7 +301,8 @@ body {
 	height: 3rem;
 	border-radius: var(--rounded-full);
 	background-color: var(--theme-btn);
-	transition: all var(--transition-base);
+	transition: transform var(--transition-base),
+		background-color var(--transition-base), box-shadow var(--transition-base);
 	box-shadow: var(--blue-shadow);
 	position: var(--p-relative);
 	outline: none;
@@ -360,7 +366,7 @@ body {
 }
 
 .wrapper-outer {
-	width: var(--wrapper-width);
+	width: var(--wrapper-outer-width);
 	margin: 0 auto;
 }
 
@@ -380,8 +386,18 @@ body {
 	align-items: var(--align-center);
 }
 
+.center-x {
+	display: var(--d-flex);
+	justify-content: var(--justify-center);
+}
+
 .space-between {
 	justify-content: var(--justify-between);
+}
+
+.responsive-columns {
+	display: var(--d-flex);
+	flex-wrap: var(--flex-wrap);
 }
 
 .text-center {
@@ -396,7 +412,7 @@ body {
 
 .outline:before {
 	content: '';
-	inset: 0;
+	inset: var(--inset-0);
 	transition: opacity var(--transition-base), box-shadow var(--transition-base);
 	opacity: var(--opacity-none);
 	position: var(--p-absolute);
@@ -475,15 +491,15 @@ body {
 /* Navigation background styles */
 .navigation__bg {
 	position: var(--p-absolute);
-	top: 0;
-	left: 0;
+	top: var(--inset-y-0);
+	left: var(--inset-x-0);
 	background-color: var(--primary-clr-dark-700);
 	transition: clip-path 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 	width: var(--w-full);
 	height: var(--h-full);
 	z-index: 4;
 	clip-path: circle(
-		1rem at calc(((100% + var(--wrapper-width)) / 2) - 1.5rem) 3rem
+		1rem at calc(((100% + var(--wrapper-outer-width)) / 2) - 1.5rem) 3rem
 	);
 	transition-delay: 0.9s;
 	overflow-y: var(--overflow-auto);
@@ -497,8 +513,6 @@ body {
 /* Nav styles */
 .navigation__nav {
 	height: var(--h-full);
-	display: var(--d-grid);
-	justify-content: var(--justify-center);
 	padding: 20vh 0 0;
 }
 
@@ -526,11 +540,12 @@ body {
 span[data-title]::before {
 	content: attr(data-title);
 	position: var(--p-absolute);
-	top: 0;
-	left: 0;
+	top: var(--inset-y-0);
+	left: var(--inset-x-0);
 	color: var(--monochrome-clr-light);
 	clip-path: inset(0 0 0 0);
-	transition: all var(--transition-base);
+	transition: transform var(--transition-base), opacity var(--transition-base),
+		clip-path var(--transition-base);
 }
 
 .navigation__link:hover span[data-title]::before,
@@ -607,8 +622,6 @@ span[data-title]::before {
 }
 
 .what-i-do__columns {
-	display: var(--d-flex);
-	flex-wrap: var(--flex-wrap);
 	column-gap: 8%;
 	row-gap: var(--spacing-6);
 }
@@ -622,8 +635,6 @@ span[data-title]::before {
 }
 
 .skills__list {
-	display: var(--d-flex);
-	flex-wrap: var(--flex-wrap);
 	gap: var(--spacing-3);
 }
 
@@ -637,7 +648,8 @@ span[data-title]::before {
 }
 
 /* Projects page styles */
-.projects__section {
+.projects__section,
+.blog__section {
 	padding: 0 0 var(--spacing-10);
 }
 
@@ -771,6 +783,7 @@ span[data-title]::before {
 	top: var(--spacing-8);
 	right: var(--spacing-8);
 	z-index: 2;
+	column-gap: var(--spacing-2);
 }
 
 .projects__slider-navigation .slide-btn {
@@ -782,6 +795,7 @@ span[data-title]::before {
 	border-radius: var(--rounded);
 	padding: var(--spacing-1);
 	transition: color var(--transition-base);
+	outline: none;
 }
 
 .slide-btn:hover {
@@ -822,7 +836,7 @@ span[data-title]::before {
 .theme-btn {
 	position: var(--p-fixed);
 	bottom: 4.5rem;
-	right: calc((100% - var(--wrapper-width)) / 2);
+	right: calc((100% - var(--wrapper-outer-width)) / 2);
 	z-index: 3;
 }
 
@@ -837,7 +851,7 @@ span[data-title]::before {
 	font-weight: var(--fw-semibold);
 }
 
-/* Media query for the tablet screen with min-width of the 480px - 30rem */
+/* Media query for the tablet screen with min-width of the 460px - 28.75rem */
 @media screen and (min-width: 30rem) {
 	/* Base styles */
 	body {
@@ -909,18 +923,23 @@ span[data-title]::before {
 	}
 
 	/* About Me Page styles */
+	.about-me {
+		padding: var(--spacing-8) 0 0;
+	}
+
 	.about-me__columns {
 		display: var(--d-grid);
 		grid-template-columns: 47% 28.5rem;
 		justify-content: var(--justify-between);
 	}
 
-	.about-me {
-		padding: var(--spacing-8) 0 0;
+	.about-me__info {
+		margin: 0;
 	}
 
 	/* Projects Page styles */
-	.projects__section {
+	.projects__section,
+	.blog__section {
 		padding: var(--spacing-8) 0 var(--spacing-15);
 	}
 }

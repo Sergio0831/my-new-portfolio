@@ -1,22 +1,37 @@
 // Arrow function to toggle the navigation menu state
-export const toggleMenu = () => {
+export const toggleMenu = (navBtn) => {
 	// Select the navigation button and navigation background
-	const navBtn = document.querySelector('.navigation__btn');
 	const navigationBg = document.querySelector('.navigation__bg');
+	const navLinks = navigationBg.querySelectorAll('.navigation__link');
 
-	// Get the current value of the 'aria-pressed' attribute
-	const isPressed = navBtn.getAttribute('aria-pressed');
+	// Determine if the button is initially pressed
+	const isPressed = navBtn.getAttribute('aria-pressed') === 'true';
 
-	// Check if the navigation menu is currently open or closed
-	if (isPressed === 'true') {
-		// If it's open, set the attributes to indicate it's closed
-		navBtn.setAttribute('aria-pressed', 'false');
-		navBtn.setAttribute('aria-label', 'Open Navigation');
-		navigationBg.setAttribute('aria-expanded', 'false');
-	} else {
-		// If it's close, set the attributes to indicate it's open
-		navBtn.setAttribute('aria-pressed', 'true');
-		navBtn.setAttribute('aria-label', 'Close Navigation');
-		navigationBg.setAttribute('aria-expanded', 'true');
+	// Toggle the 'isPressed' state
+	const newState = !isPressed;
+
+	// Update the 'aria-pressed' attribute
+	navBtn.setAttribute('aria-pressed', newState);
+	// Update the 'aria-label' attribute
+	navBtn.setAttribute(
+		'aria-label',
+		newState ? 'Close Navigation' : 'Open Navigation',
+	);
+	// Update the 'aria-expanded' attribute
+	navigationBg.setAttribute('aria-expanded', newState);
+
+	// Toggle navigation link focus state
+	navLinks.forEach((link) => {
+		link.setAttribute('tabindex', newState ? '0' : '-1');
+	});
+
+	// Toggle body scroll
+	document.body.style.overflow = newState ? 'hidden' : 'auto';
+};
+
+// Arrow function to close menu
+export const closeMenu = (navBtn) => {
+	if (navBtn.getAttribute('aria-pressed') === 'true') {
+		toggleMenu(navBtn);
 	}
 };
