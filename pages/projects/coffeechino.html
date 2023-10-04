@@ -74,21 +74,25 @@
         <main class="project">
             <!-- Wrapper start -->
             <div class="wrapper-outer">
+                <!-- Back link start -->
+                <a href="../pages/projects/index.html" class="project__link project__link-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
+                        <path fill="currentColor"
+                            d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5z" />
+                        <path fill="currentColor"
+                            d="M6 8.5a.47.47 0 01-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0 .2.2.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71-.1.1-.23.15-.35.15z" />
+                    </svg>
+                    <span>Back</span>
+                </a>
+                <!-- Back link end -->
                 <!-- Project section start -->
                 <section class="project__info-section">
-                    <a href="../pages/projects/index.html" class="back-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
-                            <path fill="currentColor"
-                                d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5z" />
-                            <path fill="currentColor"
-                                d="M6 8.5a.47.47 0 01-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0 .2.2.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71-.1.1-.23.15-.35.15z" />
-                        </svg>
-                        <span>Back</span>
-                    </a>
                     <div class="project__columns">
                         <div class="project__info">
+                            <img class="project__logo" src="../../images/projects/coffee.svg" alt="Coffeechino Logo">
                             <h1 class="project__title heading-2">Coffee Chino Coffee Shop</h1>
-                            <p>To create an effective online website for a business, I executed a comprehensive plan to
+                            <p class="project__desc">To create an effective online website for a business, I executed a
+                                comprehensive plan to
                                 design,
                                 develop, test, and
                                 maintain Coffee Chino's website. This project demonstrates my commitment to a seamless
@@ -104,9 +108,9 @@
                                 excellence, ensuring an enjoyable online experience for visitors.</p>
                             <div class="project__links">
                                 <a href="https://github.com/Sergio0831/coffeechino" target="_blank"
-                                    aria-label="View GitHub Code">View Code</a>
+                                    aria-label="View GitHub Code" class="project__link">View Code</a>
                                 <a href="https://sergejs-ivcenko.com/coffeechino/" target="_blank"
-                                    aria-label="View Live Site">
+                                    aria-label="View Live Site" class="project__link">
                                     <span>View the site</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
                                         <path fill="currentColor"
@@ -135,7 +139,7 @@
                 <div class="project__columns">
                     <!-- Keys section start -->
                     <section class="project__key-section">
-                        <h2 class="heading-3">Key Achievements</h2>
+                        <h2 class="project__key-title heading-3">Key Achievements</h2>
                         <div class="project__keys">
                             <!-- Project keys list start -->
                             <ul class="project__keys-list">
@@ -147,7 +151,7 @@
                                 </li>
                                 <li class="project__keys-item">
                                     I have used the latest version of <a href="https://html.spec.whatwg.org/multipage"
-                                        target="_blank">HTML</a>,
+                                        target="_blank" class="project__link">HTML</a>,
                                     to ensure the code is modern and semantic.
                                 </li>
                                 <li class="project__keys-item">
@@ -172,7 +176,7 @@
                                 </li>
                                 <li class="project__keys-item">
                                     Through constant validation using the <a href="https://validator.w3.org"
-                                        target="_blank">W3C</a> online
+                                        target="_blank" class="project__link">W3C</a> online
                                     validator, I have ensured that the
                                     HTML and CSS code met industry
                                     standards, promoting optimal performance and compatibility.
@@ -184,7 +188,7 @@
                     <!-- Keys section end -->
                     <!-- Project tools section start -->
                     <section class="project__tools-section">
-                        <h2 class="heading-3">Tools Used</h2>
+                        <h2 class="project__tools-title heading-3">Tools Used</h2>
                         <!-- Project tools list start -->
                         <ul class="project__tools">
                             <li class="project__tool">
@@ -209,7 +213,7 @@
                                     <path fill="#F7DF1E"
                                         d="M3.75.375a3 3 0 00-3 3V44.25a3 3 0 003 3h40.875a3 3 0 003-3V3.375a3 3 0 00-3-3H3.75zm21.795 39.942c-.692 1.406-2.013 2.33-3.543 2.776-2.352.54-4.601.232-6.274-.772-1.12-.687-1.995-1.745-2.588-2.963l3.57-2.186c.03.013.124.182.25.401.455.763.848 1.303 1.62 1.682.758.259 2.422.424 3.065-.91.393-.679.268-2.86.268-5.274 0-3.794.017-7.571.017-11.321h4.39c0 4.125.023 8.032 0 12.057.01 2.468.224 4.667-.775 6.51zm18.215-1.24c-1.526 5.22-10.036 5.39-13.436 1.94-.719-.811-1.17-1.235-1.598-2.172 1.807-1.04 1.807-1.04 3.566-2.057.955 1.468 1.838 2.275 3.427 2.606 2.155.263 4.324-.478 3.837-2.767-.5-1.87-4.413-2.325-7.077-4.324-2.704-1.816-3.338-6.23-1.116-8.75.741-.933 2.004-1.63 3.33-1.964l1.382-.179c2.656-.053 4.316.648 5.534 2.008.339.344.616.714 1.133 1.517-1.414.902-1.41.893-3.436 2.205-.433-.932-1.15-1.517-1.91-1.772-1.178-.357-2.664.032-2.972 1.277-.107.383-.085.74.085 1.374.477 1.089 2.08 1.562 3.516 2.222 4.137 1.678 5.534 3.477 5.877 5.618.331 1.843-.08 3.04-.142 3.218z" />
                                 </svg>
-                                <span class="project__tool-name">CSS</span>
+                                <span class="project__tool-name">JavaScript</span>
                             </li>
                         </ul>
                         <!-- Project tools list start -->
@@ -228,8 +232,7 @@
                     <!-- Fallback image -->
                     <img srcset="../../images/projects/coffeechino/showcase/showcase-1920.webp 1920w, ../../images/projects/coffeechino/showcase/showcase-1440.webp 1440w, ../../images/projects/coffeechino/showcase/showcase-820.webp 820w, ../../images/projects/coffeechino/showcase/showcase-460.webp 460w"
                         sizes="100vw" src="../../images/projects/coffeechino/showcase/showcase-1920.webp"
-                        class="project__image" alt="Coffee Chino Project Showcase" width="1920" height="1080"
-                        loading="lazy">
+                        alt="Coffee Chino Project Showcase" width="1920" height="1080" loading="lazy">
                 </picture>
             </section>
             <!-- Project showcase section end -->
@@ -237,7 +240,7 @@
             <section class="project__slider-section wrapper-outer" aria-label="Project Slider">
                 <!-- Project slider start -->
                 <div class="project__slider">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper project__slider-wrapper">
                         <!-- Desktop image slide start -->
                         <div class="swiper-slide project__slider-slide">
                             <picture>
@@ -248,7 +251,7 @@
                                 <!-- Fallback image -->
                                 <img srcset="../../images/projects/coffeechino/slider/desktop-960.webp 960w, ../../images/projects/coffeechino/slider/desktop-820.webp 820w, ../../images/projects/coffeechino/slider/desktop-460.webp 460w"
                                     sizes="(max-width: 960px) calc(100vw - 60px), 1200px"
-                                    src="../../images/projects/coffeechino/slider/desktop.webp" class="project__image"
+                                    src="../../images/projects/coffeechino/slider/desktop.webp"
                                     alt="Coffee Chino Projest Desktop" width="1200" height="675" loading="lazy">
                             </picture>
                         </div>
@@ -263,32 +266,17 @@
                                 <!-- Fallback image -->
                                 <img srcset="../../images/projects/coffeechino/slider/mobile-960.webp 960w, ../../images/projects/coffeechino/slider/mobile-820.webp 820w, ../../images/projects/coffeechino/slider/mobile-460.webp 460w"
                                     sizes="(max-width: 960px) calc(100vw - 60px), 1200px"
-                                    src="../../images/projects/coffeechino/slider/mobile.webp" class="project__image"
+                                    src="../../images/projects/coffeechino/slider/mobile.webp"
                                     alt="Coffee Chino Projest Mobile" width="1200" height="675" loading="lazy">
                             </picture>
                         </div>
                         <!-- Mobile image slide end -->
                     </div>
-                    <!-- Projects slider custom navigation start -->
-                    <div class="project__slider-navigation center-y">
-                        <button type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M40.521 35.7H27.128v5.357h4.822a1.607 1.607 0 110 3.214H19.092a1.607 1.607 0 110-3.214h4.822V35.7H10.52a3.772 3.772 0 01-3.75-3.75V10.52a3.771 3.771 0 013.75-3.75h30a3.771 3.771 0 013.75 3.75V31.95a3.771 3.771 0 01-3.75 3.75zm0-3.215h-30a.536.536 0 01-.536-.535V10.52a.536.536 0 01.536-.536h30a.536.536 0 01.536.536V31.95a.536.536 0 01-.536.535z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                        <button type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
-                                <path fill="currentColor" fill-rule="evenodd"
-                                    d="M14.904 10.577a1.442 1.442 0 011.442-1.442h17.308a1.442 1.442 0 011.442 1.442v28.846a1.442 1.442 0 01-1.442 1.442H16.346a1.442 1.442 0 01-1.442-1.442V10.577zm1.442-4.327a4.327 4.327 0 00-4.327 4.327v28.846a4.327 4.327 0 004.327 4.327h17.308a4.327 4.327 0 004.327-4.327V10.577a4.327 4.327 0 00-4.327-4.327H16.346zm4.327 30.721a1.01 1.01 0 100 2.02h8.654a1.01 1.01 0 000-2.02h-8.654z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
+                    <!-- Projects slider custom pagination start -->
+                    <div class="project__slider-pagination center-x">
                     </div>
-                    <!-- Projects slider custom navigation end -->
+                    <!-- Projects slider custom pagination end -->
                 </div>
-
                 <!-- Project slider end -->
             </section>
             <!-- Project slider section start -->
