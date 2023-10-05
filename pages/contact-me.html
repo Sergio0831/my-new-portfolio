@@ -43,20 +43,20 @@
                                     <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="./pages/about-me.html" class="navigation__link active"><span
+                                    <a href="./pages/about-me.html" class="navigation__link"><span
                                             data-title="About Me">About
                                             Me</span></a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="./pages/projects/index.html" class="navigation__link "><span
+                                    <a href="./pages/projects/index.html" class="navigation__link"><span
                                             data-title="Projects">Projects</span></a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                    <a href="./pages/blog.html" class="navigation__link"><span
                                             data-title="Blog">Blog</span></a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                    <a href="./pages/contact-me.html" class="navigation__link  active"><span
                                             data-title="Contact Me">Contact Me</span></a>
                                 </li>
                             </ul>
@@ -90,32 +90,32 @@
                 </section>
                 <!-- Contact Me sections end -->
                 <!-- Contact form start -->
-                <form action="#" class="contact-me__form">
+                <form action="#" class="contact-me__form" novalidate>
                     <div class="contact-me__form-group">
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name"
+                            class="contact-me__form-input">
                         <div class="contact-me__form-group__label"><label for="name" class="contact-me__form-label">Name
                             </label>
-                            <span class="error-message" aria-live="polite">Required</span>
+                            <span class="error-message" aria-live="polite"></span>
                         </div>
-                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required
-                            class="contact-me__form-input">
                     </div>
                     <div class="contact-me__form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email"
+                            class="contact-me__form-input">
                         <div class="contact-me__form-group__label">
                             <label for="email" class="contact-me__form-label">Email
                             </label>
-                            <span class="error-message" aria-live="polite">Required</span>
+                            <span class="error-message" aria-live="polite"></span>
                         </div>
-                        <input type="text" id="email" name="email" placeholder="Enter Your Email" required
-                            class="contact-me__form-input">
                     </div>
                     <div class="contact-me__form-group">
+                        <textarea id="message" name="message" placeholder="Enter Your Message"
+                            class="contact-me__form-input"></textarea>
                         <div class="contact-me__form-group__label">
                             <label for="message" class="contact-me__form-label">Message
                             </label>
-                            <span class="error-message" aria-live="polite">Required</span>
+                            <span class="error-message" aria-live="polite"></span>
                         </div>
-                        <textarea type="text" id="message" name="message" placeholder="Enter Your Message" required
-                            class="contact-me__form-input"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-primary--large">Send Message</button>
                 </form>

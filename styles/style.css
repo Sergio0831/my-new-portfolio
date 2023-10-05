@@ -1011,16 +1011,22 @@ span[data-title]::before {
 	background-color: var(--clr-transparent);
 }
 
+.contact-me__form-group {
+	display: var(--d-flex);
+	flex-direction: column-reverse;
+	row-gap: var(--spacing-2);
+}
+
 .contact-me__form-group__label {
 	display: var(--d-flex);
 	justify-content: var(--justify-between);
-	margin: 0 0 var(--spacing-2);
 }
 
 .contact-me__form-label {
 	font-size: var(--text-md);
 	font-weight: var(--fw-semibold);
 	display: var(--d-inline-block);
+	transition: color var(--transition-base);
 }
 
 .error-message {
@@ -1051,11 +1057,23 @@ span[data-title]::before {
 	border-color: var(--clr-secondary);
 }
 
-.contact-me__form-input:focus:invalid {
+.contact-me__form-input.invalid {
 	border-color: var(--error);
 }
 
-.contact-me__form-input:focus:invalid + .contact-me__form-label {
+.contact-me__form-input:focus.invalid {
+	border-color: var(--error);
+}
+
+.contact-me__form-input.invalid
+	+ .contact-me__form-group__label
+	.contact-me__form-label {
+	color: var(--error);
+}
+
+.contact-me__form-input:focus.invalid
+	+ .contact-me__form-group__label
+	.contact-me__form-label {
 	color: var(--error);
 }
 

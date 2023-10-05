@@ -4,6 +4,8 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs
 import { animateNavLinks } from './animations.js';
 import { getCurrentTheme, loadTheme } from './theme.js';
 import { closeMenu, toggleMenu } from './toggleMenu.js';
+import { icons } from './icons.js';
+import { validateForm, validateFormOnFocus } from './validateForm.js';
 
 // Wait for DOM content fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'.projects__slider-current',
 	);
 	const projectSlider = document.querySelector('.project__slider');
+	const contactForm = document.querySelector('.contact-me__form');
 
 	// Create and initialize the animation timeline
 	const timeLine = animateNavLinks();
@@ -115,19 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	const icons = [
-		`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
-			<path fill="currentColor" fill-rule="evenodd"
-			d="M40.521 35.7H27.128v5.357h4.822a1.607 1.607 0 110 3.214H19.092a1.607 1.607 0 110-3.214h4.822V35.7H10.52a3.772 3.772 0 01-3.75-3.75V10.52a3.771 3.771 0 013.75-3.75h30a3.771 3.771 0 013.75 3.75V31.95a3.771 3.771 0 01-3.75 3.75zm0-3.215h-30a.536.536 0 01-.536-.535V10.52a.536.536 0 01.536-.536h30a.536.536 0 01.536.536V31.95a.536.536 0 01-.536.535z"
-			clip-rule="evenodd" />
-		</svg>`,
-		`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
-			<path fill="currentColor" fill-rule="evenodd"
-			d="M14.904 10.577a1.442 1.442 0 011.442-1.442h17.308a1.442 1.442 0 011.442 1.442v28.846a1.442 1.442 0 01-1.442 1.442H16.346a1.442 1.442 0 01-1.442-1.442V10.577zm1.442-4.327a4.327 4.327 0 00-4.327 4.327v28.846a4.327 4.327 0 004.327 4.327h17.308a4.327 4.327 0 004.327-4.327V10.577a4.327 4.327 0 00-4.327-4.327H16.346zm4.327 30.721a1.01 1.01 0 100 2.02h8.654a1.01 1.01 0 000-2.02h-8.654z"
-			clip-rule="evenodd" />
-		</svg>`,
-	];
-
 	// Single project desktop/mobile screenshot slider
 	const swiperProject = new Swiper(projectSlider, {
 		loop: false,
@@ -152,6 +142,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		},
 	});
+
+	// Check if contact form excist on the page
+	if (contactForm) {
+		// Validate contact form on inputs focus and blur
+		validateFormOnFocus();
+
+		// Attach 'submit' event handler to the form
+		contactForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			const formData = new FormData(contactForm);
+			const formDataObject = Object.fromEntries(formData);
+
+			// Check if form inputs are valid
+			if (validateForm(contactForm)) {
+				contactForm.reset();
+			}
+		});
+	}
 
 	// Attach a click event handler to the themeBtn to change a theme on button click
 	themeBtn.addEventListener('click', () => {
