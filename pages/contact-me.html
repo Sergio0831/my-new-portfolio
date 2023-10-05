@@ -12,12 +12,135 @@
     <link rel="preload" href="../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="../js/index.js"></script>
+    <base href="../">
     <title>Contact Me | Sergejs Ivcenko - Front End Web Developer</title>
 </head>
 
 <body>
-    <h1>Contact Me Page</h1>
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="../images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
+
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav center-x">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link active"><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link "><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
+                </div>
+                <!-- Navigation end -->
+
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main start -->
+        <main class="contact-me">
+            <!-- Wrapper start -->
+            <div class="wrapper-outer">
+                <!-- Contact Me sections start -->
+                <section class="contact-me__section">
+                    <!-- Wrapper inner start -->
+                    <div class="wrapper-inner">
+                        <h1 class="contact-me__title heading-2">Contact Me</h1>
+                        <p>Thank you for visiting my portfolio website! Please feel free to reach me using my <a
+                                href="https://www.linkedin.com/in/ivcenko/" target="_blank" class="body-link"
+                                aria-label="Sergejs Ivcenko LinkedIn Profile Page">LinkedIn</a> page or
+                            submitting
+                            the
+                            contact form below. I look forward to connecting with you soon.</p>
+                    </div>
+                    <!-- Wrapper inner end -->
+                </section>
+                <!-- Contact Me sections end -->
+                <!-- Contact form start -->
+                <form action="#" class="contact-me__form">
+                    <div class="contact-me__form-group">
+                        <div class="contact-me__form-group__label"><label for="name" class="contact-me__form-label">Name
+                            </label>
+                            <span class="error-message" aria-live="polite">Required</span>
+                        </div>
+                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required
+                            class="contact-me__form-input">
+                    </div>
+                    <div class="contact-me__form-group">
+                        <div class="contact-me__form-group__label">
+                            <label for="email" class="contact-me__form-label">Email
+                            </label>
+                            <span class="error-message" aria-live="polite">Required</span>
+                        </div>
+                        <input type="text" id="email" name="email" placeholder="Enter Your Email" required
+                            class="contact-me__form-input">
+                    </div>
+                    <div class="contact-me__form-group">
+                        <div class="contact-me__form-group__label">
+                            <label for="message" class="contact-me__form-label">Message
+                            </label>
+                            <span class="error-message" aria-live="polite">Required</span>
+                        </div>
+                        <textarea type="text" id="message" name="message" placeholder="Enter Your Message" required
+                            class="contact-me__form-input"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-primary--large">Send Message</button>
+                </form>
+                <!-- Contact form end -->
+
+            </div>
+            <!-- Wrapper end -->
+        </main>
+        <!-- Main end -->
+
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
+
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
+
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
 </body>
 
 </html>
