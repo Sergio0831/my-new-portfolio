@@ -159,19 +159,25 @@ const init = () => {
 			// Check if form inputs are valid
 			if (validateFormonSubmit(contactForm)) {
 				const formData = new FormData(contactForm);
+				const formDataObject = Object.fromEntries(formData);
 				const submitBtn = document.getElementById('submitBtn');
 
 				// Disable button
 				submitBtn.setAttribute('disabled', true);
 
 				try {
-					const response = await fetch('mail.php', {
-						method: 'POST',
-						body: formData,
-					});
+					const response = await fetch(
+						'https://ivcenko-email.netlify.app/send',
+						{
+							method: 'POST',
+							body: JSON.stringify(formDataObject),
+							headers: {
+								'Content-Type': 'application/json',
+							},
+						},
+					);
 
 					const data = await response.json();
-					console.log(data.status);
 					console.log(data.message);
 
 					// // Show modal
