@@ -159,7 +159,7 @@ const init = () => {
 			// Check if form inputs are valid
 			if (validateFormonSubmit(contactForm)) {
 				const formData = new FormData(contactForm);
-				const submitBtn = contactForm.getElementById('submitBtn');
+				const submitBtn = document.getElementById('submitBtn');
 
 				// Disable button
 				submitBtn.setAttribute('disabled', true);
