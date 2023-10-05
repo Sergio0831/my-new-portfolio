@@ -19,7 +19,7 @@ const removeError = (input) => {
 };
 
 // Function to validate form inputs
-export const validateForm = (form) => {
+export const validateFormonSubmit = (form) => {
 	const formInputs = form.querySelectorAll('.contact-me__form-input');
 	let valid = true;
 

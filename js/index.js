@@ -1,14 +1,15 @@
 'use strict';
 
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
-import { animateNavLinks } from './animations.js';
+import { animateModal, animateNavLinks } from './animations.js';
 import { getCurrentTheme, loadTheme } from './theme.js';
 import { closeMenu, toggleMenu } from './toggleMenu.js';
 import { icons } from './icons.js';
-import { validateForm, validateFormOnFocus } from './validateForm.js';
+import { validateFormonSubmit, validateFormOnFocus } from './validateForm.js';
+import { submitForm } from './submitForm.js';
 
-// Wait for DOM content fully loaded
-document.addEventListener('DOMContentLoaded', () => {
+// Function to initialize
+const init = () => {
 	const themeBtn = document.querySelector('.theme-btn');
 	const navBtn = document.querySelector('.navigation__btn');
 	const footerYear = document.getElementById('footerYear');
@@ -18,23 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	);
 	const projectSlider = document.querySelector('.project__slider');
 	const contactForm = document.querySelector('.contact-me__form');
+	const modal = document.querySelector('.modal');
+	const closeModalBtn = document.querySelector('.modal__close');
 
-	// Create and initialize the animation timeline
-	const timeLine = animateNavLinks();
+	// Create and initialize the navigation links animation timeline
+	const navLinksTimeLine = animateNavLinks();
 
-	// Attach a click event handler to the navigation button toggle the navigation and play/reverse the timeline
-	navBtn.addEventListener('click', () => {
-		toggleMenu(navBtn);
-		timeLine.reversed(!timeLine.reversed());
-	});
+	// Create and initialize the modal animation timeline
+	const modalTimeline = animateModal();
 
-	// Attach 'keydown' event handler to the document and close navigation menu when 'esc' key pressed
-	document.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape') {
-			closeMenu(navBtn);
-			timeLine.reversed(!timeLine.reversed());
-		}
-	});
+	// Function to open modal
+	const openModal = () => {
+		document.body.style.overflow = 'hidden';
+		modalTimeline.play();
+	};
+
+	// Function to cLose modal
+	const closeModal = () => {
+		document.body.style.overflow = 'auto';
+		modalTimeline.reverse();
+	};
 
 	// Initialize Swiper for the projets slider
 	const swiperProjects = new Swiper(projectsSlider, {
@@ -149,15 +153,75 @@ document.addEventListener('DOMContentLoaded', () => {
 		validateFormOnFocus();
 
 		// Attach 'submit' event handler to the form
-		contactForm.addEventListener('submit', (e) => {
+		contactForm.addEventListener('submit', async (e) => {
 			e.preventDefault();
 
-			const formData = new FormData(contactForm);
-			const formDataObject = Object.fromEntries(formData);
-
 			// Check if form inputs are valid
-			if (validateForm(contactForm)) {
+			if (validateFormonSubmit(contactForm)) {
+				const formData = new FormData(contactForm);
+				const submitBtn = contactForm.getElementById('submitBtn');
+
+				// Disable button
+				submitBtn.setAttribute('disabled', true);
+
+				try {
+					const response = await fetch('mail.php', {
+						method: 'POST',
+						body: formData,
+					});
+
+					const data = await response.json();
+					console.log(data.status);
+					console.log(data.message);
+
+					// // Show modal
+					openModal();
+				} catch (error) {
+					console.log(error);
+				} finally {
+					// Enable button
+					submitBtn.removeAttribute('disabled');
+				}
+
+				// Reset form
 				contactForm.reset();
+			}
+		});
+	}
+
+	// Attach a click event handler to the navigation button toggle the navigation and play/reverse the timeline
+	navBtn.addEventListener('click', () => {
+		toggleMenu(navBtn);
+		navLinksTimeLine.reversed(!navLinksTimeLine.reversed());
+	});
+
+	// Attach 'keydown' event handler to the document and close navigation menu when 'esc' key pressed
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeMenu(navBtn);
+			navLinksTimeLine.reversed(!navLinksTimeLine.reversed());
+		}
+	});
+
+	// Check if close modal button exist
+	if (closeModalBtn) {
+		// Attach a 'click' event handler to close modal button and close modal when button is clicked
+		closeModalBtn.addEventListener('click', closeModal);
+	}
+
+	// Check if close modal exist
+	if (modal) {
+		// Attach a 'click' event handler and close modal when click outside modal content
+		document.addEventListener('click', (e) => {
+			if (e.target === modal) {
+				closeModal();
+			}
+		});
+
+		// Attach 'keydown' event handler to the document and close modal when 'esc' key pressed
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				closeModal();
 			}
 		});
 	}
@@ -184,4 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Add the current year to the footer copyright
 	footerYear.textContent = new Date().getFullYear();
-});
+};
+
+// Wait for DOM content fully loaded
+document.addEventListener('DOMContentLoaded', init);

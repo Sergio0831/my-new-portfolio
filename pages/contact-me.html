@@ -117,7 +117,9 @@
                             <span class="error-message" aria-live="polite"></span>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-primary--large">Send Message</button>
+                    <button type="submit" id="submitBtn"
+                        class="contact-me__form-btn btn btn-primary btn-primary--large">Send
+                        Message</button>
                 </form>
                 <!-- Contact form end -->
 
@@ -125,6 +127,22 @@
             <!-- Wrapper end -->
         </main>
         <!-- Main end -->
+
+        <!-- Modal start -->
+        <div class="modal center">
+            <div class="modal__content">
+                <button type="button" aria-label="Close Modal" class="modal__close btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 24 24">
+                        <path fill="currentColor"
+                            d="M7.314 5.9l3.535-3.536A1 1 0 109.435.95L5.899 4.485 2.364.95A1 1 0 10.95 2.364l3.535 3.535L.95 9.435a1 1 0 101.414 1.414l3.535-3.535 3.536 3.535a1 1 0 101.414-1.414L7.314 5.899z" />
+                    </svg>
+                </button>
+                <p class="modal__message">
+                    Thank you for contacting me! I will get back to you shortly.
+                </p>
+            </div>
+        </div>
+        <!-- Modal end -->
 
         <!-- Theme button start -->
         <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
@@ -136,7 +154,6 @@
             <div class="wrapper-outer">
                 <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
             </div>
-
         </footer>
         <!-- Footer start -->
     </div>

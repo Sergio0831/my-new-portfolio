@@ -277,6 +277,7 @@ html {
 }
 
 body {
+	position: var(--p-relative);
 	background-color: var(--body-bg);
 	color: var(--body-text);
 	font-family: var(--font-body);
@@ -365,18 +366,18 @@ body {
 }
 
 @media (hover: hover) {
-	.btn-primary:hover {
+	.btn-primary:hover:not(:disabled) {
 		transform: translate(5px, -5px) scale(1.05);
 		box-shadow: var(--button-shadow-hover);
 	}
 }
 
-.btn-primary:focus-visible {
+.btn-primary:focus-visible:not(:disabled) {
 	transform: translate(5px, -5px) scale(1.05);
 	box-shadow: var(--button-shadow-hover);
 }
 
-.btn-primary:active {
+.btn-primary:active:not(:disabled) {
 	transform: translate(0, 0) scale(0.95);
 	box-shadow: var(--button-shadow);
 }
@@ -905,7 +906,7 @@ span[data-title]::before {
 }
 
 .project__info-section {
-	margin: 0 0 var(--spacing-10);
+	margin: var(--spacing-8) 0 var(--spacing-10);
 }
 
 .project__key-title,
@@ -1077,6 +1078,52 @@ span[data-title]::before {
 	color: var(--error);
 }
 
+.contact-me__form-btn:disabled {
+	box-shadow: none;
+	background-color: var(--secondary-clr-light);
+	color: var(--clr-input-dark);
+	cursor: initial;
+}
+
+/* Modal styles */
+.modal {
+	position: var(--p-absolute);
+	inset: 0;
+	background-color: var(--clr-input-dark);
+	backdrop-filter: blur(10px);
+	z-index: 7;
+	padding: 0 var(--spacing-6);
+	display: none;
+}
+
+.modal__content {
+	max-width: 22.5rem;
+	position: var(--p-relative);
+	background-color: var(--primary-clr-dark-light);
+	color: var(--monochrome-clr-light);
+	box-shadow: var(--card-shadow);
+	border-radius: var(--rounded-md);
+	padding: var(--spacing-14) var(--spacing-7);
+	font-size: var(--text-md);
+	font-weight: var(--fw-semibold);
+}
+
+.modal__close {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: transparent;
+	color: var(--monochrome-clr-light);
+	transition: color var(--transition-base);
+	position: var(--p-absolute);
+	top: var(--spacing-1);
+	right: var(--spacing-1);
+}
+
+.modal__close:hover,
+.modal__close:focus {
+	color: var(--secondary-clr-base);
+}
+
 /* Dark / Light theme button switch styles */
 .theme-btn-wrapper {
 	position: var(--p-relative);
@@ -1117,10 +1164,13 @@ span[data-title]::before {
 	.about-me,
 	.what-i-do,
 	.skills,
-	.project__info-section,
 	.projects__section,
 	.blog__section {
 		margin: 0 0 var(--spacing-15);
+	}
+
+	.project__info-section {
+		margin: var(--spacing-8) 0 var(--spacing-15);
 	}
 
 	.project__showcase-section {
@@ -1185,7 +1235,6 @@ span[data-title]::before {
 		padding: var(--spacing-8) 0 0;
 	}
 
-	.project__info-section,
 	.projects__section,
 	.blog__section {
 		margin: var(--spacing-8) 0 var(--spacing-15);
