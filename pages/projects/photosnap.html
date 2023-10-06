@@ -11,13 +11,318 @@
     <link rel="preload" href="../../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../styles/swiper.min.css">
     <link rel="stylesheet" href="../../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script type="module" src="../../js/index.js"></script>
+    <base href="../../">
     <title>Photosnap | Multi-Page Website - React, TypeScript, SCSS</title>
 </head>
 
 <body>
-    <h1>Photosnap Project</h1>
+    <!-- Grid wrapper start -->
+    <div class="wrapper-grid">
+        <!-- Header start -->
+        <header class="header">
+            <div class="wrapper-outer center-y space-between">
+                <!-- Logo start -->
+                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
+                        src="../../images/logo-dark.svg" alt="Logo"></a>
+                <!-- Logo end -->
+
+                <!-- Navigation start -->
+                <div class="navigation">
+                    <button type="button" class="navigation__btn btn btn-round center outline"
+                        aria-label="Open Navigation" aria-pressed="false">
+                        <span class="navigation__icon"></span>
+                    </button>
+                    <div class="navigation__bg" aria-expanded="false" role="navigation">
+                        <!-- Main nav start -->
+                        <nav class="navigation__nav center-x">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="/" class="navigation__link "><span data-title="Home">Home</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/about-me.html" class="navigation__link"><span
+                                            data-title="About Me">About
+                                            Me</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/projects/index.html" class="navigation__link active"><span
+                                            data-title="Projects">Projects</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/blog.html" class="navigation__link "><span
+                                            data-title="Blog">Blog</span></a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="./pages/contact-me.html" class="navigation__link "><span
+                                            data-title="Contact Me">Contact Me</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Main nav end -->
+                    </div>
+                </div>
+                <!-- Navigation end -->
+
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Main start -->
+        <main class="project">
+            <!-- Wrapper start -->
+            <div class="wrapper-outer">
+                <!-- Back link start -->
+                <a href="../pages/projects/index.html" class="body-link body-link-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
+                        <path fill="currentColor"
+                            d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5z" />
+                        <path fill="currentColor"
+                            d="M6 8.5a.47.47 0 01-.35-.15l-3.5-3.5c-.2-.2-.2-.51 0-.71L5.65.65c.2-.2.51-.2.71 0 .2.2.2.51 0 .71L3.21 4.51l3.15 3.15c.2.2.2.51 0 .71-.1.1-.23.15-.35.15z" />
+                    </svg>
+                    <span>Back</span>
+                </a>
+                <!-- Back link end -->
+                <!-- Project section start -->
+                <section class="project__info-section">
+                    <div class="project__columns">
+                        <div class="project__info">
+                            <img class="project__logo" src="../../images/projects/photosnap.svg" alt="Photosnap Logo">
+                            <h1 class="project__title heading-2">Photosnap multi-page website</h1>
+                            <p class="project__desc">PhotoSnap multi-site web challenge from <a
+                                    href="https://www.frontendmentor.io" target="_blank"
+                                    aria-label="Frontend Mentor website" class="body-link">Frontend
+                                    Mentor</a>, I had a
+                                remarkable opportunity to showcase my web development
+                                skills by building a marketing website for an advanced photo-sharing app. This challenge
+                                was the perfect to showcase my
+                                mastery of CSS Grid, allowing me to create responsive and visually appealing layouts.
+                            </p>
+                            <div class="project__links">
+                                <a href="https://github.com/Sergio0831/photosnap" target="_blank"
+                                    aria-label="View GitHub Code" class="body-link">View Code</a>
+                                <a href="https://photosnap-ivcenko.netlify.app" target="_blank"
+                                    aria-label="View Live Site" class="body-link">
+                                    <span>View the site</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" height="0.7em">
+                                        <path fill="currentColor"
+                                            d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5z" />
+                                        <path fill="currentColor"
+                                            d="M10 8.5a.47.47 0 01-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15-3.15-3.15c-.2-.2-.2-.51 0-.71.2-.2.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <picture>
+                            <!-- Avif format -->
+                            <source
+                                srcset="../../images/projects/photosnap/desktop-portrait-960.avif 960w, ../../images/projects/photosnap/desktop-portrait-820.avif 820w, ../../images/projects/photosnap/desktop-portrait-460.avif 460w"
+                                type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 460px">
+                            <!-- Fallback image -->
+                            <img srcset="../../images/projects/photosnap/desktop-portrait-960.webp 960w, ../../images/projects/photosnap/desktop-portrait-820.webp 820w, ../../images/projects/photosnap/desktop-portrait-460.webp 460w"
+                                sizes="(max-width: 960px) calc(100vw - 60px), 460px"
+                                src="../../images/projects/photosnap/desktop-portrait-460.webp" class="project__image"
+                                alt="Photosnap Projest Desktop Portrait" width="460" height="306" loading="eager"
+                                fetchpriority="high">
+                        </picture>
+                    </div>
+                </section>
+                <!-- Project section end -->
+                <div class="project__columns">
+                    <!-- Keys section start -->
+                    <section class="project__key-section">
+                        <h2 class="project__key-title heading-3">Key Achievements</h2>
+                        <div class="project__keys">
+                            <!-- Project keys list start -->
+                            <ul class="project__keys-list">
+                                <li class="project__keys-item">
+                                    A careful copy of the design is provided, to get it looking as close as possible.
+                                </li>
+                                <li class="project__keys-item">
+                                    Implemented advanced CSS Grid techniques to ensure optimal layouts for each page,
+                                    adapting to various screen sizes and
+                                    devices.
+                                </li>
+                                <li class="project__keys-item">
+                                    Implemented hover states for all interactive elements, for better user
+                                    interactivity.
+                                </li>
+                                <li class="project__keys-item">
+                                    Leveraged <a href="https://react.dev" target="_blank" aria-label="React Website"
+                                        class="body-link">React</a> and <a href="https://www.typescriptlang.org/"
+                                        target="_blank" aria-label="TypeScript Website" class="body-link">TypeScript</a>
+                                    to
+                                    create a robust, maintainable, and dynamic
+                                    codebase for smooth content interaction
+                                    and rendering.
+                                </li>
+                                <li class="project__keys-item">
+                                    Used <a href="https://www.framer.com/motion" target="_blank"
+                                        aria-label="Framer Motion Website" class="body-link">Framer Motion</a> to add
+                                    smooth and attractive animations, for
+                                    better user experience and visual appeal.
+                                </li>
+                                <li class="project__keys-item">
+                                    Used <a href="https://sass-lang.com" target="_blank" aria-label="SASS Website"
+                                        class="body-link">SCSS</a> to optimize styling, and
+                                    create cleaner, more organized style sheets for efficient maintenance and quick
+                                    iteration.
+                                </li>
+                                <li class="project__keys-item">
+                                    Tested on various devices, browsers, and screen sizes to ensure a seamless and
+                                    appealing user experience.
+                                </li>
+                                <li class="project__keys-item">
+                                    Accepted the challenge as an opportunity for personal and professional growth,
+                                    expanding my skills and knowledge in
+                                    web design and development.
+                                </li>
+                            </ul>
+                            <!-- Project keys list end -->
+                        </div>
+                    </section>
+                    <!-- Keys section end -->
+                    <!-- Project tools section start -->
+                    <section class="project__tools-section">
+                        <h2 class="project__tools-title heading-3">Tools Used</h2>
+                        <!-- Project tools list start -->
+                        <ul class="project__tools">
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 26" width="48"
+                                    height="48">
+                                    <g fill="#00D8FF">
+                                        <path d="M12.993 15.629a2.369 2.369 0 100-4.738 2.369 2.369 0 000 4.738z" />
+                                        <path
+                                            d="M21.99 9.354a23.158 23.158 0 00-1.434-.478c.125-.499.229-.997.312-1.475.436-2.743-.042-4.675-1.371-5.423-.395-.229-.831-.333-1.33-.333-1.455 0-3.304 1.08-5.174 2.888-1.87-1.807-3.719-2.888-5.173-2.888-.499 0-.935.104-1.33.333-1.33.769-1.808 2.7-1.371 5.423.083.478.187.976.311 1.475-.498.145-.976.29-1.433.478-2.598.997-4.01 2.368-4.01 3.906 0 1.537 1.433 2.909 4.01 3.906.457.166.935.333 1.433.478-.124.499-.228.997-.311 1.475-.437 2.743.041 4.675 1.37 5.423.396.229.832.333 1.33.333 1.476 0 3.325-1.08 5.174-2.889 1.87 1.808 3.72 2.889 5.174 2.889.498 0 .935-.104 1.33-.333 1.33-.769 1.807-2.7 1.371-5.423a20.82 20.82 0 00-.312-1.475c.499-.145.977-.29 1.434-.478C24.587 16.17 26 14.797 26 13.26c0-1.538-1.413-2.909-4.01-3.906zm-3.075-6.337c.852.498 1.143 2.036.79 4.217-.063.437-.167.894-.291 1.372a24.684 24.684 0 00-3.429-.52 29.974 29.974 0 00-2.16-2.7c1.537-1.517 3.095-2.556 4.363-2.556.27 0 .52.062.727.187zm-2.327 12.32a26.53 26.53 0 01-1.268 1.995c-.768.063-1.537.083-2.327.083-.81 0-1.579-.02-2.327-.083a26.156 26.156 0 01-1.246-1.994 33.477 33.477 0 01-1.102-2.078c.333-.686.707-1.392 1.102-2.078.374-.665.81-1.33 1.267-1.994a28.685 28.685 0 012.327-.084c.81 0 1.58.021 2.327.084.457.664.873 1.33 1.247 1.994.395.686.769 1.392 1.101 2.078-.353.686-.706 1.371-1.101 2.078zm1.724-.685c.312.727.561 1.434.79 2.14a22.85 22.85 0 01-2.244.395c.25-.395.52-.81.748-1.247.25-.436.478-.872.706-1.288zm-5.319 5.63a23.335 23.335 0 01-1.433-1.724c.477.021.955.042 1.433.042.478 0 .956-.021 1.434-.042a23.359 23.359 0 01-1.434 1.725zM9.13 17.167a22.814 22.814 0 01-2.244-.395 27.28 27.28 0 01.79-2.14c.228.416.456.852.706 1.268.249.457.498.852.748 1.267zm-1.455-5.298a24.523 24.523 0 01-.79-2.14c.707-.166 1.455-.291 2.245-.395-.25.395-.52.81-.748 1.247-.25.436-.478.872-.707 1.288zm5.32-5.63c.498.54.976 1.121 1.433 1.724-.478-.021-.956-.042-1.434-.042s-.956.02-1.433.042a23.35 23.35 0 011.433-1.725zm4.612 4.362l-.748-1.246c.79.104 1.537.228 2.244.395a27.278 27.278 0 01-.79 2.14 25.527 25.527 0 00-.706-1.289zM6.282 7.234c-.353-2.181-.062-3.719.79-4.217.207-.125.457-.187.727-.187 1.247 0 2.805 1.018 4.363 2.555a27.323 27.323 0 00-2.16 2.701 28.25 28.25 0 00-3.429.52c-.125-.478-.208-.935-.29-1.372zM1.15 13.26c0-.977 1.184-2.015 3.262-2.784.416-.167.873-.312 1.33-.437.332 1.04.748 2.14 1.247 3.242-.5 1.1-.935 2.181-1.247 3.22-2.867-.83-4.592-2.078-4.592-3.241zm5.922 10.243c-.852-.498-1.143-2.036-.79-4.218.062-.436.166-.893.291-1.37 1.08.248 2.223.415 3.428.518.707.998 1.434 1.891 2.161 2.702C10.625 22.65 9.066 23.69 7.8 23.69c-.27 0-.52-.062-.727-.187zm12.632-4.218c.354 2.182.063 3.72-.79 4.218a1.404 1.404 0 01-.726.187c-1.247 0-2.805-1.018-4.364-2.555a27.295 27.295 0 002.161-2.702 28.221 28.221 0 003.428-.519c.125.478.208.935.291 1.371zm1.87-3.24c-.415.165-.872.31-1.33.435a30.286 30.286 0 00-1.246-3.24c.499-1.102.935-2.183 1.247-3.221 2.867.83 4.591 2.077 4.591 3.24 0 .977-1.205 2.016-3.262 2.785z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="a">
+                                            <path fill="#fff" d="M0 0h26v26H0z" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="project__tool-name">React</span>
+                            </li>
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 26" width="48"
+                                    height="48">
+                                    <path fill="#fff" d="M24.85 9.547H4.605V24.51H24.85V9.547z" />
+                                    <path fill="#007ACC"
+                                        d="M.305 12.982v9.695a3 3 0 003 3h19.39a3 3 0 003-3V3.287a3 3 0 00-3-3H3.305a3 3 0 00-3 3v9.695zm20.46-1.016c.609.141 1.161.46 1.589.914.235.245.44.518.61.813 0 .032-1.098.774-1.766 1.188-.024.016-.122-.09-.23-.25a1.44 1.44 0 00-1.192-.717c-.77-.053-1.265.351-1.261 1.016a.931.931 0 00.11.475c.168.351.483.56 1.47.987 1.818.782 2.596 1.298 3.08 2.031.54.813.66 2.125.294 3.096-.406 1.056-1.402 1.773-2.81 2.011a7.787 7.787 0 01-1.933-.02 4.672 4.672 0 01-2.584-1.347c-.233-.258-.688-.93-.66-.98.074-.054.152-.104.234-.147l.94-.52.73-.423.152.226c.257.367.584.68.963.922.812.426 1.921.367 2.47-.126a1.103 1.103 0 00.14-1.406c-.203-.282-.61-.52-1.745-1.015-1.31-.565-1.875-.915-2.39-1.471-.323-.367-.56-.8-.698-1.27a5.082 5.082 0 01-.044-1.625c.27-1.265 1.218-2.149 2.604-2.41a6.43 6.43 0 011.927.052v-.004zm-5.96 1.064v1.04H11.51v9.39H9.171v-9.392H5.866v-1.015c-.01-.35-.002-.701.025-1.05.016-.019 2.03-.019 4.468-.019h4.435l.012 1.046z" />
+                                    <defs>
+                                        <clipPath id="a">
+                                            <path fill="#fff" d="M0 0h26v26H0z" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="project__tool-name">TypeScript</span>
+                            </li>
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 26" width="48"
+                                    height="48">
+                                    <path fill="#CB6699" fill-rule="evenodd"
+                                        d="M.248 11.407c0 .143.042.237.065.328.154.596.484 1.107.875 1.574.558.664 1.241 1.2 1.941 1.703.607.436 1.226.862 1.836 1.296.104.074.203.16.317.25-.098.053-.18.1-.264.143-.804.408-1.577.865-2.29 1.419-.43.334-.846.689-1.14 1.152-.472.746-.639 1.54-.287 2.39.103.247.26.461.48.62a.71.71 0 00.237.121c.215.05.434.084.651.124h.616a3.834 3.834 0 001.862-.681c.876-.605 1.466-1.415 1.72-2.456.184-.756.192-1.512-.026-2.265a2.37 2.37 0 00-.071-.206c-.027-.067-.058-.133-.094-.218l1.396-.803.021.018c-.025.083-.052.166-.075.25-.166.606-.276 1.223-.237 1.852.042.67.23 1.298.622 1.858.317.452 1.073.47 1.41.015.12-.162.236-.33.323-.51.228-.47.439-.95.656-1.425l.038-.087c-.015.225-.034.423-.042.62-.013.31.005.617.11.91.091.252.245.44.533.473.197.023.354-.067.499-.182.226-.178.41-.399.546-.65.386-.709.783-1.413 1.133-2.14.379-.787.71-1.596 1.061-2.396l.058-.141c.084.326.141.646.248.948.124.352.277.694.444 1.028.08.157.07.26-.04.391-.458.553-.908 1.112-1.359 1.67-.1.124-.199.25-.282.384a.75.75 0 00-.097.277.353.353 0 00.28.4c.179.039.369.053.55.04a3.222 3.222 0 001.706-.642c.654-.484.864-1.146.706-1.93-.043-.212-.119-.419-.193-.624-.033-.092-.035-.157.025-.243.523-.747.97-1.54 1.386-2.35a.486.486 0 01.062-.098c.135.7.337 1.376.7 1.989-.185.179-.368.34-.534.519-.365.393-.682.82-.848 1.34-.07.224-.125.452-.094.691.05.372.354.614.72.529.783-.181 1.459-.55 1.952-1.203.333-.44.363-.931.224-1.445-.038-.14-.084-.278-.132-.438.193-.06.381-.132.576-.176 1.011-.23 2.012-.19 2.986.175.57.213 1.029.57 1.302 1.131.332.687.148 1.338-.499 1.772-.06.04-.129.072-.179.122a.177.177 0 00-.042.137c.005.024.07.056.109.055.212-.001.385-.113.55-.227.415-.287.718-.673.783-1.182l.013-.038-.016-.331c-.006-.02.005-.038.003-.052-.088-.74-.483-1.315-1.058-1.765-.667-.521-1.453-.736-2.285-.77a5.158 5.158 0 00-1.984.306c-.182.066-.363.144-.546.217-.025-.044-.051-.087-.073-.13-.188-.386-.416-.754-.466-1.195-.036-.314-.08-.627-.005-.938.072-.298.165-.591.253-.886.045-.151.013-.236-.131-.304a.577.577 0 00-.16-.053 2.458 2.458 0 00-1.05.078c-.122.036-.21.104-.238.239-.015.077-.047.152-.069.228-.09.317-.153.641-.299.944-.364.758-.78 1.488-1.206 2.213-.046.078-.095.155-.153.25-.15-.313-.309-.594-.357-.923-.055-.372-.098-.744-.005-1.113.069-.275.159-.546.242-.817.039-.13.02-.197-.096-.265a.566.566 0 00-.193-.075 2.365 2.365 0 00-1.087.089c-.11.036-.168.107-.202.22-.1.336-.184.68-.323.999-.563 1.292-1.143 2.577-1.722 3.862-.121.268-.263.527-.399.788-.035.067-.085.125-.128.187-.034-.04-.048-.069-.048-.097.001-.165-.018-.335.013-.495.095-.482.205-.963.32-1.442.096-.395.207-.786.313-1.179.036-.131.036-.254-.058-.365a.546.546 0 00-.687-.083l-.087.05.017-.14c.041-.301.05-.6-.033-.897-.103-.369-.366-.58-.749-.57a1.608 1.608 0 00-.53.102c-.695.272-1.229.754-1.683 1.334a.526.526 0 01-.154.133c-.588.326-1.177.647-1.767.97l-.655.36c-.176-.168-.336-.342-.518-.49-.554-.452-1.116-.892-1.674-1.339-.495-.396-.974-.808-1.34-1.332-.273-.39-.448-.817-.465-1.3-.021-.614.153-1.175.466-1.698.4-.669.946-1.205 1.546-1.691.634-.514 1.32-.95 2.032-1.349.996-.557 2.02-1.05 3.118-1.376 1.126-.334 2.268-.525 3.446-.392.463.053.913.159 1.326.385.316.174.575.4.696.755.119.35.115.703.033 1.057-.168.718-.56 1.31-1.055 1.838-.812.867-1.801 1.457-2.915 1.847a8.023 8.023 0 01-1.984.423 3.737 3.737 0 01-1.622-.195 2.11 2.11 0 01-.893-.607c-.044-.05-.1-.106-.18-.058-.08.046-.094.122-.067.199.044.127.085.26.154.373.174.285.428.492.708.67.537.341 1.137.456 1.759.483.944.04 1.865-.1 2.773-.354 1.297-.361 2.424-1 3.328-2.007.753-.84 1.29-1.786 1.406-2.93.056-.557-.004-1.104-.265-1.613-.283-.551-.734-.962-1.272-1.244-.785-.411-1.632-.65-2.505-.65h-.876c-1.058 0-2.081.302-3.076.664a21.13 21.13 0 00-2.207.955c-1.561.78-3.014 1.72-4.208 3.013C1.284 8.731.78 9.441.49 10.278a8.228 8.228 0 00-.226.761m5.655 7.315c-.068.906-.478 1.64-1.149 2.235-.377.334-.81.572-1.314.656-.183.03-.37.038-.548-.038-.253-.108-.31-.333-.314-.572-.008-.38.126-.725.309-1.053.239-.428.589-.753.963-1.058.589-.48 1.228-.885 1.882-1.268l.05-.02c.101.373.15.742.121 1.118zm5.11-3.936c-.047.29-.107.579-.192.859-.292.97-.667 1.91-1.073 2.838-.075.172-.184.328-.278.491a.342.342 0 01-.058.068c-.117.116-.229.11-.288-.042a3.199 3.199 0 01-.148-.552c-.025-.125-.019-.257-.026-.385.007-.913.286-1.742.758-2.515.195-.318.407-.622.731-.823.1-.062.212-.112.324-.143.173-.05.279.03.25.204zm3.487 4.442l1.253-1.463c.052.543-.872 1.628-1.253 1.463zm4.002-.985c-.089.051-.185.087-.276.134-.083.043-.11 0-.113-.071a.485.485 0 01.019-.147 3.15 3.15 0 01.944-1.52l.032-.017a1.342 1.342 0 01-.606 1.621z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="project__tool-name">SCSS</span>
+                            </li>
+                            <li class="project__tool">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48"
+                                    height="48">
+                                    <path fill="#fff"
+                                        d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24z" />
+                                    <path fill="#05F" d="M14.4 32H24v9.6L14.4 32z" />
+                                    <path fill="#0AF" d="M14.4 22.4H24V32h-9.6v-9.6zm9.6 0l9.6 9.6H24v-9.6z" />
+                                    <path fill="#8DF" d="M24 12.8h9.6v9.6H24v-9.6zm-9.6 0H24v9.6l-9.6-9.6z" />
+                                </svg>
+                                <span class="project__tool-name">Framer Motion</span>
+                            </li>
+                        </ul>
+                        <!-- Project tools list start -->
+                    </section>
+                    <!-- Project tools section start -->
+                </div>
+            </div>
+            <!-- Wrapper end -->
+            <!-- Project showcase section start -->
+            <section class="project__showcase-section" aria-label="Showcase Image">
+                <picture>
+                    <!-- Avif format -->
+                    <source
+                        srcset="../../images/projects/photosnap/showcase-1920.avif 1920w, ../../images/projects/photosnap/showcase-1440.avif 1440w, ../../images/projects/photosnap/showcase-820.avif 820w, ../../images/projects/photosnap/showcase-460.avif 460w"
+                        type="image/avif" sizes="(min-width: 1440px) 1920px, 100vw">
+                    <!-- Fallback image -->
+                    <img srcset="../../images/projects/photosnap/showcase-1920.webp 1920w, ../../images/projects/photosnap/showcase-1440.webp 1440w, ../../images/projects/photosnap/showcase-820.webp 820w, ../../images/projects/photosnap/showcase-460.webp 460w"
+                        sizes="100vw" src="../../images/projects/photosnap/showcase-1920.webp"
+                        alt="PhotoSnap Project Showcase" width="1920" height="1080" loading="lazy">
+                </picture>
+            </section>
+            <!-- Project showcase section end -->
+            <!-- Project slider section start -->
+            <section class="project__slider-section wrapper-outer" aria-label="Project Slider">
+                <!-- Project slider start -->
+                <div class="project__slider">
+                    <div class="swiper-wrapper project__slider-wrapper">
+                        <!-- Desktop image slide start -->
+                        <div class="swiper-slide project__slider-slide">
+                            <picture>
+                                <!-- Avif format -->
+                                <source
+                                    srcset="../../images/projects/photosnap/slider/desktop.avif 1200w, ../../images/projects/photosnap/slider/desktop-960.avif 960w, ../../images/projects/photosnap/slider/desktop-820.avif 820w, ../../images/projects/photosnap/slider/desktop-460.avif 460w"
+                                    type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 1200px">
+                                <!-- Fallback image -->
+                                <img srcset="../../images/projects/photosnap/slider/desktop-960.webp 960w, ../../images/projects/photosnap/slider/desktop-820.webp 820w, ../../images/projects/photosnap/slider/desktop-460.webp 460w"
+                                    sizes="(max-width: 960px) calc(100vw - 60px), 1200px"
+                                    src="../../images/projects/photosnap/slider/desktop.webp"
+                                    alt="PhotoSnap Projest Desktop" width="1200" height="675" loading="lazy">
+                            </picture>
+                        </div>
+                        <!-- Desktop image slide end -->
+                        <!-- Mobile image slide start -->
+                        <div class="swiper-slide project__slider-slide">
+                            <picture>
+                                <!-- Avif format -->
+                                <source
+                                    srcset="../../images/projects/photosnap/slider/mobile.avif 1200w, ../../images/projects/photosnap/slider/mobile-960.avif 960w, ../../images/projects/photosnap/slider/mobile-820.avif 820w, ../../images/projects/photosnap/slider/mobile-460.avif 460w"
+                                    type="image/avif" sizes="(max-width: 960px) calc(100vw - 60px), 1200px">
+                                <!-- Fallback image -->
+                                <img srcset="../../images/projects/photosnap/slider/mobile-960.webp 960w, ../../images/projects/photosnap/slider/mobile-820.webp 820w, ../../images/projects/photosnap/slider/mobile-460.webp 460w"
+                                    sizes="(max-width: 960px) calc(100vw - 60px), 1200px"
+                                    src="../../images/projects/photosnap/slider/mobile.webp"
+                                    alt="PhotoSnap Projest Mobile" width="1200" height="675" loading="lazy">
+                            </picture>
+                        </div>
+                        <!-- Mobile image slide end -->
+                    </div>
+                    <!-- Projects slider custom pagination start -->
+                    <div class="project__slider-pagination center-x">
+                    </div>
+                    <!-- Projects slider custom pagination end -->
+                </div>
+                <!-- Project slider end -->
+            </section>
+            <!-- Project slider section start -->
+        </main>
+        <!-- Main end -->
+
+        <!-- Theme button start -->
+        <button type="button" class="theme-btn btn btn-round center" role="switch" aria-checked="false"
+            aria-label="Light Theme"></button>
+        <!-- Theme button end -->
+
+        <!-- Footer start -->
+        <footer class="footer text-center">
+            <div class="wrapper-outer">
+                <p class="footer__copy">© Copyright <span id="footerYear"></span>. Made by Sergejs Ivcenko</p>
+            </div>
+
+        </footer>
+        <!-- Footer start -->
+    </div>
+    <!-- Grid wrapper end -->
 </body>
 
 </html>

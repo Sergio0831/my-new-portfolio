@@ -6,7 +6,6 @@ import { getCurrentTheme, loadTheme } from './theme.js';
 import { closeMenu, toggleMenu } from './toggleMenu.js';
 import { icons } from './icons.js';
 import { validateFormonSubmit, validateFormOnFocus } from './validateForm.js';
-import { submitForm } from './submitForm.js';
 
 // Function to initialize
 const init = () => {
