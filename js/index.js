@@ -167,14 +167,13 @@ const init = () => {
 
 				try {
 					const response = await fetch(
-						'https://ivcenko-email.netlify.app/send',
+						'https://ivcenko-email.onrender.com/send',
 						{
 							method: 'POST',
 							body: JSON.stringify(formDataObject),
 							headers: {
 								'Content-Type': 'application/json',
 							},
-							mode: 'cors',
 						},
 					);
 
