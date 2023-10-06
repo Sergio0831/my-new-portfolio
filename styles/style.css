@@ -550,7 +550,7 @@ body {
 	height: var(--h-full);
 	z-index: 4;
 	clip-path: circle(
-		1rem at calc(((100% + var(--wrapper-outer-width)) / 2) - 1.5rem) 3rem
+		0rem at calc(((100% + var(--wrapper-outer-width)) / 2) - 1.5rem) 3rem
 	);
 	transition-delay: 0.9s;
 	overflow-y: var(--overflow-auto);
