@@ -6,11 +6,11 @@
 
 ### Light Theme
 
-![Screenshot Light](./assests/images/screenshot-light.png)
+![Screenshot Light](./images/screenshot-light.png)
 
 ### Dark Theme
 
-![Screenshot Dark](./assests/images/screenshot-dark.png)
+![Screenshot Dark](./images/screenshot-dark.png)
 
 ### Links
 
