@@ -4,11 +4,17 @@
 
 <!-- ### Screenshot -->
 
-<!-- ![Screenshot](./assests/images/screenshot.jpg) -->
+### Light Theme
+
+![Screenshot Light](./assests/images/screenshot-light.png)
+
+### Dark Theme
+
+![Screenshot Dark](./assests/images/screenshot-dark.png)
 
 ### Links
 
-- Live Site! [Demo](https://sergejs-ivcenko.com)
+- Live Site! [Demo](https://sergejs-ivcenko.netlify.app/)
 
 ## My process
 
