@@ -1,4 +1,6 @@
-import { moonIcon, sunIcon } from './themeIcons.js';
+'use strict';
+
+import { moonIcon, sunIcon } from './svgIcons/themeIcons.js';
 
 // Arrow function to determine the current theme on user preferences and local storage
 export const getCurrentTheme = () => {

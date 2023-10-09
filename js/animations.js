@@ -1,3 +1,5 @@
+'use strict';
+
 // Animation function for nav links
 export const animateNavLinks = () => {
 	const navMenu = document.querySelector('.navigation__nav');

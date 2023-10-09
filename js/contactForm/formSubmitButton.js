@@ -1,3 +1,5 @@
+'use strict';
+
 // Show spinner and disable submit button while form is sending
 export const showSpinnerAndDisableButton = (button) => {
 	const spinner = document.createElement('span');

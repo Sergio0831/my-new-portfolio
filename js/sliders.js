@@ -1,5 +1,12 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
-import { icons } from './icons.js';
+'use strict';
+
+import { S as Swiper } from './swiper/shared/swiper-core.min.mjs';
+import Navigation from './swiper/modules/navigation.min.mjs';
+import Pagination from './swiper/modules/pagination.min.mjs';
+import Keyboard from './swiper/modules/keyboard.min.mjs';
+import Scrollbar from './swiper/modules/scrollbar.min.mjs';
+import A11y from './swiper/modules/a11y.min.mjs';
+import { icons } from './svgIcons/paginationIcons.js';
 
 // Initialize Swiper for the projets slider
 export const initializeProjectsSlider = (projectsSlider) => {
@@ -8,6 +15,7 @@ export const initializeProjectsSlider = (projectsSlider) => {
 	);
 
 	const swiperProjects = new Swiper(projectsSlider, {
+		modules: [Navigation, Pagination, Keyboard, Scrollbar, A11y],
 		direction: 'vertical',
 		loop: false,
 		speed: 1000,
@@ -92,6 +100,7 @@ export const initializeProjectsSlider = (projectsSlider) => {
 // Single project desktop/mobile screenshot slider
 export const initializeProjectSlider = (projectSlider) => {
 	new Swiper(projectSlider, {
+		modules: [Navigation, Pagination, Keyboard, A11y],
 		loop: false,
 		speed: 800,
 		slidesPerView: 1,
@@ -115,3 +124,22 @@ export const initializeProjectSlider = (projectSlider) => {
 		},
 	});
 };
+
+const initializeSliders = () => {
+	const projectsSlider = document.querySelector('.projects__slider');
+	const projectSlider = document.querySelector('.project__slider');
+
+	// Check if the projects sliders is exist
+	if (projectsSlider) {
+		// Initialize Swiper for the projets slider
+		initializeProjectsSlider(projectsSlider);
+	}
+
+	// Check if the project sliders is exist
+	if (projectSlider) {
+		// Initialize project slider
+		initializeProjectSlider(projectSlider);
+	}
+};
+
+document.addEventListener('DOMContentLoaded', initializeSliders);

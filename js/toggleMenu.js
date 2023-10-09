@@ -1,3 +1,5 @@
+'use strict';
+
 // Function to toggle the navigation menu state
 export const toggleMenu = (navBtn) => {
 	// Select the navigation button and navigation background

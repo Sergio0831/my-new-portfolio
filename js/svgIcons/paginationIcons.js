@@ -1,3 +1,5 @@
+'use strict';
+
 export const icons = [
 	`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
 			<path fill="currentColor" fill-rule="evenodd"

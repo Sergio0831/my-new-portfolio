@@ -1,3 +1,5 @@
+'use strict';
+
 // Function to validate email input
 const isValidEmail = (email) => {
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
