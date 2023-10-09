@@ -52,48 +52,44 @@ export const animateModal = () => {
 	// Create a timeline for the animation with initial settings
 	const timeline = gsap.timeline({ paused: true });
 
-	if (modal) {
-		// Define animation properties for the modal
-		timeline.fromTo(
-			modal,
-			{
-				opacity: 0,
-				ease: 'easeInOut',
-				duration: 0.3,
+	// Define animation properties for the modal
+	timeline.fromTo(
+		modal,
+		{
+			opacity: 0,
+			ease: 'easeInOut',
+			duration: 0.3,
+		},
+		{
+			opacity: 1,
+			ease: 'easeInOut',
+			duration: 0.3,
+			onStart: () => {
+				modal.style.display = 'flex';
 			},
-			{
-				opacity: 1,
-				ease: 'easeInOut',
-				duration: 0.3,
-				onStart: () => {
-					modal.style.display = 'flex';
-				},
-				onReverseComplete: () => {
-					modal.style.display = 'none';
-				},
+			onReverseComplete: () => {
+				modal.style.display = 'none';
 			},
-		);
-	}
+		},
+	);
 
-	if (modalContent) {
-		// Define animation properties for the modal content
-		timeline.fromTo(
-			modalContent,
-			{
-				opacity: 0,
-				y: -100,
-				ease: 'elastic(1, 0.5)',
-				duration: 0.6,
-				delay: 1,
-			},
-			{
-				opacity: 1,
-				y: 0,
-				ease: 'elastic(1, 0.5)',
-				duration: 0.6,
-			},
-		);
-	}
+	// Define animation properties for the modal content
+	timeline.fromTo(
+		modalContent,
+		{
+			opacity: 0,
+			y: -100,
+			ease: 'elastic(1, 0.5)',
+			duration: 0.6,
+			delay: 1,
+		},
+		{
+			opacity: 1,
+			y: 0,
+			ease: 'elastic(1, 0.5)',
+			duration: 0.6,
+		},
+	);
 
 	// Return the timeline
 	return timeline;
