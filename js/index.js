@@ -1,11 +1,13 @@
 'use strict';
 
 import { animateNavLinks } from './animations.js';
+import tabTrappingKey from './focusTrap/index.js';
 import { getCurrentTheme, loadTheme } from './theme.js';
 import { closeMenu, toggleMenu } from './toggleMenu.js';
 
 // Function to initialize
 const init = () => {
+	const navigation = document.querySelector('.navigation');
 	const themeBtn = document.querySelector('.theme-btn');
 	const navBtn = document.querySelector('.navigation__btn');
 	const footerYear = document.getElementById('footerYear');
@@ -13,9 +15,24 @@ const init = () => {
 	// Create and initialize the navigation links animation timeline
 	const navLinksTimeLine = animateNavLinks();
 
+	// Define a named function for the 'keydown' event handler
+	const handleEventHandler = (e) => {
+		tabTrappingKey(e, navigation);
+	};
+
 	// Attach a click event handler to the navigation button toggle the navigation and play/reverse the timeline
 	navBtn.addEventListener('click', () => {
 		toggleMenu(navBtn);
+
+		// Implement focus trap
+		if (navBtn.getAttribute('aria-pressed') === 'true') {
+			// If navigation button 'aria-pressed' is true, add the focus trap
+			document.addEventListener('keydown', handleEventHandler);
+		} else {
+			// If navigation button 'aria-pressed' is false, remove the focus trap
+			document.removeEventListener('keydown', handleEventHandler);
+		}
+
 		navLinksTimeLine.reversed(!navLinksTimeLine.reversed());
 	});
 
@@ -23,6 +40,10 @@ const init = () => {
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape') {
 			closeMenu(navBtn);
+
+			// Remove the focus trap
+			document.removeEventListener('keydown', handleEventHandler);
+
 			navLinksTimeLine.reversed(!navLinksTimeLine.reversed());
 		}
 	});
