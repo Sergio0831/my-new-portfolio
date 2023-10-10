@@ -24,10 +24,3 @@ export const toggleMenu = (navBtn) => {
 	// Toggle body scroll
 	document.body.style.overflow = newState ? 'hidden' : 'auto';
 };
-
-// Function to close menu
-export const closeMenu = (navBtn) => {
-	if (navBtn.getAttribute('aria-pressed') === 'true') {
-		toggleMenu(navBtn);
-	}
-};

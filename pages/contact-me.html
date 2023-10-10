@@ -7,14 +7,20 @@
     <meta name="description"
         content="Interested in working together? Use the contact form to discuss opportunities and projects. Let's create something amazing!">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <!-- Preloading fonts start -->
     <link rel="preload" href="../fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preloading fonts end -->
+    <!-- Loading styles start -->
     <link rel="stylesheet" href="../styles/style.css">
+    <!-- Loading styles end -->
+    <!-- Loading scripts start -->
     <script src="../js/gsap/gsap.min.js"></script>
     <script type="module" src="../js/contactForm/index.js"></script>
     <script type="module" src="../js/index.js"></script>
+    <!-- Loading scripts end -->
     <base href="../">
     <title>Contact Me | Sergejs Ivcenko - Front End Web Developer</title>
 </head>
@@ -26,8 +32,7 @@
         <header class="header">
             <div class="wrapper-outer center-y space-between">
                 <!-- Logo start -->
-                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
-                        src="../images/logo-dark.svg" alt="Logo"></a>
+                <a href="/" id="logo" class="header__logo outline"></a>
                 <!-- Logo end -->
 
                 <!-- Navigation start -->

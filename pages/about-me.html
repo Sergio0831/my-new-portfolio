@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Passionate about web development, web design, and SEO.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <!-- Preloading logo image -->
-    <link rel="preload" as="image" href="../images/logo-dark.svg">
-    <!-- Preloading fonts -->
+    <!-- Preloading fonts start -->
     <link rel="preload" href="../fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preloading fonts end -->
+    <!-- Loading styles start -->
     <link rel="stylesheet" href="../styles/style.css">
+    <!-- Loading styles end -->
+    <!-- Loading scripts start -->
     <script src="../js/gsap/gsap.min.js"></script>
     <script type="module" src="../js/index.js"></script>
+    <!-- Loading scripts end -->
     <base href="../">
     <title>About Me | Sergejs Ivcenko - Web Development, Web Design & SEO</title>
 </head>
@@ -27,8 +30,7 @@
         <header class="header">
             <div class="wrapper-outer center-y space-between">
                 <!-- Logo start -->
-                <a href="/" class="header__logo outline"><img class="header__logo-img" loading="eager"
-                        src="../images/logo-dark.svg" alt="Logo"></a>
+                <a href="/" id="logo" class="header__logo outline"></a>
                 <!-- Logo end -->
 
                 <!-- Navigation start -->

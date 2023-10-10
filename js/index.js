@@ -3,14 +3,20 @@
 import { animateNavLinks } from './animations.js';
 import tabTrappingKey from './focusTrap/index.js';
 import { getCurrentTheme, loadTheme } from './theme.js';
-import { closeMenu, toggleMenu } from './toggleMenu.js';
+import { toggleMenu } from './navMenu/toggleMenu.js';
+import { closeMenu } from './navMenu/closeMenu.js';
+import { logoIcon } from './svgIcons/logoIcon.js';
 
 // Function to initialize
 const init = () => {
+	const logo = document.getElementById('logo');
 	const navigation = document.querySelector('.navigation');
 	const themeBtn = document.querySelector('.theme-btn');
 	const navBtn = document.querySelector('.navigation__btn');
 	const footerYear = document.getElementById('footerYear');
+
+	// Insert logo svg
+	logo.insertAdjacentHTML('beforeend', logoIcon);
 
 	// Create and initialize the navigation links animation timeline
 	const navLinksTimeLine = animateNavLinks();

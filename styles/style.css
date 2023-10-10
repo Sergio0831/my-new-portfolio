@@ -477,6 +477,12 @@ body {
 	box-shadow: 0 0 0 0.2rem var(--clr-current);
 }
 
+/* Logo icon styles */
+.logo-icon {
+	vertical-align: middle;
+	transition: fill var(--transition-base);
+}
+
 /* Header styles */
 .header {
 	padding: var(--spacing-7) 0;

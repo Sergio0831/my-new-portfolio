@@ -7,16 +7,19 @@
     <meta name="description"
         content="Passionate, creative, and problem-solving Frontend Web Developer. I create modern, clean, mobile-first, responsive, functional, and beautiful interfaces.">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <!-- Preloading logo image -->
-    <link rel="preload" as="image" href="./images/logo-dark.svg">
-    <!-- Preloading fonts -->
+    <!-- Preloading fonts start -->
     <link rel="preload" href="./fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/SF-Pro-Text-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preloading fonts end -->
+    <!-- Loading styles start -->
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- Loading styles end -->
+    <!-- Loading scripts start -->
     <script src="./js/gsap/gsap.min.js"></script>
     <script type="module" src="./js/index.js"></script>
+    <!-- Loading scripts end -->
     <base href="./">
     <title>Sergejs Ivcenko Portfolio | Front End Web Developer - Dublin</title>
 </head>
@@ -28,7 +31,7 @@
         <header class="header">
             <div class="wrapper-outer center-y space-between">
                 <!-- Logo start -->
-                <img class="header__logo-img" loading="eager" src="./images/logo-dark.svg" alt="Logo">
+                <div id="logo" aria-label="Sergejs Ivcenko Logo"></div>
                 <!-- Logo end -->
 
                 <!-- Navigation start -->
