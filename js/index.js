@@ -9,11 +9,57 @@ import { logoIcon } from './svgIcons/logoIcon.js';
 
 // Function to initialize
 const init = () => {
+	const cursor = document.getElementById('cursor');
+	const linksButtons = document.querySelectorAll('a, button');
 	const logo = document.getElementById('logo');
 	const navigation = document.querySelector('.navigation');
 	const themeBtn = document.querySelector('.theme-btn');
 	const navBtn = document.querySelector('.navigation__btn');
 	const footerYear = document.getElementById('footerYear');
+
+	// Custom cursor
+	let mouseX = 0,
+		mouseY = 0,
+		posX = 0,
+		posY = 0;
+
+	const mouseCoords = (e) => {
+		mouseX = e.pageX;
+		mouseY = e.pageY;
+	};
+
+	gsap.to({}, 0.01, {
+		repeat: -1,
+		onRepeat: () => {
+			posX += (mouseX - posX) / 6;
+			posY += (mouseY - posY) / 6;
+			gsap.set(cursor, {
+				css: {
+					left: posX,
+					top: posY,
+				},
+			});
+		},
+	});
+
+	linksButtons.forEach((el) => {
+		console.log(window.getComputedStyle(el).backgroundColor);
+		el.addEventListener('mouseover', () => {
+			if (
+				(window.getComputedStyle(el).backgroundColor === 'rgb(48, 90, 173)') |
+				(window.getComputedStyle(el).backgroundColor === 'rgb(86, 122, 228)')
+			) {
+				cursor.style.borderColor = 'var(--clr-secondary)';
+			} else {
+				cursor.style.borderColor = 'var(--theme-btn)';
+			}
+
+			cursor.classList.add('active');
+		});
+		el.addEventListener('mouseout', () => {
+			cursor.classList.remove('active');
+		});
+	});
 
 	// Insert logo svg
 	logo.insertAdjacentHTML('beforeend', logoIcon);
@@ -25,6 +71,17 @@ const init = () => {
 	const handleEventHandler = (e) => {
 		tabTrappingKey(e, navigation);
 	};
+
+	// Attach a 'mousemove' event listener to the body to get mouse position
+	document.body.addEventListener('mousemove', (e) => {
+		cursor.classList.remove('hidden');
+		mouseCoords(e);
+	});
+
+	// Attach a 'mouseout' event listener to the body to hide custom cursor
+	document.body.addEventListener('mouseout', (e) => {
+		cursor.classList.add('hidden');
+	});
 
 	// Attach a click event handler to the navigation button toggle the navigation and play/reverse the timeline
 	navBtn.addEventListener('click', () => {
