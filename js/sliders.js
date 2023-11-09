@@ -19,8 +19,7 @@ export const initializeProjectsSlider = (projectsSlider) => {
 		direction: 'vertical',
 		loop: false,
 		speed: 1000,
-		slidesPerView: 1,
-		spaceBetween: 32,
+		slidesPerView: 'auto',
 		grabCursor: true,
 		// Enable keyboard navigation
 		keyboard: {

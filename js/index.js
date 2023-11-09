@@ -43,7 +43,6 @@ const init = () => {
 	});
 
 	linksButtons.forEach((el) => {
-		console.log(window.getComputedStyle(el).backgroundColor);
 		el.addEventListener('mouseover', () => {
 			if (
 				(window.getComputedStyle(el).backgroundColor === 'rgb(48, 90, 173)') |

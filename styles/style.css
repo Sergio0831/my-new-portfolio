@@ -280,6 +280,7 @@ body {
 	position: var(--p-relative);
 	background-color: var(--body-bg);
 	color: var(--body-text);
+	overflow-x: var(--overflow-hidden);
 	font-family: var(--font-body);
 	line-height: var(--lh-large);
 	font-weight: var(--fw-normal);
@@ -750,7 +751,6 @@ span[data-title]::before {
 .projects__slider {
 	background-color: var(--primary-clr-dark-700);
 	height: var(--h-screen);
-	width: var(--w-screen);
 	overflow: var(--overflow-hidden);
 	position: relative;
 }

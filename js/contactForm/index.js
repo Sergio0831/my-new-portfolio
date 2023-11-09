@@ -37,7 +37,7 @@ const initializeContactForm = () => {
 
 				try {
 					const response = await fetch(
-						'https://ivcenko-email.onrender.com/send',
+						'https://us-central1-email-api-14367.cloudfunctions.net/api/send',
 						{
 							method: 'POST',
 							body: JSON.stringify(formDataObject),
